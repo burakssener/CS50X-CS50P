@@ -20,12 +20,12 @@ int main(void)
     while (lama>goal);
 
     int plus = lama/3;
-    int 
+    int opposite = lama/4;
     int year;
 
     //with loop find how many years user need
 
-    for(year = 0; lama<goal; lama=lama+change)
+    for(year = 0; lama<goal; lama=lama+plus-opposite)
     {
         year = year+1;
     }
