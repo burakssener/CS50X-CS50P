@@ -3,11 +3,25 @@
 
 int main(void)
 {
-    //prompting user for a starting point and goal
-    int lama = get_int("How many lamas do you have? ");
-    int goal = get_int("How many Lamas do you want? ");
+    //starting point and goal
+    
+    int lama;
+    do
+    {
+        int lama = get_int("How many lamas do you have? ");
+    }
+    while (lama<9);
+
+    int goal;
+    do
+    {
+        int goal = get_int("How many Lamas do you want? ");
+    }
+    while (lama>goal);
+
     int change = lama/12;
     int year;
+
     //with loop find how many years user need
 
     for(year = 0; lama<goal; lama=lama+change)
