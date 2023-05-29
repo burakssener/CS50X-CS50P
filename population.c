@@ -25,9 +25,10 @@ int main(void)
 
     //with loop find how many years user need
 
-    for(year = 0; lama<goal; lama=lama+plus-opposite)
+    for(year = 0; lama<goal; lama = lama + plus)
     {
         year = year+1;
+        lama = lama - opposite;
     }
 
     //give result
