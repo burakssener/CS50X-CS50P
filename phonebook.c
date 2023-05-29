@@ -9,5 +9,5 @@ int main(void)
     double phone = get_int("Phone number: ");
 
 
-    printf("name= %s, age= %i, phone number= %d", name, age, phone);
+    printf("name= %s, age= %i, phone number= %f", name, age, phone);
 }
