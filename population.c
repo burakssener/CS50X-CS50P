@@ -4,18 +4,18 @@
 int main(void)
 {
     //starting point and goal
-    
+
     int lama;
     do
     {
-        int lama = get_int("How many lamas do you have? ");
+        lama = get_int("How many lamas do you have? ");
     }
     while (lama<9);
 
     int goal;
     do
     {
-        int goal = get_int("How many Lamas do you want? ");
+        goal = get_int("How many Lamas do you want? ");
     }
     while (lama>goal);
 
