@@ -35,4 +35,3 @@ int main(void)
     //give result
     printf("You need %i years to reach %i Lamas\n",year ,lama);
 }
-
