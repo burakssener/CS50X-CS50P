@@ -9,6 +9,5 @@ int main(void)
     int phone = get_int("Phone number: ");
 }
 
-{
-    printf("name=i%, age=i%, phone number=s%", name, age, phone);
-}
+
+    printf("name= %i, age= %i, phone number=%s", name, age, phone);
