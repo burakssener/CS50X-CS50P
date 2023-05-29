@@ -6,8 +6,8 @@ int main(void)
 {
     string name = get_string("Name of the person: ");
     int age = get_int("Age of the person: ");
-    int phone = get_int("Phone number: ");
+    double phone = get_int("Phone number: ");
+
+
+    printf("name= %s, age= %i, phone number= %d", name, age, phone);
 }
-
-
-    printf("name= %i, age= %i, phone number=%s", name, age, phone);
