@@ -8,6 +8,5 @@ int main(void)
     int age = get_int("Age of the person: ");
     string phone = get_string("Phone number: ");
 
-
     printf("name= %s, age= %i, phone number= %s", name, age, phone);
 }
