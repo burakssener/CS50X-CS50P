@@ -19,7 +19,8 @@ int main(void)
     }
     while (lama>goal);
 
-    int change = lama/12;
+    int plus = lama/3;
+    int 
     int year;
 
     //with loop find how many years user need
