@@ -10,7 +10,7 @@ int main(void)
     {
         lama = get_int("How many lamas do you have? ");
     }
-    while (lama<12);
+    while (lama<9);
 
     int goal;
     do
