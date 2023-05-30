@@ -12,7 +12,7 @@ int main(void)
         if (word[i] < word[i + 1]);
         return
         else;
-        break
+        printf("The word is not alphebitical")
     }
     //give username answer
 
