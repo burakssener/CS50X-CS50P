@@ -12,11 +12,17 @@ int main(void)
     for(i=0; i<length; i++)
     {
         if (word[i] > word[i + 1])
-        printf("The word is not alphebitical");
-        return 0;
-        else;
-        br
+        {
+            printf("The word is not alphebitical\n");
+            return 0;
+        }
+
+        else
+        {
+            break;
+        }
+
     }
-    printf("The word is alphebitical");
+    printf("The word is alphebitical\n");
 
 }
