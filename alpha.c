@@ -17,10 +17,6 @@ int main(void)
             return 0;
         }
 
-        else
-        {
-            break;
-        }
 
     }
     printf("The word is alphebitical\n");
