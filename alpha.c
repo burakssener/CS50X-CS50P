@@ -9,7 +9,7 @@ int main(void)
     //determine if the word is alphebatical or not
     int length = strlen(word);
     int i;
-    for(i=0; i<length; i++)
+    for(i=0; i<length-1; i++) //every strings end with null and null has lower asci number than everyting so add -1
     {
         if (word[i] > word[i + 1])
         {
@@ -20,5 +20,5 @@ int main(void)
 
     }
     printf("The word is alphebitical\n");
-
+    return 0;
 }
