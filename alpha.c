@@ -14,11 +14,10 @@ int main(void)
         if (word[i] > word[i + 1])
         {
             printf("The word is not alphebitical\n");
-            return 0;
+            return 0; //makes program finished
         }
 
 
     }
     printf("The word is alphebitical\n");
-    return 0;
 }
