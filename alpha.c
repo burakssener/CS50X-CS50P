@@ -3,8 +3,17 @@
 
 int main(void)
 {
-    int word = get_string("Write the word that you want to check: ")
-
+    //get word from user
+    string word = get_string("Write the word that you want to check: ")
+    //determine if the word is alphebatical or not
     int length = str_len(word);
-    
+    for(i=0; i<length; i++)
+    {
+        if (word[i] < word[i + 1]);
+        return
+        else;
+        break
+    }
+    //give username answer
+
 }
