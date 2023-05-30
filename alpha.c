@@ -9,7 +9,7 @@ int main(void)
     //determine if the word is alphebatical or not
     int length = strlen(word);
     int i;
-    for(i=0; i<length-1; i++) //every strings end with null and null has lower asci number than everyting so add -1
+    for(i=0; i<length-1; i++) //I have i+1 at the end so add -1 (if not the last letter is compared with null)
     {
         if (word[i] > word[i + 1])
         {
