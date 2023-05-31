@@ -31,8 +31,9 @@ int compute_score(string word)
         if isupper(word[i])
         {
             
-        }
 
+        }
+        else
 
 
         total += alpha[i]
