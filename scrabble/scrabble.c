@@ -33,10 +33,10 @@ int compute_score(string word)
             word[i] = string(int(word[i])+32)
 
         }
-        
 
 
-        total += alpha[i]
+
+    
 
 
 
