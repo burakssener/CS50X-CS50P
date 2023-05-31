@@ -30,10 +30,10 @@ int compute_score(string word)
     {
         if isupper(word[i])
         {
-            int(word[i])+32
+            word[i] = string(int(word[i])+32)
 
         }
-        else
+        
 
 
         total += alpha[i]
