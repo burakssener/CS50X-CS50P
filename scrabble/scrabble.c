@@ -24,8 +24,12 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    for(i=0; i<n; n = strlen(word); i++)
+    string upperword = toupper(word)
+
+    for(i=0; n = strlen(word); i<n;  i++)
+    {
+        upperword
+    }
 
 
-    int toupper(word)
 }
