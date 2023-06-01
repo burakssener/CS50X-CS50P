@@ -22,14 +22,14 @@ int main(void)
     {
         printf("Winner is Player1!");
     }
-    if (score2<score1);
-    {
-        printf("Winner is Player2!");
-    }
-    else
-    {
-        printf("Tie!");
-    }
+        else if (score2<score1)
+        {
+            printf("Winner is Player2!");
+        }
+        else
+        {
+            printf("Tie!");
+        }
 }
 
 int compute_score(string word)
