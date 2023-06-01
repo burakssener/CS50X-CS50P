@@ -25,18 +25,12 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    total = 0;
-    for(i=0; i < strlen(word)); i++;
+    //total = 0;
+    int i;
+    for(i=0; i < strlen(word); i++)
     {
-        printf("%c", toupper(word[i]))
+        printf("%c", toupper(word[i]));
     }
 
 
-
-
-
-
-
-
-    }
 }
