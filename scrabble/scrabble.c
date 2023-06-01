@@ -28,7 +28,7 @@ int compute_score(string word)
 
     for(i=0; n = strlen(word); i<n;  i++)
     {
-        upperword
+        upperword[i] = 
     }
 
 
