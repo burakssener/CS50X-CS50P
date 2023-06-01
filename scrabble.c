@@ -43,7 +43,7 @@ int compute_score(string word)
         {
             total += POINTS[word[i] - 65];
         }
-          else
+        else
         {
             total += POINTS[word[i] - 97];
         }
@@ -51,6 +51,6 @@ int compute_score(string word)
 
 
     }
+    printf("%i", total);
     return total;
-
 }
