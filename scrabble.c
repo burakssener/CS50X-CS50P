@@ -35,7 +35,11 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    string upperword = toupper(word)
+    for(j=0; n=strlen(word); j<n; j++)
+    {
+        toupper()
+    }
+
     int total = 0;
     for(i=0; n = strlen(word); i<n;  i++)
     {
