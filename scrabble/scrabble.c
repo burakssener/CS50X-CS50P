@@ -25,10 +25,15 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     string upperword = toupper(word)
-
+    int total = 0;
     for(i=0; n = strlen(word); i<n;  i++)
     {
-        upperword[i] = 
+        if (upperword[i] ==  abcd[n]);
+        {
+            total + POINTS[i]
+
+
+        }
     }
 
 
