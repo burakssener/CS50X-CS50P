@@ -35,14 +35,10 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    for(j=0; n=strlen(word); j<n; j++)
-    {
-        toupper()
-    }
-
     int total = 0;
     for(i=0; n = strlen(word); i<n;  i++)
     {
+        if (islowe)
         total += POINTS[uppperword[i] - 65];
 
     }
