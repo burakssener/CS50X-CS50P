@@ -36,10 +36,19 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     int total = 0;
-    for(i=0; n = strlen(word); i<n;  i++)
+    int i;
+    for(i=0; i<strlen(word); i++)
     {
-        if (islowe)
-        total += POINTS[uppperword[i] - 65];
+        if (islower(word)) == true)
+        {
+            total += POINTS[uppperword[i] - 65];
+        }
+        else
+        {
+            total += POINTS[uppperword[i] - 97];
+        }
+
+
 
     }
 
