@@ -28,12 +28,8 @@ int compute_score(string word)
     int total = 0;
     for(i=0; n = strlen(word); i<n;  i++)
     {
-        if (upperword[i] ==  abcd[n]);
-        {
-            total + POINTS[i]
+        total += POINTS[uppperword[i] - 65];
 
-
-        }
     }
 
 
