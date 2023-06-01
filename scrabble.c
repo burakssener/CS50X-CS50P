@@ -49,8 +49,8 @@ int compute_score(string word)
         }
 
 
-    return 0;
-    }
 
+    }
+    return 0;
 
 }
