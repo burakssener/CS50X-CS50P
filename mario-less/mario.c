@@ -18,6 +18,7 @@ int main(void)
 
     for (i=1; i<=x; i= i + 1)
 {
+        printf("  ");
 
         for (a=i; a>0; a = a-1)
         {
