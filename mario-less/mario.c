@@ -21,7 +21,9 @@ int main(void)
         for (a=x; a>0; a = a-1)
         {
             printf("#");
+            a = a-1;
         }
+        printf("\n");
 
     }
 
