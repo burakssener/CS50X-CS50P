@@ -11,7 +11,7 @@ int main(void)
 
 
     }
-    while(n8>=x>=1)
+    while(8>=x And x>=1)
     //controls input is between 1 and 8
 
 }
