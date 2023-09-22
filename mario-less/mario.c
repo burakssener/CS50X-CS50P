@@ -7,11 +7,11 @@ int main(void)
 
     do
     {
-
-
+          int a = get
+          printf("Error: The number should be in the range of 1 to 8! \n")
 
     }
-    while(8>=x And x>=1)
+    while(8<=x && x<=1)
     //controls input is between 1 and 8
 
 }
