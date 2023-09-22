@@ -4,5 +4,6 @@
 int main(void)
 {
     //prompt for input
-    //the function that creates pyramid
+    //controls input is between 1 and 8
+
 }
