@@ -7,7 +7,7 @@ int main(void)
 
     do
     {
-          int a = get
+          int x = get_int("Please Provide me a number");
           printf("Error: The number should be in the range of 1 to 8! \n")
 
     }
