@@ -17,11 +17,12 @@ int main(void)
     int a;
 
     for (i=x; i>0; i= i-1)
-    {
-        for (a=x; a>0; a = a-1)
+{
+        
+        for (a=i; a>0; a = a-1)
         {
             printf("#");
-            a = a-1;
+
         }
         printf("\n");
 
