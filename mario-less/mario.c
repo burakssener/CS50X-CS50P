@@ -16,7 +16,7 @@ int main(void)
     int i;
     int a;
 
-    while (i=x; i>0; i= i +)
+    while (i=5; i>0; i= i +)
 {
 
         for (a=i; a>0; a = a-1)
