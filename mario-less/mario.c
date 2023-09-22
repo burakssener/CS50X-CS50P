@@ -13,15 +13,12 @@ int main(void)
     }
     while(x>=8 || x<=1);
 
-    int i;
-    int a;
+    int i, a, b;
 
     for (i=1; i<=x; i= i + 1)
 {
-        printf("#"*(x-i));
-        printf("#"*x);
 
-        printf("  ");
+        printf("#  ");
 
         for (a=i; a>0; a = a-1)
         {
@@ -33,3 +30,4 @@ int main(void)
     }
 
 }
+
