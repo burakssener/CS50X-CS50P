@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    //prompt for input
+    //prompt for input that controls if input is between 1 and 8
     int x;
 
     do
@@ -11,7 +11,7 @@ int main(void)
           x = get_int("Please Provide me a number between 1 and 8: ");
 
     }
-    while(x>=8 && x<=1);
-    //controls input is between 1 and 8
+    while(x>=8 || x<=1);
+    
 
 }
