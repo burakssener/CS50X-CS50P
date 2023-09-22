@@ -14,10 +14,14 @@ int main(void)
     while(x>=8 || x<=1);
 
     int i;
+    int a;
 
     for (i=x; i>0; i= i-1)
     {
-        printf("# \n");
+        for (a=x; a>0; a = a-1)
+        {
+            printf("#");
+        }
 
     }
 
