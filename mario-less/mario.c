@@ -11,7 +11,7 @@ int main(void)
           x = get_int("Please Provide me a number between 1 and 8: ");
 
     }
-    while(x>=8 || x<=1);
+    while(x>8 || x<1);
 
     int i, a, b, c;
 
