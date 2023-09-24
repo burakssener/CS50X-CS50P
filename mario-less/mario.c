@@ -15,6 +15,7 @@ int main(void)
 
     int i, a, b, c;
 
+
     for (i=1; i<=x; i= i + 1)
 {
 
@@ -24,7 +25,7 @@ int main(void)
 
         }
 
-        for (c=x; c>0; c = c-1)
+        for (c = x; c>0; c = c-1)
         {
             printf("#");
 
