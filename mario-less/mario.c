@@ -19,13 +19,13 @@ int main(void)
     for (i=1; i<=x; i= i + 1)
 {
 
-        for (b=i; b>0; b = b-1)
+        for (b=x-i; b>0; b = b-1)
         {
-            printf(".");
+            printf(" ");
 
         }
 
-        for (c =b-i; c>0; c = c-1)
+        for (c =i; c>0; c = c-1)
         {
             printf("#");
 
