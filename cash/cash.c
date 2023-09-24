@@ -37,7 +37,12 @@ int main(void)
 
 int get_cents(void)
 {
-    // TODO
+    int x;
+    do
+    {
+        x = get_int("Please give total cost in a format of cents: ");
+    }
+    while (x<0);
     return 0;
 }
 
