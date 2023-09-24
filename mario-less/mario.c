@@ -8,24 +8,24 @@ int main(void)
 
     do
     {
-          x = get_int("Please Provide me a number between 1 and 8: ");
+        x = get_int("Please Provide me a number between 1 and 8: ");
 
     }
-    while(x>8 || x<1);
+    while (x > 8 || x < 1);
 
     int i, a, b, c;
 
 
-    for (i=1; i<=x; i= i + 1)
-{
+    for (i = 1; i <= x; i = i + 1)
+    {
 
-        for (b=x-i; b>0; b = b-1)
+        for (b = x - i; b > 0; b = b - 1)
         {
             printf(" ");
 
         }
 
-        for (c =i; c>0; c = c-1)
+        for (c = i; c > 0; c = c - 1)
         {
             printf("#");
 
@@ -34,7 +34,7 @@ int main(void)
         printf("  ");
 
 
-        for (a=i; a>0; a = a-1)
+        for (a = i; a > 0; a = a - 1)
         {
             printf("#");
 
