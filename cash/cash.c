@@ -43,13 +43,12 @@ int get_cents(void)
         x = get_int("Please give total cost in a format of cents: ");
     }
     while (x<0);
-    return 0;
+    return x;
 }
 
 int calculate_quarters(int cents)
 {
-    int division  = cents / 25;
-    return (division);
+    return (cents / 25);
 
 }
 
