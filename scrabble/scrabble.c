@@ -22,19 +22,27 @@ int main(void)
 
     if(score1 > score2)
     {
-        printf("Winner: Player1")
+        printf("Player 1 wins!");
+    }
+    else if(score1 == score2)
+    {
+        printf("Tie!");
+    }
+    else if(score2 > score1)
+    {
+        printf("Player 2 wins!");
     }
 }
 int total;
 int compute_score(string word)
 {
-    word = tolower(word)
+    word = tolower(word);
 
-    for(i=0; str[i]!='\0'; i++)
+    for(i=0; word[i]!='\0'; i++)
     {
-        char_arr = (str[i] - 97)
-        char_value = POINTS[char_arr]
-        total += char_value
+        char_arr = (word[i] - 97);
+        char_value = POINTS[char_arr];
+        total += char_value;
     }
     // TODO: Compute and return score for string
 }
