@@ -38,11 +38,12 @@ int main(void)
 
 int compute_score(string word)
 {
-    
+    char lowered[]= word;
 
     for(i=0; lowered[i]!='\0'; i++)
     {
-        char_arr = (lowered[i] - 97);
+        lowered[i] = tolower(lowered[i])
+        input = (lowered[i] - 97);
         char_value = POINTS[char_arr];
         total += char_value;
     }
