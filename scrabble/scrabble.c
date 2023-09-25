@@ -25,6 +25,9 @@ int compute_score(string word)
 {
     word = tolower(word)
 
-    
+    for(i=0; str[i]!='\0'; i++)
+    {
+        str[i]
+    }
     // TODO: Compute and return score for string
 }
