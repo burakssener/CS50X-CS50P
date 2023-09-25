@@ -23,5 +23,6 @@ int main(void)
 
 int compute_score(string word)
 {
+    word = tolower(word)
     // TODO: Compute and return score for string
 }
