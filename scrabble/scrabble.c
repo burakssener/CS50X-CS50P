@@ -24,11 +24,11 @@ int main(void)
     {
         printf("Player 1 wins!");
     }
-    else(score1 == score2)
+    else if(score1 == score2)
     {
         printf("Tie!");
     }
-    else(score2 > score1);
+    else if(score2 > score1);
     {
         printf("Player 2 wins!")
     }
