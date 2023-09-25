@@ -7,6 +7,8 @@
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
 int compute_score(string word);
+int lowered;
+int total;
 
 int main(void)
 {
@@ -33,14 +35,14 @@ int main(void)
         printf("Player 2 wins!");
     }
 }
-int total;
+
 int compute_score(string word)
 {
-    word = tolower(word);
+    
 
-    for(i=0; word[i]!='\0'; i++)
+    for(i=0; lowered[i]!='\0'; i++)
     {
-        char_arr = (word[i] - 97);
+        char_arr = (lowered[i] - 97);
         char_value = POINTS[char_arr];
         total += char_value;
     }
