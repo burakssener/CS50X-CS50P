@@ -19,15 +19,22 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
-}
 
+    if(score1 > score2)
+    {
+        printf("Winner: Player1")
+    }
+}
+int total;
 int compute_score(string word)
 {
     word = tolower(word)
 
     for(i=0; str[i]!='\0'; i++)
     {
-        str[i]
+        char_arr = (str[i] - 97)
+        char_value = POINTS[char_arr]
+        total += char_value
     }
     // TODO: Compute and return score for string
 }
