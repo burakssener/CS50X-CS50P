@@ -7,8 +7,8 @@
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
 int compute_score(string word);
-int total;
-char lowered[];
+int total, i, input;
+char char_value;
 
 int main(void)
 {
@@ -38,7 +38,8 @@ int main(void)
 
 int compute_score(string word)
 {
-    lowered[]= word;
+    int len = strlen(word);
+    char lowered[len+1];
 
     for(i=0; lowered[i]!='\0'; i++)
     {
