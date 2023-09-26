@@ -47,6 +47,8 @@ int compute_score(string word)
         input = (lowered[i] - 97);
         char_value = POINTS[input];
         total += char_value;
+
     }
+    return total;
     // TODO: Compute and return score for string
 }
