@@ -38,7 +38,7 @@ int main(void)
 
 int compute_score(string word)
 {
-    lowered[]= word;
+    char lowered[strlen(word)]= word;
 
     for(i=0; lowered[i]!='\0'; i++)
     {
