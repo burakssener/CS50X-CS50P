@@ -4,10 +4,10 @@
 #include <string.h>
 
 // Points assigned to each letter of the alphabet
-int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+int points[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
 int compute_score(string word);
-int total, i, input;
+int total = 0, i, input;
 char char_value;
 
 int main(void)
@@ -41,12 +41,12 @@ int compute_score(string word)
     int len = strlen(word);
     char lowered[len+1];
 
-    for(i=0; lowered[i]!='\0'; i++)
+    for(i=0;lowered[i]!='\0'; i++)
     {
         lowered[i] = tolower(lowered[i]);
         input = (lowered[i] - 97);
-        char_value = POINTS[input];
-        total += char_value;
+        char_value = points[input];
+        total = total + char_value;
 
     }
     return total;
