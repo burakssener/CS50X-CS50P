@@ -51,6 +51,7 @@ int compute_score(string word)
         i = i + 1;
 
     }
+    return total;
 
     //int len = strlen(word);
     //char lowered[len+1] = word;  This is not working because I can't assign strings to arrays like that I need to use loops to assign each and every element
@@ -62,7 +63,7 @@ int compute_score(string word)
         total = total + char_value;
 
     } */
-    return total;
+
     // TODO: Compute and return score for string
 }
 
