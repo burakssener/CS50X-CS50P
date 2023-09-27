@@ -44,7 +44,7 @@ int compute_score(string word)
     total = 0;
 
     // while loop that computes score as total character by character
-    while(word[i]!='\0')
+    while(word[i] != '\0')
     {
         word[i] = tolower(word[i]);
         input = (word[i] - 97);  //make all chars lower and get their asci number
