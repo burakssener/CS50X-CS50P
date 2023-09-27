@@ -40,6 +40,7 @@ int compute_score(string word)
 {
 
     i = 0;
+    total = 0;
 
     while(word[i]!='\0')
     {
