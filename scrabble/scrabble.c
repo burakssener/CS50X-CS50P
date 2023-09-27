@@ -38,14 +38,14 @@ int main(void)
 
 int compute_score(string word)
 {
-    int len = strlen(word);
-    char lowered[len+1] = word;
+    //int len = strlen(word);
+    //char lowered[len+1] = word;
     i = 0;
 
-    while(lowered[i]!='\0')
+    while(word[i]!='\0')
     {
-        lowered[i] = tolower(lowered[i]);
-        input = (lowered[i] - 97);
+        word[i] = tolower(word[i]);
+        input = (word[i] - 97);
         char_value = points[input];
         total = total + char_value;
         i = i + 1;
