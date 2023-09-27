@@ -9,6 +9,8 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
+
+    print_bulb(1);
 }
 
 void print_bulb(int bit)
