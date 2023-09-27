@@ -24,7 +24,7 @@ int main(void)
 
     if(score1 > score2)
     {
-        printf("Player 1 wins! \n");
+        printf("Player 1 wins!");
     }
     else if(score1 == score2)
     {
@@ -32,7 +32,7 @@ int main(void)
     }
     else if(score2 > score1)
     {
-        printf("Player 2 wins!  \n");
+        printf("Player 2 wins!");
     }
 }
 
