@@ -41,7 +41,7 @@ int compute_score(string word)
     int len = strlen(word);
     char lowered[len+1];
 
-    for(i=0;lowered[i]!='\0'; i++)
+    for(i=0; lowered[i]!='\0'; i++)
     {
         lowered[i] = tolower(lowered[i]);
         input = (lowered[i] - 97);
