@@ -41,14 +41,28 @@ int compute_score(string word)
     int len = strlen(word);
     char lowered[len+1];
 
-    for(i=0; lowered[i]!='\0'; i++)
+
+    while(lowered[i]!='\0')
+    {
+        lowered[i] = tolower(lowered[i]);
+        input = (lowered[i] - 97);
+        char_value = points[input];
+        total = total + char_value;
+        i = i + 1;
+
+    }
+
+    /* for(i=0; lowered[i]!='\0'; i++)
     {
         lowered[i] = tolower(lowered[i]);
         input = (lowered[i] - 97);
         char_value = points[input];
         total = total + char_value;
 
-    }
+    } */
     return total;
     // TODO: Compute and return score for string
 }
+
+
+
