@@ -10,7 +10,9 @@ int main(void)
 {
     // TODO
 
-    print_bulb(1);
+    string get_str = ("Word: ")
+
+    for(i=0; )
 }
 
 void print_bulb(int bit)
