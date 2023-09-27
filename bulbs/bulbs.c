@@ -10,9 +10,19 @@ int main(void)
 {
     // TODO
 
-    string get_str = ("Word: ")
+    string word = get_string("Word: ");
 
-    for(i=0; )
+    for(i=0; word[i] != '\0' ; i++)
+    {
+        word[i]
+
+
+
+
+        print_bulb(word[i]);
+
+
+    }
 }
 
 void print_bulb(int bit)
