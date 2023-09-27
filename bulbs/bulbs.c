@@ -11,10 +11,30 @@ int main(void)
     // TODO
 
     string word = get_string("Word: ");
+    int binary;
 
     for(i=0; word[i] != '\0' ; i++)
     {
-        word[i]
+
+        int digit = word[i];
+        while(digit != 0)
+        {
+
+            if(digit % 2 != 0)
+            {
+                binary += "0";
+                digit = digit / 2;
+
+            }
+            else if( digit % 2 != 1)
+            {
+
+                binary += "1";
+                digit = digit / 2;
+            }
+
+
+        }
 
 
 
