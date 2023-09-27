@@ -22,15 +22,15 @@ int main(void)
 
     // TODO: Print the winner
 
-    if(score1 > score2)
+    if (score1 > score2)
     {
         printf("Player 1 wins!");
     }
-    else if(score1 == score2)
+    else if (score1 == score2)
     {
         printf("Tie!");
     }
-    else if(score2 > score1)
+    else if (score2 > score1)
     {
         printf("Player 2 wins!");
     }
@@ -44,7 +44,7 @@ int compute_score(string word)
     total = 0;
 
     // while loop that computes score as total character by character
-    while(word[i] != '\0')
+    while (word[i] != '\0')
     {
         word[i] = tolower(word[i]);
         input = (word[i] - 97);  //make all chars lower and get their asci number
