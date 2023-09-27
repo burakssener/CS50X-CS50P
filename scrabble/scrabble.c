@@ -24,7 +24,7 @@ int main(void)
 
     if(score1 > score2)
     {
-        printf("Player 1 wins!");
+        printf("Player 1 wins! \n");
     }
     else if(score1 == score2)
     {
@@ -32,14 +32,13 @@ int main(void)
     }
     else if(score2 > score1)
     {
-        printf("Player 2 wins!");
+        printf("Player 2 wins!  \n");
     }
 }
 
 int compute_score(string word)
 {
-    //int len = strlen(word);
-    //char lowered[len+1] = word;
+
     i = 0;
 
     while(word[i]!='\0')
@@ -52,6 +51,8 @@ int compute_score(string word)
 
     }
 
+    //int len = strlen(word);
+    //char lowered[len+1] = word;  This is not working because I can't assign strings to arrays like that I need to use loops to assign each and every element
     /* for(i=0; lowered[i]!='\0'; i++)
     {
         lowered[i] = tolower(lowered[i]);
