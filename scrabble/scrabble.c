@@ -39,14 +39,16 @@ int main(void)
 int compute_score(string word)
 {
 
+    // assign each value 0 to make function computable more than once
     i = 0;
     total = 0;
 
+    // while loop that computes score as total character by character
     while(word[i]!='\0')
     {
         word[i] = tolower(word[i]);
-        input = (word[i] - 97);
-        char_value = points[input];
+        input = (word[i] - 97);  //make all chars lower and get their asci number
+        char_value = points[input]; //getting the equivalent point
         total = total + char_value;
         i = i + 1;
 
