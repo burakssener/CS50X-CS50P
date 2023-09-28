@@ -5,18 +5,19 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
+void binary_get(string word);
 
 int main(int argc, char *argv[])
 {
 
     string word = get_string("Word: ");
-    int i;
+    binary_get(word);
 
 }
 
-get_binary(string word)
+void binary_get(string word)
 {
-
+    int i;
     for(i=0; word[i] != '\0' ; i++)
     {
         char binary[100];
@@ -36,8 +37,9 @@ get_binary(string word)
                 strcat(binary, "1");
                 digit = digit / 2;
             }
-                return 0;
         }
+
+        for(j=0; j<)
         print_bulb(binary);
 
 
