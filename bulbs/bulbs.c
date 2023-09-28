@@ -43,8 +43,6 @@ void binary_get(string word)
         {
              print_bulb(binary);
 
-             
-
 
         }
 
