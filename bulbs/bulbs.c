@@ -10,7 +10,8 @@ int main(void)
 {
     // TODO
 
-    string word = get_string("Word: "), binary;
+    string word = get_string("Word: ");
+    string binary = "";
     int i;
 
     for(i=0; word[i] != '\0' ; i++)
@@ -22,14 +23,14 @@ int main(void)
 
             if(digit % 2 != 0)
             {
-                binary += "0";
+                strcat(binary, "0");
                 digit = digit / 2;
 
             }
             else if( digit % 2 != 1)
             {
 
-                binary += "1";
+                strcat(binary, "1");
                 digit = digit / 2;
             }
 
