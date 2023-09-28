@@ -8,15 +8,16 @@ void print_bulb(int bit);
 
 int main(int argc, char *argv[])
 {
-    // TODO
 
     string word = get_string("Word: ");
-    char binary[100];
     int i;
+
+    get_binary(string word)
+    {
 
     for(i=0; word[i] != '\0' ; i++)
     {
-
+        char binary[100];
         int digit = word[i];
         while(digit != 0)
         {
@@ -33,15 +34,18 @@ int main(int argc, char *argv[])
                 strcat(binary, "1");
                 digit = digit / 2;
             }
-            return 0; 
+            return binary;
 
 
         }
             print_bulb(word[i]);
 
 
+
     }
 }
+
+
 
 void print_bulb(int bit)
 {
