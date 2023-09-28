@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     // TODO
 
     string word = get_string("Word: ");
-    string binary = "";
+    char binary[100];
     int i;
 
     for(i=0; word[i] != '\0' ; i++)
@@ -33,14 +33,11 @@ int main(int argc, char *argv[])
                 strcat(binary, "1");
                 digit = digit / 2;
             }
+            return 0; 
 
 
         }
-
-
-
-
-        print_bulb(word[i]);
+            print_bulb(word[i]);
 
 
     }
@@ -59,3 +56,24 @@ void print_bulb(int bit)
         printf("\U0001F7E1");
     }
 }
+
+/*for(i=0; word[i] != '\0' ; i++)
+    {
+
+        int digit = word[i];
+        while(digit != 0)
+        {
+
+            if(digit % 2 != 0)
+            {
+                strcat(binary, "0");
+                digit = digit / 2;
+
+            }
+            else if( digit % 2 != 1)
+            {
+
+                strcat(binary, "1");
+                digit = digit / 2;
+            }
+            return 0; /*
