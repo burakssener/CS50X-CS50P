@@ -36,11 +36,13 @@ get_binary(string word)
                 strcat(binary, "1");
                 digit = digit / 2;
             }
-            return binary;
+            
+            print_bulb(binary);
+            return 0;
 
 
         }
-            print_bulb(word[i]);
+
 
 
 
