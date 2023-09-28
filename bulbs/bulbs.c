@@ -39,8 +39,15 @@ void binary_get(string word)
             }
         }
 
-        for(j=0; j<)
-        print_bulb(binary);
+        for(j=0; j<strlen(word); j++)
+        {
+             print_bulb(binary);
+
+             
+
+
+        }
+
 
 
     }
