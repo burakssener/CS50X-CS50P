@@ -11,7 +11,7 @@ int main(void)
     // TODO
 
     string word = get_string("Word: ");
-    int binary;
+    int binary, i;
 
     for(i=0; word[i] != '\0' ; i++)
     {
