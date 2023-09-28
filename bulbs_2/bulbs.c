@@ -13,7 +13,7 @@ int main(void)
     string word = get_string("Word: ");
 
 
-}
+
     int i;
     for(i=0; word[i] != '\0' ; i++)
     {
@@ -23,7 +23,7 @@ int main(void)
 
             if(digit % 2 != 0)
             {
-                print_bulb(0)
+                print_bulb(0);
 
                 digit = digit / 2;
 
@@ -31,14 +31,15 @@ int main(void)
             else if( digit % 2 != 1)
             {
 
-                print_bulb(1)
+                print_bulb(1);
 
                 digit = digit / 2;
             }
         }
 
-
+        printf("\n");
     }
+}
 
 void print_bulb(int bit)
 {
@@ -54,23 +55,3 @@ void print_bulb(int bit)
     }
 }
 
-/*for(i=0; word[i] != '\0' ; i++)
-    {
-
-        int digit = word[i];
-        while(digit != 0)
-        {
-
-            if(digit % 2 != 0)
-            {
-                strcat(binary, "0");
-                digit = digit / 2;
-
-            }
-            else if( digit % 2 != 1)
-            {
-
-                strcat(binary, "1");
-                digit = digit / 2;
-            }
-            return 0; /*
