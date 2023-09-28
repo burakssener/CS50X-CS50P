@@ -12,8 +12,10 @@ int main(int argc, char *argv[])
     string word = get_string("Word: ");
     int i;
 
-    get_binary(string word)
-    {
+}
+
+get_binary(string word)
+{
 
     for(i=0; word[i] != '\0' ; i++)
     {
@@ -43,9 +45,8 @@ int main(int argc, char *argv[])
 
 
     }
+
 }
-
-
 
 void print_bulb(int bit)
 {
