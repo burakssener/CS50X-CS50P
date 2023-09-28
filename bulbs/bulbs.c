@@ -10,8 +10,8 @@ int main(void)
 {
     // TODO
 
-    string word = get_string("Word: ");
-    int binary, i;
+    string word = get_string("Word: "), binary;
+    int i;
 
     for(i=0; word[i] != '\0' ; i++)
     {
