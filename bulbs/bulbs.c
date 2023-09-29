@@ -6,7 +6,7 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 char binary[BITS_IN_BYTE + 1];
-int i;
+int i, j;
 
 int main(void)
 {
@@ -36,7 +36,7 @@ int main(void)
         }
         for(j = BITS_IN_BYTE - 1; j >=0; j-- )
         {
-            binary[]
+            print_bulb(binary[j]);
 
         }
 
