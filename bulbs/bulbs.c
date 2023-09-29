@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 
     string word = get_string("Word: ");
-    string binary_get(string word);
+    string binary = string binary_get(string word);
 
 }
 
@@ -26,22 +26,28 @@ string binary_get(string word)
         while(digit != 0)
         {
 
-            if(digit % 2 != 0)
+            if(digit % 2 == 0)
             {
                 strcat(binary, "0");
                 digit = digit / 2;
 
             }
-            else if( digit % 2 != 1)
+            else if( digit % 2 == 1)
             {
 
                 strcat(binary, "1");
                 digit = digit / 2;
             }
+
+        }
+        for(j=0; j<strlen(word); j++)
+        {
+          print_bulb(binary);
+
+
         }
 
 
-    return binary;
 
 
     }
