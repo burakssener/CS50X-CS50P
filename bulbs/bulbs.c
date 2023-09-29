@@ -6,21 +6,22 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 void binary_get(string word);
+char binary[8];
 
 int main(int argc, char *argv[])
 {
 
     string word = get_string("Word: ");
-    binary_get(word);
+    int x = binary_get(word);
+    printf("Binary code is: ", x);
 
 }
 
-void binary_get(string word)
+binary_get(string word)
 {
     int i;
     for(i=0; word[i] != '\0' ; i++)
     {
-        char binary[100];
         int digit = word[i];
         while(digit != 0)
         {
@@ -39,13 +40,8 @@ void binary_get(string word)
             }
         }
 
-        for(j=0; j<strlen(word); j++)
-        {
-             print_bulb(binary);
 
-
-        }
-
+    return binary;
 
 
     }
