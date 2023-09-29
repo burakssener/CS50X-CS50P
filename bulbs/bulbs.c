@@ -16,7 +16,7 @@ int main(void)
  for(i=0; i<strlen(word); i++)
  { // while loop inside for loop to get binary code of characters
     int digit = word[i];
-    binary = ""
+    binary = "";
         while(digit != 0)
         {
 
@@ -30,12 +30,12 @@ int main(void)
             else if( digit % 2 == 1)
             {
 
-                strcat(binary , "1")
+                strcat(binary , "1");
 
                 digit = digit / 2;
             }
         }
-        printf(binary)
+        printf("%s", binary);
 
 
 
