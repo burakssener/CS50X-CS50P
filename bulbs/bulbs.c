@@ -16,7 +16,7 @@ int main(void)
  for(i=0; i<strlen(word); i++)
  { // while loop inside for loop to get binary code of characters
     int digit = word[i];
-    for(digit != 0)
+    for(c = digit != 0)
         {
 
         if(digit % 2 == 0)
