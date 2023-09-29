@@ -34,7 +34,11 @@ int main(void)
                 digit = digit / 2;
             }
         }
-        printf("%s", binary);
+        for(j = BITS_IN_BYTE - 1; j >=0; j-- )
+        {
+            binary[]
+
+        }
 
 
 
