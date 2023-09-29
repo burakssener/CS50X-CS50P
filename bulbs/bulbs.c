@@ -6,7 +6,7 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 char binary[BITS_IN_BYTE + 1]= {0};
-int i, j, c;
+int i, j, c, b;
 
 int main(void)
 {
@@ -29,6 +29,11 @@ int main(void)
 
         }
     printf("\n");
+
+    for(b = 8; b > 0; b--)
+    {
+        binary[b] = 0;
+    }
         }
 
 
