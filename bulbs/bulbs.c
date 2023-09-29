@@ -5,7 +5,7 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-int binary[BITS_IN_BYTE] = {0};
+char binary[BITS_IN_BYTE + 1] = {0};
 int i, j;
 
 int main(void)
@@ -13,21 +13,40 @@ int main(void)
     //get input from user
     string word = get_string("Word: ");
     // for loop to get strings characters
-    for(i=0; i<strlen(word); i++)
-    {
-        // while loop inside for loop to get binary code of characters
-        int digit = word[i];
-        for(j = BITS_IN_BYTE - 1; j >= 0; j--)
+ for(i=0; i<strlen(word); i++)
+ { // while loop inside for loop to get binary code of characters
+    int digit = word[i];
+    for(c = 7; digit != 0)
         {
-            binary[j] = digit % 2;
+
+        if(digit % 2 == 0)
+            {
+            strcat(&binary[7] , "0");
+
             digit = digit / 2;
+
+            }
+            else if( digit % 2 == 1)
+            {
+
+            strcat(&binary[7] , "1");
+
+            digit = digit / 2;
+            }
         }
-        for(j = 0; j < BITS_IN_BYTE; j++)
+    for(j = 7; j >= 0; j--)
         {
-            print_bulb(binary[j]);
+        print_bulb(binary[j]);
+
         }
-    }
-    // printing these binary codes into display screen
+
+
+
+
+
+ }
+
+ // printing these binary codes into display screen
 }
 
 void print_bulb(int bit)
