@@ -21,7 +21,7 @@ int main(void)
 
             if(digit % 2 == 0)
             {
-                strcat(binary , "0");
+                strcat(&binary[7] , "0");
 
                 digit = digit / 2;
 
@@ -29,7 +29,7 @@ int main(void)
             else if( digit % 2 == 1)
             {
 
-                strcat(binary , "1");
+                strcat(&binary[7] , "1");
 
                 digit = digit / 2;
             }
