@@ -43,15 +43,15 @@ int main(void)
 
 void print_bulb(int bit)
 {
+    string dark = "\U000026AB";
+    string ligt = "\U0001F7E1";
     if (bit == 0)
     {
         // Dark emoji
-        dark = "\U000026AB"
         printf("%-1s", dark);
     }
     else if (bit == 1)
     {
-        ligt = "\U0001F7E1"
         // Light emoji
         printf("%-1s", light);
     }
