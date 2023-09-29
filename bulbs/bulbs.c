@@ -10,14 +10,14 @@ int main(void)
 {
  // for loop to get strings characters
  for(i=0; i<strlen(word); i++)
- {
-    char digit = word[i];
+ { // while loop inside for loop to get binary code of characters
+    int digit = word[i];
         while(digit != 0)
         {
 
             if(digit % 2 == 0)
             {
-                print_bulb(0);
+                strcat(binary , "0");
 
                 digit = digit / 2;
 
@@ -36,7 +36,7 @@ int main(void)
 
 
  }
- // for loop inside for loop to get binary code of characters
+
  // printing these binary codes into display screen
 }
 
