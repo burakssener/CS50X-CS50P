@@ -5,19 +5,19 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-void binary_get(string word);
+string binary_get(string word);
 string binary[8];
 
 int main(int argc, char *argv[])
 {
 
     string word = get_string("Word: ");
-    string x = binary_get(word);
+    string binary_get(string word);
     printf("Binary code is: ", x);
 
 }
 
-binary_get(string word)
+string binary_get(string word)
 {
     int i;
     for(i=0; word[i] != '\0' ; i++)
@@ -41,7 +41,7 @@ binary_get(string word)
         }
 
 
-    return binary;
+    return(binary);
 
 
     }
