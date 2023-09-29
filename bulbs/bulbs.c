@@ -34,7 +34,7 @@ int main(void)
                 digit = digit / 2;
             }
         }
-        for(j = 7; j >=0; j--)
+        for(j = 7; j >= 0; j--)
         {
             print_bulb(binary[j]);
 
