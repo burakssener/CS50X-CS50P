@@ -41,7 +41,7 @@ string binary_get(string word)
         }
 
 
-    return(binary);
+    return binary;
 
 
     }
