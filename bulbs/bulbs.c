@@ -5,7 +5,7 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-char binary[BITS_IN_BYTE + 1];
+char binary[BITS_IN_BYTE + 1] = {0};
 int i, j;
 
 int main(void)
