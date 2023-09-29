@@ -13,7 +13,7 @@ int main(void)
     //get input from user
     string word = get_string("Word: ");
     // for loop to get strings characters
- for(i=0; i<strlen(word); i++)
+ for(i = 0; i < strlen(word); i++)
  { // while loop inside for loop to get binary code of characters
     int digit = word[i];
     for(c = 7; digit != 0; c--)
