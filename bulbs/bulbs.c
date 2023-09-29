@@ -25,7 +25,7 @@ int main(void)
             else if( digit % 2 == 1)
             {
 
-                print_bulb(1);
+                strcat(binary , "1")
 
                 digit = digit / 2;
             }
