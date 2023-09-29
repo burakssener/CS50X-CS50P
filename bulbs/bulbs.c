@@ -16,27 +16,27 @@ int main(void)
  for(i=0; i<strlen(word); i++)
  { // while loop inside for loop to get binary code of characters
     int digit = word[i];
-        while(digit != 0)
+    while(digit != 0)
         {
 
-            if(digit % 2 == 0)
+        if(digit % 2 == 0)
             {
-                strcat(&binary[7] , "0");
+            strcat(&binary[7] , "0");
 
-                digit = digit / 2;
+            digit = digit / 2;
 
             }
             else if( digit % 2 == 1)
             {
 
-                strcat(&binary[7] , "1");
+            strcat(&binary[7] , "1");
 
-                digit = digit / 2;
+            digit = digit / 2;
             }
         }
-        for(j = 7; j >= 0; j--)
+    for(j = 7; j >= 0; j--)
         {
-            print_bulb(binary[j]);
+        print_bulb(binary[j]);
 
         }
 
