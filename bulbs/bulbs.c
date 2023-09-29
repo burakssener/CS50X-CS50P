@@ -11,7 +11,26 @@ int main(void)
  // for loop to get strings characters
  for(i=0; i<strlen(word); i++)
  {
-    
+    char digit = word[i];
+        while(digit != 0)
+        {
+
+            if(digit % 2 == 0)
+            {
+                print_bulb(0);
+
+                digit = digit / 2;
+
+            }
+            else if( digit % 2 == 1)
+            {
+
+                print_bulb(1);
+
+                digit = digit / 2;
+            }
+        }
+
 
 
 

@@ -17,26 +17,7 @@ int main(void)
     int i;
     for(i=0; word[i] != '\0' ; i++)
     {
-        int digit = word[i];
-        while(digit != 0)
-        {
-
-            if(digit % 2 == 0)
-            {
-                print_bulb(0);
-
-                digit = digit / 2;
-
-            }
-            else if( digit % 2 == 1)
-            {
-
-                print_bulb(1);
-
-                digit = digit / 2;
-            }
-        }
-
+        
         printf("\n");
     }
 }
