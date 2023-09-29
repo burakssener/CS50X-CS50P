@@ -15,7 +15,6 @@ int main(void)
     // for loop to get strings characters
  for(i=0; i<strlen(word); i++)
  { // while loop inside for loop to get binary code of characters
-    binary[7]= {0};
     int digit = word[i];
     for(c = 7; digit != 0; c--)
         {
@@ -24,13 +23,14 @@ int main(void)
             digit = digit / 2;
 
             }
-        }
     for(j = 0; j < 8; j++)
         {
         print_bulb(binary[j]);
 
         }
     printf("\n");
+        }
+
 
 
 
