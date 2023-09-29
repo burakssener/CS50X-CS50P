@@ -6,9 +6,12 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 string binary;
+int i;
 
 int main(void)
 {
+    //get input from user
+    string word = get_string("Word: ");
  // for loop to get strings characters
  for(i=0; i<strlen(word); i++)
  { // while loop inside for loop to get binary code of characters
@@ -32,6 +35,7 @@ int main(void)
                 digit = digit / 2;
             }
         }
+        printf(binary)
 
 
 
