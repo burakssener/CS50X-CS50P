@@ -6,13 +6,13 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 void binary_get(string word);
-char binary[8];
+string binary[8];
 
 int main(int argc, char *argv[])
 {
 
     string word = get_string("Word: ");
-    int x = binary_get(word);
+    string x = binary_get(word);
     printf("Binary code is: ", x);
 
 }
