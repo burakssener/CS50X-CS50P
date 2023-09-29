@@ -21,14 +21,14 @@ int main(void)
         while(digit != 0)
         {
 
-            if(digit % 2 != 0)
+            if(digit % 2 == 0)
             {
                 print_bulb(0);
 
                 digit = digit / 2;
 
             }
-            else if( digit % 2 != 1)
+            else if( digit % 2 == 1)
             {
 
                 print_bulb(1);
