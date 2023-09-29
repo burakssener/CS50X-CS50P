@@ -6,7 +6,7 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 string binary_get(string word);
-string binary[8];
+string binary;
 
 int main(int argc, char *argv[])
 {
@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
 
 string binary_get(string word)
 {
+    binary = "";
     int i;
     for(i=0; word[i] != '\0' ; i++)
     {
