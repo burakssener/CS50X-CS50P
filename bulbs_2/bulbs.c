@@ -48,7 +48,7 @@ void print_bulb(int bit)
     if (bit == 0)
     {
         // Dark emoji
-        printf("%-5s", dark);
+        printf("%-1s", dark);
     }
     else if (bit == 1)
     {
