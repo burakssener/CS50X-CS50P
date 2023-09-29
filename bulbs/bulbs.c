@@ -16,14 +16,14 @@ int main(void)
     for(i = 0; i < strlen(word); i++)
     { // while loop inside for loop to get binary code of characters
         int digit = word[i];
-        for(c = 7; digit != 0; c--)
+        for (c = 7; digit != 0; c--)
             {
                 binary[c] = digit % 2 ;
 
                 digit = digit / 2;
 
             }
-        for(j = 0; j < 8; j++)
+        for (j = 0; j < 8; j++)
             {
             print_bulb(binary[j]);
 
