@@ -18,10 +18,11 @@ int main(int argc, char *argv[])
 
 string binary_get(string word)
 {
-    binary = "";
+
     int i;
     for(i=0; word[i] != '\0' ; i++)
     {
+        binary = "";
         int digit = word[i];
         while(digit != 0)
         {
@@ -40,7 +41,7 @@ string binary_get(string word)
             }
 
         }
-        for(j=0; j<strlen(word); j++)
+        for(j=0; j<strlen(binary); j++)
         {
           print_bulb(binary);
 
