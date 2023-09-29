@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
 
     string word = get_string("Word: ");
     string binary_get(string word);
-    printf("Binary code is: ", x);
 
 }
 
