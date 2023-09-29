@@ -9,7 +9,14 @@ void print_bulb(int bit);
 int main(void)
 {
  // for loop to get strings characters
- for(i=0; i<strlen(word))
+ for(i=0; i<strlen(word); i++)
+ {
+    
+
+
+
+
+ }
  // for loop inside for loop to get binary code of characters
  // printing these binary codes into display screen
 }
