@@ -4,16 +4,28 @@ How do you know?: for random10000.txt real    0m0,260s
 user    0m0,162s
 sys     0m0,036s
 
+For sorted5000.txt real    0m0,021s
+user    0m0,000s
+sys     0m0,018s
+
 sort2 uses: merge sort
 
 How do you know?: for random10000.txt real    0m0,061s
 user    0m0,007s
 sys     0m0,032s
 
-So it is the fastest random sorting it means this is merge sort algorithm.
+For sorted5000.txt real    0m0,022s
+user    0m0,003s
+sys     0m0,016s
+
+So it is the fastest for random10000 it means this is merge sort algorithm.
 
 sort3 uses: TODO
 
 How do you know?: for random10000.txt real    0m0,106s
 user    0m0,070s
 sys     0m0,033s
+
+For sorted5000.txt real    0m0,066s
+user    0m0,019s
+sys     0m0,025s
