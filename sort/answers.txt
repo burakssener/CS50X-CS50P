@@ -10,7 +10,7 @@ How do you know?: for random10000.txt real    0m0,061s
 user    0m0,007s
 sys     0m0,032s
 
-So it is the fastest it means this is merge sort algorithm.
+So it is the fastest random sorting it means this is merge sort algorithm.
 
 sort3 uses: TODO
 
