@@ -1,4 +1,4 @@
-sort1 uses: TODO
+sort1 uses: bubble sort
 
 How do you know?: for random10000.txt real    0m0,260s
 user    0m0,162s
@@ -12,6 +12,8 @@ For reversed5000.txt real    0m0,071s
 user    0m0,045s
 sys     0m0,017s
 
+for reversed sorting it took longer so it is bubble sorting
+
 sort2 uses: merge sort
 
 How do you know?: for random10000.txt real    0m0,061s
@@ -20,7 +22,7 @@ sys     0m0,032s
 
 So it is the fastest for random10000 it means this is merge sort algorithm.
 
-sort3 uses: TODO
+sort3 uses: Selection sort
 
 How do you know?: for random10000.txt real    0m0,106s
 user    0m0,070s
@@ -33,3 +35,5 @@ sys     0m0,025s
 For reversed5000.txt real    0m0,038s
 user    0m0,018s
 sys     0m0,019s
+
+it took longer to sort sorted list because bubble took n but selection took n square and it is selection sort
