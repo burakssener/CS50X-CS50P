@@ -132,9 +132,9 @@ bool vote(int voter, int rank, string name)
 
     if (name == Alice)
     {
-        for(j=0; j<=2; j++){
+        while(rank<=2){
 
-        voter[i][j] =
+        voter[i][j] = 
 
         }
 
