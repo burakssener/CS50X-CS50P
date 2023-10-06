@@ -128,19 +128,13 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
 
+        for(rank=0; rank<candidate_count; i++){
 
 
-
-
-
-
-        for(i=0; i<candidate_count; i++){
-
-            
-            if (strcompare((candidates[voter].name),argv[i]) == 1)
+            if (strcompare((candidates[voter].name),argv[rank + 1]) == 1)
             {
 
-                preferences[voter][i] = argv[i]
+                preferences[voter][rank] = argv[rank]
 
 
             }
