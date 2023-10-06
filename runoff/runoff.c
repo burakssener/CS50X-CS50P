@@ -127,8 +127,11 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    if can
-    preferences[i][j]
+    if (strcompare((candidates[voter].name),argv[a]) == 1)
+    preferences[i][j] = argv[]
+
+
+
 
 
 
