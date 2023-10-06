@@ -127,8 +127,6 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    if (strcompare((candidates[voter].name),argv[a]) == 1)
-    preferences[i][j] = argv[]
 
 
 
@@ -136,12 +134,18 @@ bool vote(int voter, int rank, string name)
 
 
 
-    for(i=0; i < voter_count; i++)
-    {
+        for(i=0; i<candidate_count; i++){
 
-        for(j=0; j<candidate_count; j++){
+            
+            if (strcompare((candidates[voter].name),argv[i]) == 1)
+            {
 
-            preferences[i][j] = argv[]
+                preferences[voter][i] = argv[i]
+
+
+            }
+
+
 
         }
 
