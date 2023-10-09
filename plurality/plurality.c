@@ -67,7 +67,14 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // for loops that compare name and candidates
-    // when the correct candidate found add 1 to their vote
+    for(i = 0; i < candidate_count; i++ ){
+        if (candidates[i].name == name){
+            return true;
+
+        }
+
+    }
+    // when the correct candidate found return true and add 1 to their vote
     // if it cant be found return false
     return false;
 }
