@@ -141,9 +141,7 @@ bool vote(int voter, int rank, string name)
             a = a + 1
 
 
-
-
-            }
+ }
 
 
 
