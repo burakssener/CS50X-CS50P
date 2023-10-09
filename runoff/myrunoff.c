@@ -146,8 +146,8 @@ void tabulate(void)
 
     // a loop that looks preferences and count al off preferences[voters]
     // if candidates[a].eliminated for rank of the voter look next one
-    // if the candidate doesnt eliminated return the value
-    // candidates[voters]
+    // if the candidate doesnt eliminated return the value and use break function
+    // update candidates[voters] for the returned value
     preferences[i][0]
     return;
 }
