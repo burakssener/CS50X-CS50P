@@ -70,7 +70,9 @@ bool vote(string name)
     for(int i = 0; i < candidate_count; i++ ){
 
         if (candidates[i].name == name){
+
             candidates[i].votes += 1;
+            
             return true;
 
         }
@@ -78,7 +80,7 @@ bool vote(string name)
     }
     // when the correct candidate found return true and add 1 to their vote
     // if it cant be found return false
-    
+    return false;
 }
 
 // Print the winner (or winners) of the election
