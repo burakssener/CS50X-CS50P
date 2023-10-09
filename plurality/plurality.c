@@ -68,7 +68,9 @@ bool vote(string name)
 {
     // for loops that compare name and candidates
     for(i = 0; i < candidate_count; i++ ){
+
         if (candidates[i].name == name){
+            candidates[i].votes += 1;
             return true;
 
         }
