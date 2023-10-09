@@ -133,7 +133,7 @@ bool vote(int voter, int rank, string name)
 
 
 		for (a = 0; a < candidate_count; a++) {
-			if ((strcmp((name), candidates[i]) == 0))
+			if ((strcmp((name), candidates[a]) == 0))
 			{
 
 				preferences[voter][rank] = argv[rank]
