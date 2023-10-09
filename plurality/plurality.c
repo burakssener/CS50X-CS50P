@@ -67,7 +67,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // for loops that compare name and candidates
-    for(i = 0; i < candidate_count; i++ ){
+    for(int i = 0; i < candidate_count; i++ ){
 
         if (candidates[i].name == name){
             candidates[i].votes += 1;
@@ -87,7 +87,7 @@ void print_winner(void)
     // TODO
     string winner;
     int winner_vote = 0;
-    for(a = 0; a < candidate_count; a++ )
+    for(int a = 0; a < candidate_count; a++ )
 
     if (candidates[a].votes > winner_vote)
     {
