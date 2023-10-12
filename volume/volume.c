@@ -37,6 +37,8 @@ int main(int argc, char *argv[])
 
     //read the header from input file
     //write the header to the output file
+    // multiply sample value
+    //write new sample
     //
 
     // TODO: Read samples from input file and write updated data to output file
