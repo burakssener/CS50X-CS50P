@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
 
     //read the header from input file
+    readed_file = fopen( "argv[1]" , "r" )
     //write the header to the output file
     // multiply sample value
     //write new sample
