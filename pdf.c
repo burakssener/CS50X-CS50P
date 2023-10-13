@@ -27,6 +27,6 @@ int main(int argc, string argv[])
 
     }
 
-    uint8_t = //unsigned integer 
+    uint8_t = //unsigned integer 8 bits and it it is its own type
 
 }
