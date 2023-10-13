@@ -8,8 +8,23 @@ int main(int argc, string argv[])
 
 
 
+    if( argc != 2)
+    {
+        printf("improper usage!!");
+        return 1;
+    }
 
+    //open file
 
+    char *filename = argv[1]
+    FILE *file = open(filename, "r")
 
+    if (file == NULL)
+    {
+
+        printf("No Such a file ")
+        return 1;
+        
+    }
 
 }
