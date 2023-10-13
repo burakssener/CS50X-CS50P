@@ -24,7 +24,9 @@ int main(int argc, string argv[])
 
         printf("No Such a file ")
         return 1;
-        
+
     }
+
+    uint8_t = //unsigned integer 
 
 }
