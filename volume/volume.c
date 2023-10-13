@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     uint8_t header[HEADER_SIZE];
 
     fread(header, HEADER_SIZE, 1 , input);
-    fread(header, HEADER_SIZE, 1 , output);
+    fwrite(header, HEADER_SIZE, 1 , output);
     // multiply sample value
     //write new sample
     //
