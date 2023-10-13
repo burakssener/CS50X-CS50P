@@ -4,7 +4,7 @@
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     average = (image[height][width].rgbtRed + image[height][width].rgbtGreen + image[height][width].rgbtBlue) / 3;
-    for(height = 0, )
+    for(a = 0; a < height)
     image[height][width].rgbtRed = average;
     image[height][width].rgbtGreen = average;
     image[height][width].rgbtBlue = average;
