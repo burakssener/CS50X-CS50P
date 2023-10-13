@@ -36,8 +36,11 @@ int main(int argc, string argv[])
     fread(buffer, 1, 4, file;)
 
 
-    
+    for(i=0; i<4; i++)
+    {
 
+        printf("%d", buffer[i]);
+    }
 
 
 
