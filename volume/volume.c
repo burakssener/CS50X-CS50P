@@ -37,16 +37,14 @@ int main(int argc, char *argv[])
 
     //read the header from input file
     //write the header to the output file
+    uint8_t header[HEADER_SIZE];
+
+    fread(header, HEADER_SIZE, 1 , input);
+    fread(header, HEADER_SIZE, 1 , output);
     // multiply sample value
     //write new sample
     //
-    uint8_t header[44];
-
-    fread(header, HEADER_SIZE, 1 , input);
-    fread(header, HEADER_SIZE, ,1 , output);
-
-    int16_t buffer;
-
+  
 
 
     // TODO: Read samples from input file and write updated data to output file
