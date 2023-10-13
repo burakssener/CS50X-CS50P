@@ -41,6 +41,13 @@ int main(int argc, char *argv[])
     // multiply sample value
     //write new sample
     //
+    uint8_t header[44];
+
+    fread(buffer, 1, 44, file;)
+
+
+
+
 
     // TODO: Read samples from input file and write updated data to output file
 
