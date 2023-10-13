@@ -36,16 +36,15 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
 
     //read the header from input file
-    FILE *input = fopen( "argv[1]" , "r" )
     //write the header to the output file
     // multiply sample value
     //write new sample
     //
-    uint8_t header[44];
+    uint8_t buffer[44];
 
-    fread(buffer, 1, 44, file;)
+    fread(header, 1, 44, input;)
 
-
+    int16_t buffer;
 
 
 
