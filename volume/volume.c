@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     //write new sample
     //
 
-  uint16_t buffer;
+  int16_t buffer;
 
   while(fread(&buffer, sizeof(int16_t), 1, input))
   {
