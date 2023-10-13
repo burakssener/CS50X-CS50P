@@ -40,9 +40,10 @@ int main(int argc, char *argv[])
     // multiply sample value
     //write new sample
     //
-    uint8_t buffer[44];
+    uint8_t header[44];
 
-    fread(header, 1, 44, input;)
+    fread(header, HEADER_SIZE, 1 , input);
+    fread(header, HEADER_SIZE, ,1 , output);
 
     int16_t buffer;
 
