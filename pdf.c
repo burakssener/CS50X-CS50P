@@ -31,5 +31,16 @@ int main(int argc, string argv[])
     //unsigned integer 8 bits(single byte) and it it is its own type
 
 
-    uint8_t =
-}
+    uint8_t buffer[4];
+
+    fread(buffer, 1, 4, file;)
+
+
+    
+
+
+
+
+
+
+    }
