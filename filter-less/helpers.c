@@ -70,6 +70,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         if(width % 2 == 0)
         {
+            for (b = 0; b < width; b = b + 1)
+        {
+            tmp = image[a][b]
+            image[a][b] = image[height-1-a][width-1-b]
+            image[height-1-a][width-1-b] = tmp
 
 
 
@@ -83,7 +88,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (b = 0; b < width; b = b + 1)
         {
             tmp = image[a][b]
-            image[height-1-a][width-1-b] = image[a]
+            image[a][b] = image[height-1-a][width-1-b]
+            image[height-1-a][width-1-b] = tmp
         }
 
     }
