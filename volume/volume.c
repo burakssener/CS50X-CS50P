@@ -44,7 +44,10 @@ int main(int argc, char *argv[])
     // multiply sample value
     //write new sample
     //
-  
+
+  uint16_t buffer;
+
+  while(fread(&buffer, size of(int16_t), 1, input))
 
 
     // TODO: Read samples from input file and write updated data to output file
