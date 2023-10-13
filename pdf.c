@@ -28,6 +28,8 @@ int main(int argc, string argv[])
 
     }
 
-    uint8_t = //unsigned integer 8 bits(single byte) and it it is its own type
+    //unsigned integer 8 bits(single byte) and it it is its own type
 
+
+    uint8_t =
 }
