@@ -47,10 +47,10 @@ int main(int argc, char *argv[])
 
   uint16_t buffer;
 
-  while(fread(&buffer, size of(int16_t), 1, input))
+  while(fread(&buffer, sizeof(int16_t), 1, input))
   {
-    buffer *= factor
-    fwrite(&buffer, sizeof(uint16_t), 1, output)
+    buffer *= factor;
+    fwrite(&buffer, sizeof(uint16_t), 1, output);
   }
 
 
