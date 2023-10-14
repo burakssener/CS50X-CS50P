@@ -105,7 +105,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE image2[height][width];
-
+    int avgblue, avgred, avggreen;
 
     for(a = 0; a < height; a++)
     {
