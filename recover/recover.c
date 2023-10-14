@@ -25,3 +25,5 @@ while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
 
 
 }
+
+fwrite()
