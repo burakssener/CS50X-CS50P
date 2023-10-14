@@ -127,6 +127,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
 
             }
+            else if((a=0 && b=0) || (a=height - 1 && b=width -  1) || (a=0 && b=width - 1) || (a=height - 1 && b=0) )
+            {
+
+
+
+
+
+
+
+            }
 
             image2[a][b].rgbtBlue = round(avgblue / division_num);
             image2[a][b].rgbtGreen = round(avggreen / division_num);
