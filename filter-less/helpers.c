@@ -105,15 +105,33 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     //find all pixels values in image and copy to image2
-    image2[height][width];
-    // for the inside squares there is 9 different bit to calculate average
+    RGBTRIPLE image2[height][width];
+    int average;
+
     for(a = 0; a < height; a++)
     {
         for(b = 0; b < width; b++)
+        {
+            if((a=0 && b=0) || (a=height - 1 && b=width -  1) || (a=0 && b=width - 1) || (a=height - 1 && b=0) )
+            // for the corner squares there is 4 different bit to calculate average
+            {
+                image[a][b] + image
+
+            }
+            else if(a=0 || a = height - 1 || b = 0 ||b = width - 1)
+            // for the edge squares there is 6 different bit to calculate average
+            {
+
+            }
+            else
+            // for the inside squares there is 9 different bit to calculate average
+            {
+
+
+            }
+        }
 
     }
-    // for the edge squares there is 6 different bit to calculate average
-    // for the corner squares there is 4 different bit to calculate average
 
     // copy image2 to image1
     return;
