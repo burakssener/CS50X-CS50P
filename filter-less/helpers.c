@@ -105,14 +105,16 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE image2[height][width];
-    int average;
+    int averagered, averagegreen, averageblue;
 
     for(a = 0; a < height; a++)
     {
         for(b = 0; b < width; b++)
         {
+            averagered = round((image[a - 1][b - 1].rgbtRed + image[a - 1][b].rgbtRed + image[a - 1][b + 1].rgbtRed  image[a][b - 1].rgbtRed  + image[a][b].rgbtRed  + image[a][b + 1].rgbtRed  + image[a + 1][b - 1].rgbtRed  image[a + 1][b].rgbtRed  + image[a + 1][b + 1].rgbtRed) / 9)
+            averagegreen = round((image[a - 1][b - 1].rgbtGreen + image[a - 1][b].rgbtGreen + image[a - 1][b + 1].rgbtGreen image[a][b - 1].rgbtGreen  + image[a][b].rgbtGreen  + image[a][b + 1].rgbtGreen  + image[a + 1][b - 1].rgbtGreen  image[a + 1][b].rgbtGreen + image[a + 1][b + 1].rgbtGreen) / 9)
+            averageblue = round((image[a - 1][b - 1].rgbtBlue + image[a - 1][b].rgbtBlue + image[a - 1][b + 1].rgbtBlue  image[a][b - 1].rgbtBlue  + image[a][b].rgbtBlue  + image[a][b + 1].rgbtBlue  + image[a + 1][b - 1].rgbtBlue  image[a + 1][b].rgbtBlue  + image[a + 1][b + 1].rgbtBlue) / 9)
             
-
         }
     }
 
