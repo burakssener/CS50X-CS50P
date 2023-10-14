@@ -23,9 +23,8 @@ if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&  ((buffer[3] 
     {
         char *filename = malloc(10);
         sprintf(filename, "%03i.jpg", jpegcount);
-        FILE *img = fopen(filename, "w");
-        output_ file = fopen(filename, "w");
-        fwrite(buffer, 1, BLOCK_SIZE, output_file);
+        FILE *img = fopen(output_file, "w");
+        fwrite(buffer, 1, BLOCK_SIZE, img);
         jpegcount = jpegcount + 1;
 
     }
