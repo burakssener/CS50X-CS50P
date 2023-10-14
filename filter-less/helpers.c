@@ -105,18 +105,27 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE image2[height][width];
+    int avgblue, avgred, avggreen, h, w, i, j, division_num;
 
     for(h = 0; h < height; h++)
     {
         for(w = 0; w < width; w++)
         {
+            avgblue = 0, avgred = 0, avggreen = 0, division_num = 0;
             for(i = -1; i < 2; i++)
             {
                 for(j = -1; j < 2; j++)
                 {
-                    
+                        avgblue += image[a + i][b + j].rgbtBlue;
+                        avggreen += image[a + i][b + j].rgbtGreen;
+                        avgred += image[a + i][b + j].rgbtRed;
+                        division_num += 1;
+
                 }
             }
+            image2[a][b].rgbtBlue = round(avgblue / division_num);
+            image2[a][b].rgbtGreen = round(avggreen / division_num);
+            image2[a][b].rgbtRed = round(avgred / division_num);
 
         }
 
