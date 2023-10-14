@@ -20,10 +20,10 @@ if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&  ((buffer[3] 
 {
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
-        char *filename
+        char *filename = malloc(10);
         sprintf(filename, "%03i.jpg", jpegcount);
         FILE *img = fopen(filename, "w");
-        fwrite(buffer, i, BLOCK_SIZE, raw_file);
+        fwrite(buffer, 1, BLOCK_SIZE, raw_file);
         jpegcount = jpegcount + 1;
 
     }
@@ -35,11 +35,3 @@ if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&  ((buffer[3] 
 
 
 }
-
-
-
-
-
-
-
-fwrite()
