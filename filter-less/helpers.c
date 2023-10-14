@@ -113,7 +113,24 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
         for(b = 0; b < width; b++)
         {
-            if(a > 0 && a < height - 1 && b > 0  && b < width - 1)
+
+            if((a=0 && b=0) || (a=height - 1 && b=width -  1) || (a=0 && b=width - 1) || (a=height - 1 && b=0) )
+            {
+
+
+
+            }
+            else if(a=0 || a = height - 1 || b = 0 ||b = width - 1)
+            {
+
+
+
+
+            }
+
+
+
+            else if(a > 0 && a < height - 1 && b > 0  && b < width - 1)
             {
                 for(i = -1; i < 2; i++)
                 {
@@ -125,16 +142,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         division_num += 1;
                     }
                 }
-
-            }
-            else if((a=0 && b=0) || (a=height - 1 && b=width -  1) || (a=0 && b=width - 1) || (a=height - 1 && b=0) )
-            {
-
-
-
-
-
-
 
             }
 
