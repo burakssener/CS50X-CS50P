@@ -105,40 +105,46 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE image2[height][width];
-    int avgblue = 0, avgred = 0, avggreen = 0, a, b, i, division_num;
 
-    for(a = 0; a < height; a++)
+
+    for(int a = 0; a < height; a++)
     {
+        int avgblue = 0, avgred = 0, avggreen = 0, b, i, j, division_num = 0;
+
         for(b = 0; b < width; b++)
         {
-            if(a > 0 && a < height - 1 %% b > 0  && b < width - 1)
+            if(a > 0 && a < height - 1 && b > 0  && b < width - 1)
             {
                 for(i = -1; i < 2; i++)
                 {
-                    avgblue += image[a + i][b].rgbtBlue
-                    avggreen += image[a + i][b].rgbtGreen
-                    avgred += image[a + i][b].rgbtRed
+                    for(j = -1; j < 2; j++)
+                    {
+                        avgblue += image[a + i][b + j].rgbtBlue;
+                        avggreen += image[a + i][b + j].rgbtGreen;
+                        avgred += image[a + i][b + j].rgbtRed;
+                        division_num += 1;
+                    }
                 }
 
-                for(i = -1; i < 2; i++)
-                {
-                    avgblue += image[a][b + 1].rgbtBlue
-                    avggreen += image[a][b + 1].rgbtGreen
-                    avgred += image[a][b + 1].rgbtRed
-                }
             }
 
             image2[a][b].rgbtBlue = round(avgblue / division_num);
             image2[a][b].rgbtGreen = round(avggreen / division_num);
-            image2[a][b].rgbtRed = round(avgred / division_num),
+            image2[a][b].rgbtRed = round(avgred / division_num);
 
 
         }
     }
 
+     for(int a = 0; a < height; a++)
+    {
 
+        for(int b = 0; b < width; b++)
+        {
+            image[a][b] = image[height][width];
+        }
 
-}
+    }
 
 
     return;
