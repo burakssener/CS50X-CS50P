@@ -12,6 +12,8 @@ int main(int argc, char *argv[])
 FILE *raw_file = fopen(argv[1], "r");
 // look for begginning of a jpeg
 uint8_t buffer[BLOCK_SIZE];
+fread(buffer, i, BLOCK_SIZE, raw_file)
+
 if (buffer[0] == "0xff" && buffer[1] == "0xd8" && buffer[2] == "0xff" &&  ((buffer[3] & "0xf0") == "0xe0"))
 {
     while (fread(buffer, i, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
