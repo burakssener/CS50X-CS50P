@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 
 //open memory card
 FILE *raw_file = fopen(argv[1], "r");
+FILE *output_file = NULL;
 // look for begginning of a jpeg
 uint8_t buffer[BLOCK_SIZE];
 int jpegcount = 0;
