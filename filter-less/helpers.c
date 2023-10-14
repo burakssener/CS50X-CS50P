@@ -104,8 +104,26 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    //find all pixels values in image and copy to image2
     RGBTRIPLE image2[height][width];
+    int average;
+
+    for(a = 0; a < height; a++)
+    {
+        for(b = 0; b < width; b++)
+        {
+            
+
+        }
+    }
+
+
+
+}
+
+
+    return;
+}
+/* RGBTRIPLE image2[height][width];
     int average;
 
     for(a = 0; a < height; a++)
@@ -126,13 +144,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             else
             // for the inside squares there is 9 different bit to calculate average
             {
+                average = image[a - 1][b - 1].rgbtRed + image[a - 1][b].rgbtRed + image[a - 1][b + 1] image[a][b - 1] + image[a][b] + image[a][b + 1] + image[a + 1][b - 1] image[a + 1][b] + image[a + 1][b + 1]
 
 
             }
+            //find all pixels values in image and copy to image2
+            // copy image2 to image1
         }
-
-    }
-
-    // copy image2 to image1
-    return;
-}
+*/
