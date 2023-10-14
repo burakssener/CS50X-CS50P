@@ -106,8 +106,60 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE image2[height][width];
 
+    for(h = 0; h < height; h++)
+    {
+        for(w = 0; w < width; w++)
+        {
+            image[h][w] 
+        }
 
-    for(int a = 0; a < height; a++)
+
+
+    }
+
+
+
+
+
+    return;
+}
+/* SOLVING ATTEMP1
+RGBTRIPLE image2[height][width];
+    int averagered, averagegreen, averageblue;
+
+
+    for(a = 0; a < height; a++)
+    {
+        for(b = 0; b < width; b++)
+        {
+            if((a=0 && b=0) || (a=height - 1 && b=width -  1) || (a=0 && b=width - 1) || (a=height - 1 && b=0) )
+            // for the corner squares there is 4 different bit to calculate average
+            {
+                image[a][b] + image
+
+            }
+            else if(a=0 || a = height - 1 || b = 0 ||b = width - 1)
+            // for the edge squares there is 6 different bit to calculate average
+            {
+
+            }
+            else
+            // for the inside squares there is 9 different bit to calculate average
+            {
+            averagered = round((image[a - 1][b - 1].rgbtRed + image[a - 1][b].rgbtRed + image[a - 1][b + 1].rgbtRed  image[a][b - 1].rgbtRed  + image[a][b].rgbtRed  + image[a][b + 1].rgbtRed  + image[a + 1][b - 1].rgbtRed  image[a + 1][b].rgbtRed  + image[a + 1][b + 1].rgbtRed) / 9)
+            averagegreen = round((image[a - 1][b - 1].rgbtGreen + image[a - 1][b].rgbtGreen + image[a - 1][b + 1].rgbtGreen image[a][b - 1].rgbtGreen  + image[a][b].rgbtGreen  + image[a][b + 1].rgbtGreen  + image[a + 1][b - 1].rgbtGreen  image[a + 1][b].rgbtGreen + image[a + 1][b + 1].rgbtGreen) / 9)
+            averageblue = round((image[a - 1][b - 1].rgbtBlue + image[a - 1][b].rgbtBlue + image[a - 1][b + 1].rgbtBlue  image[a][b - 1].rgbtBlue  + image[a][b].rgbtBlue  + image[a][b + 1].rgbtBlue  + image[a + 1][b - 1].rgbtBlue  image[a + 1][b].rgbtBlue  + image[a + 1][b + 1].rgbtBlue) / 9)
+
+
+            }
+            //find all pixels values in image and copy to image2
+            // copy image2 to image1
+        }
+
+
+SOLVING ATTEMPT 2
+
+ for(int a = 0; a < height; a++)
     {
         int avgblue, avgred, avggreen, b, i, j, division_num;
 
@@ -160,39 +212,4 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
 
     }
-
-
-    return;
-}
-/* RGBTRIPLE image2[height][width];
-    int averagered, averagegreen, averageblue;
-
-
-    for(a = 0; a < height; a++)
-    {
-        for(b = 0; b < width; b++)
-        {
-            if((a=0 && b=0) || (a=height - 1 && b=width -  1) || (a=0 && b=width - 1) || (a=height - 1 && b=0) )
-            // for the corner squares there is 4 different bit to calculate average
-            {
-                image[a][b] + image
-
-            }
-            else if(a=0 || a = height - 1 || b = 0 ||b = width - 1)
-            // for the edge squares there is 6 different bit to calculate average
-            {
-
-            }
-            else
-            // for the inside squares there is 9 different bit to calculate average
-            {
-            averagered = round((image[a - 1][b - 1].rgbtRed + image[a - 1][b].rgbtRed + image[a - 1][b + 1].rgbtRed  image[a][b - 1].rgbtRed  + image[a][b].rgbtRed  + image[a][b + 1].rgbtRed  + image[a + 1][b - 1].rgbtRed  image[a + 1][b].rgbtRed  + image[a + 1][b + 1].rgbtRed) / 9)
-            averagegreen = round((image[a - 1][b - 1].rgbtGreen + image[a - 1][b].rgbtGreen + image[a - 1][b + 1].rgbtGreen image[a][b - 1].rgbtGreen  + image[a][b].rgbtGreen  + image[a][b + 1].rgbtGreen  + image[a + 1][b - 1].rgbtGreen  image[a + 1][b].rgbtGreen + image[a + 1][b + 1].rgbtGreen) / 9)
-            averageblue = round((image[a - 1][b - 1].rgbtBlue + image[a - 1][b].rgbtBlue + image[a - 1][b + 1].rgbtBlue  image[a][b - 1].rgbtBlue  + image[a][b].rgbtBlue  + image[a][b + 1].rgbtBlue  + image[a + 1][b - 1].rgbtBlue  image[a + 1][b].rgbtBlue  + image[a + 1][b + 1].rgbtBlue) / 9)
-
-
-            }
-            //find all pixels values in image and copy to image2
-            // copy image2 to image1
-        }
 */
