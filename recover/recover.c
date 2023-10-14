@@ -18,7 +18,7 @@ if (buffer[0] == "0xff" && buffer[1] == "0xd8" && buffer[2] == "0xff" &&  ((buff
     {
         char *filename = sprintf(filename, "%03i.jpg", 2);
         FILE *img = fopen(filename, "w");
-
+        fwrite()
 
 
     }
