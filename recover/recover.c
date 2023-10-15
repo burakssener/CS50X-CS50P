@@ -20,7 +20,7 @@ fread(buffer, 1, BLOCK_SIZE, raw_file);
 char *filename = malloc(8);
 
 
-    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    while (fread(buffer, malloc(sizeof(char)), BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&  ((buffer[3] & 0xf0) == 0xe0))
         {
@@ -32,7 +32,7 @@ char *filename = malloc(8);
 
         if(output_file != NULL)
         {
-            fwrite(buffer, 1, BLOCK_SIZE, output_file);
+            fwrite(buffer, malloc(sizeof(char)), BLOCK_SIZE, output_file);
         }
         /*FILE *img = fopen(output_file, "w");
         fwrite(buffer, 1, BLOCK_SIZE, img); */
