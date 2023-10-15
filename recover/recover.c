@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 {
     if(argc != 2)
     {
-        printf("Wrong Usage!")
+        printf("Wrong Usage!");
         return 1;
     }
 
@@ -25,12 +25,12 @@ char *filename = malloc(8);
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&  ((buffer[3] & 0xf0) == 0xe0))
         {
             sprintf(filename, "%03i.jpg", jpegcount);
-            output_file = fopen(filename, "w")
+            output_file = fopen(filename, "w");
             jpegcount = jpegcount + 1;
 
         }
 
-        if(outputfile != NULL)
+        if(output_file != NULL)
         {
             fwrite(buffer, 1, BLOCK_SIZE, output_file);
         }
