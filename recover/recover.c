@@ -25,16 +25,22 @@ char *filename = malloc(8);
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&  ((buffer[3] & 0xf0) == 0xe0))
         {
             sprintf(filename, "%03i.jpg", jpegcount);
-            FILE *img = fopen(output_file, "w");
+            output_file = fopen(filename, "w")
             jpegcount = jpegcount + 1;
 
         }
 
+        if(outputfile != NULL)
+        {
+            fwrite(buffer, 1, BLOCK_SIZE, output_file);
+        }
+        /*FILE *img = fopen(output_file, "w");
+        fwrite(buffer, 1, BLOCK_SIZE, img); */
 
-        fwrite(buffer, 1, BLOCK_SIZE, img);
-        fclose(raw_file)
-        fclose(output_file)
-}
+    }
+    free(filename);
+    fclose(raw_file);
+    fclose(output_file);
 
 
 
