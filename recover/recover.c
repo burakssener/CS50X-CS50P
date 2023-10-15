@@ -32,8 +32,9 @@ char *filename = malloc(8);
 
 
         fwrite(buffer, 1, BLOCK_SIZE, img);
-
-    }
+        fclose(raw_file)
+        fclose(output_file)
+}
 
 
 
