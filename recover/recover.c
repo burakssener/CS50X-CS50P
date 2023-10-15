@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
 //open memory card
 FILE *raw_file = fopen(argv[1], "r");
-FILE *output_file;
+FILE *output_file = NULL;
 // look for begginning of a jpeg
 uint8_t buffer[BLOCK_SIZE];
 int jpegcount = 0;
@@ -22,7 +22,7 @@ if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&  ((buffer[3] 
 {
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
-        char *filename = malloc(10);
+        char *filename = malloc(sizeof(char) * 8);
         sprintf(filename, "%03i.jpg", jpegcount);
         FILE *img = fopen(output_file, "w");
         fwrite(buffer, 1, BLOCK_SIZE, img);
