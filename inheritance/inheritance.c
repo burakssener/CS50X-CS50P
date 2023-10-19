@@ -40,7 +40,7 @@ int main(void)
 person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
-
+    person *person_1 = malloc(sizeof(person));
 
 
 
@@ -52,7 +52,7 @@ person *create_family(int generations)
         person *parent1 = create_family(generations - 1);
 
         // TODO: Set parent pointers for current person
-        person *person_1 = malloc(sizeof(person));
+
         (*person_1).parents[0] =
         (*person_1).parents[1] =
 
