@@ -53,7 +53,8 @@ person *create_family(int generations)
 
         // TODO: Set parent pointers for current person
         person *person_1 = malloc(sizeof(person));
-        person_1
+        (*person_1).parents[0] =
+        (*person_1).parents[1] =
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
 
