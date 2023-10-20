@@ -41,7 +41,7 @@ person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
     person *person_1 = malloc(sizeof(person));
-    person_1 = NULL;
+    
 
 
 
@@ -54,7 +54,7 @@ person *create_family(int generations)
 
         // TODO: Set parent pointers for current person
 
-      
+
         (*person_1).alleles[0] = person_1->parents[0]->alleles[rand() % 2];
         (*person_1).alleles[1] = person_1->parents[1]->alleles[rand() % 2];
 
