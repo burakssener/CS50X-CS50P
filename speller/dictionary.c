@@ -34,8 +34,8 @@ bool check(const char *word)
                     break;
                 }
 
-
             }
+            return true;
 
         }
     }
