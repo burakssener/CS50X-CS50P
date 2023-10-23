@@ -29,22 +29,30 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    FILE *file = fopen("dictionaries", "r");
-    if(file = NULL)
-    {
-        return 0;
-    }
-    for(i = 0; )
-    fscanf(file, "%s", word);
     // TODO: Improve this hash function
     return toupper(word[0]) - 'A';
-    node *n = malloc(sizeof(node));
-    strcpy(n->word, *word);
 }
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    node *n = malloc(sizeof(node));
+    FILE *file = fopen("dictionaries", "r");
+
+    if(file = NULL)
+    {
+        return 0;
+    }
+
+    for(i = 0; i != "E0F"; İ++)
+    {
+
+
+        
+    }
+    fscanf(file, "%s", word);
+
+    strcpy(n->word, *word);
     // TODO
     return false;
 }
