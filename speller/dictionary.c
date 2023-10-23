@@ -27,21 +27,15 @@ bool check(const char *word)
         n = table[index]->next;
         while(n != NULL)
         {
-            statement = strcasecmp(word, (n->word));
+         statement = strcasecmp(word, (n->word));
 
-                if(statement == 0)
-                {
-                    return false;
-                }
-
+            if(statement == 0)
+            {
+                return true;
             }
-            n = n->next;
-
-            return true;
 
         }
-    }
-    return false;
+        return false;
 }
 
 // Hashes word to a number
