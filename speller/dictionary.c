@@ -45,8 +45,9 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    thenumber = toupper(word[0]) - 'A';
+    int thenumber = toupper(word[0]) - 'A';
     thenumber = thenumber % N;
+    return (thenumber);
 }
 
 // Loads dictionary into memory, returning true if successful, else false
