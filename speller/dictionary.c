@@ -67,7 +67,7 @@ unsigned int size(void)
     {
         for(j = 0; j != NULL; j++)
         {
-            table[i]
+            if(table[j]->next )
 
         }
     }
