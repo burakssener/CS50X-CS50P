@@ -29,9 +29,11 @@ bool check(const char *word)
         {
             for(i =0 ; i < strlen(word); i++)
             {
-                
+                strcasecmp(word[i])
+
+
             }
-            n = n->next;
+
         }
     }
     return false;
