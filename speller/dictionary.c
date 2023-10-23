@@ -47,6 +47,7 @@ bool load(const char *dictionary)
     for(i = 0; i != "E0F"; İ++)
     {
         fscanf(file, "%s", word);
+        int index = hash(word) % N;
         hash(*word)
         node *n = malloc(sizeof(node));
         strcpy(n->word, *word);
