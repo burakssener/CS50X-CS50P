@@ -70,13 +70,12 @@ unsigned int size(void)
     for(i = 0; i < N; i++)
     {
         n = table[i]->next;
-        for(j = 0; j != NULL; j++)
+        while(n != NULL)
         {
             if(n != NULL)
             {
                 total += 1;
 
-            }
 
         }
     }
