@@ -54,7 +54,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-
+    char word[50];
     FILE *file = fopen(dictionary, "r");
 
     if(file == NULL)
@@ -62,7 +62,7 @@ bool load(const char *dictionary)
         return 0;
     }
 
-    while(fscanf(file, "%s", word) != "E0F")
+    while(wor!= "E0F")
     {
         char word[50];
         fscanf(file, "%s", word);
