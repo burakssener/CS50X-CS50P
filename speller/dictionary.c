@@ -72,11 +72,8 @@ unsigned int size(void)
         n = table[i]->next;
         while(n != NULL)
         {
-            if(n != NULL)
-            {
-                total += 1;
-
-
+            total += 1;
+            a = n
         }
     }
     return 0;
