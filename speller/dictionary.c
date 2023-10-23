@@ -70,7 +70,7 @@ bool load(const char *dictionary)
         int index = hash(new_comer->word) % N;
         if(table[index] == NULL)
         {
-            table[index] = new_comer->word;
+            table[index] = new_comer;
         }
         else
         {
@@ -81,7 +81,7 @@ bool load(const char *dictionary)
         }
 
     }
-    close(file);
+    fclose(file);
 
     return false;
 }
@@ -90,7 +90,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     node *n = malloc(sizeof(node));
-    total = 0;
+    int total = 0, i;
 
 
     for(i = 0; i < N; i++)
@@ -108,15 +108,16 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
+    int i;
     node *n = malloc(sizeof(node));
     node *tmp = malloc(sizeof(node));
-    for(i=0, i < N; i++)
+    for(i=0; i < N; i++)
     {
         tmp = table[i]->next;
         n = tmp->next;
         while(n->next != NULL)
         {
-            free(tmp)
+            free(tmp);
             tmp = n;
             n = tmp->next;
         }
