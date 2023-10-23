@@ -23,13 +23,14 @@ node *table[N];
 bool check(const char *word)
 {
     node *n = malloc(sizeof(node));
-    total = 0;
-    for(i = 0; i < N; i++)
-    {
-        n = table[i]->next;
+    int index = hash(word);
+        n = table[index]->next;
         while(n != NULL)
         {
-            total += 1;
+            for(i =0 ; i < strlen(word); i++)
+            {
+                
+            }
             n = n->next;
         }
     }
