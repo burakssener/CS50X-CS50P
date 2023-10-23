@@ -62,9 +62,8 @@ bool load(const char *dictionary)
         return 0;
     }
 
-    while(wor!= "E0F")
+    while(fscanf(file, "%s", word) != 0)
     {
-        char word[50];
         fscanf(file, "%s", word);
         int index = hash(word) % N;
         node *n = malloc(sizeof(node));
