@@ -85,7 +85,7 @@ bool load(const char *dictionary)
     }
     fclose(file);
     free(new_comer);
-    free(n);
+
 
     return true;
 }
