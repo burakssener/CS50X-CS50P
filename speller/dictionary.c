@@ -2,6 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 #include "dictionary.h"
 
@@ -27,7 +28,7 @@ bool check(const char *word)
         n = table[index]->next;
         while(n != NULL)
         {
-         statement = strcasecmp(word, (n->word));
+         bool statement = strcasecmp(word, (n->word));
 
             if(statement == 0)
             {
