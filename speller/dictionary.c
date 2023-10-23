@@ -65,9 +65,10 @@ unsigned int size(void)
 {
     for(i = 0; i < N; i++)
     {
-        for(j = 0; j <  N; j++)
+        for(j = 0; j != NULL; j++)
         {
-            
+            table[i]
+
         }
     }
     return 0;
