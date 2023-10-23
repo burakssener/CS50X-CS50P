@@ -29,7 +29,7 @@ bool check(const char *word)
 {
     node *n = malloc(sizeof(node));
     int index = hash(word);
-        n = table[index]->next;
+    n = table[index]->next;
         while(n != NULL)
         {
          bool statement = strcasecmp(word, (n->word));
@@ -57,14 +57,15 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    node *new_comer = malloc(sizeof(char) * 25);
+    node *new_comer = malloc(sizeof(node));
     FILE *file = fopen(dictionary, "r");
-    node *n = malloc(sizeof(node));
-
     if(file == NULL)
     {
         return false;
     }
+    node *n = malloc(sizeof(node));
+
+
 
     while(fscanf(file, "%s", new_comer->word) != EOF)
     {
