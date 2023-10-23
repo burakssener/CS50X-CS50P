@@ -29,7 +29,7 @@ bool check(const char *word)
         {
             for(i =0 ; i < strlen(word); i++)
             {
-                strcasecmp(word[i])
+                iif(strcasecmp(word[i], (n->word)[i])
 
 
             }
