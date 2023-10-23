@@ -29,9 +29,9 @@ bool check(const char *word)
         {
             statement = strcasecmp(word, (n->word));
 
-                if(statement == 1)
+                if(statement == 0)
                 {
-                    
+                    return false;
                 }
 
             }
