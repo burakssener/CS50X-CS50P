@@ -64,6 +64,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     node *n = malloc(sizeof(node));
+    total = 0;
 
 
     for(i = 0; i < N; i++)
@@ -71,8 +72,9 @@ unsigned int size(void)
         n = table[i]->next;
         for(j = 0; j != NULL; j++)
         {
-            if(n = NULL)
+            if(n != NULL)
             {
+                total += 1;
 
             }
 
