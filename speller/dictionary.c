@@ -62,7 +62,7 @@ bool load(const char *dictionary)
         return 0;
     }
 
-    while(fscanf(file, "%s", word) != 0)
+    while(fscanf(file, "%s", word) != EOF)
     {
         fscanf(file, "%s", word);
         int index = hash(word) % N;
