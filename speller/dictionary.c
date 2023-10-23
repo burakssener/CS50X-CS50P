@@ -25,6 +25,7 @@ bool check(const char *word)
     for(i = 0; i< strlen(word); i++)
     {
         
+
     }
     return false;
 }
