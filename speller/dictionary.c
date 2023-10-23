@@ -34,7 +34,8 @@ unsigned int hash(const char *word)
     {
         return 0;
     }
-    fscanf(file, "%s", word)
+    for(i = 0; )
+    fscanf(file, "%s", word);
     // TODO: Improve this hash function
     return toupper(word[0]) - 'A';
     node *n = malloc(sizeof(node));
