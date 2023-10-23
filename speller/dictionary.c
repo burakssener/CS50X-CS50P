@@ -51,7 +51,7 @@ bool load(const char *dictionary)
         int index = hash(word) % N;
         node *n = malloc(sizeof(node));
         strcpy(n->word, word[index]);
-        n->next = head;
+        n->next = table[N];
         head->next = head;
     }
     close(file);
