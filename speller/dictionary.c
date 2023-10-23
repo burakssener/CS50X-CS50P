@@ -22,10 +22,16 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    for(i = 0; i< strlen(word); i++)
+    node *n = malloc(sizeof(node));
+    total = 0;
+    for(i = 0; i < N; i++)
     {
-        
-
+        n = table[i]->next;
+        while(n != NULL)
+        {
+            total += 1;
+            n = n->next;
+        }
     }
     return false;
 }
