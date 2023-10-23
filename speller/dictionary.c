@@ -129,7 +129,6 @@ bool unload(void)
         free(tmp);
 
     }
-    free(n);
     return true;
 
 }
