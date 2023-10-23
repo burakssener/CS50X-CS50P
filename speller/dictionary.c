@@ -64,13 +64,14 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     node *n = malloc(sizeof(node));
-    
-    table[i]->next
+
+
     for(i = 0; i < N; i++)
     {
+        n = table[i]->next;
         for(j = 0; j != NULL; j++)
         {
-            if(table[i]->next = NULL)
+            if(n = NULL)
             {
 
             }
