@@ -100,8 +100,9 @@ bool unload(void)
     n = tmp->next;
     while(n->next != NULL)
     {
-        n= tmp->next;
         free(tmp)
+        tmp = n;
+        n = tmp->next
     }
 
     // TODO
