@@ -102,7 +102,7 @@ bool unload(void)
     {
         free(tmp)
         tmp = n;
-        n = tmp->next
+        n = tmp->next;
     }
 
     // TODO
