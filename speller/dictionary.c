@@ -44,18 +44,17 @@ bool load(const char *dictionary)
         return 0;
     }
 
-    for(i = 0; i != "E0F"; İ++)
+    while(fscanf(file, "%s", word) != "E0F")
     {
+        char word[50];
         fscanf(file, "%s", word);
         int index = hash(word) % N;
-        hash(*word)
         node *n = malloc(sizeof(node));
-        strcpy(n->word, *word);
+        strcpy(n->word, word);
         n->next = head;
         head->next = head;
-
-
     }
+    close(file);
 
     return false;
 }
