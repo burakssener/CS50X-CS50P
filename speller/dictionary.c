@@ -52,8 +52,8 @@ bool load(const char *dictionary)
         int index = hash(word) % N;
         node *n = malloc(sizeof(node));
         strcpy(n->word, word[index]);
-        n->next = table[N];
-        table[N]= n;
+        n->next = table[index];
+        table[index]= n;
     }
     close(file);
 
@@ -67,7 +67,10 @@ unsigned int size(void)
     {
         for(j = 0; j != NULL; j++)
         {
-            if(table[j]->next )
+            if(table[j]->next = NULL)
+            {
+
+            }
 
         }
     }
