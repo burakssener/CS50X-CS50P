@@ -61,7 +61,7 @@ bool load(const char *dictionary)
 
     if(file == NULL)
     {
-        return 0;
+        return false;
     }
 
     while(fscanf(file, "%s", new_comer->word) != EOF)
@@ -83,7 +83,7 @@ bool load(const char *dictionary)
     }
     fclose(file);
 
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
@@ -102,7 +102,7 @@ unsigned int size(void)
             n = n->next;
         }
     }
-    return 0;
+    return total;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
