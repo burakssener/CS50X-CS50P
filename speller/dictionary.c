@@ -29,8 +29,12 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    fopen(dictionary, "r")
-    buffer()
+    FILE *file = fopen("dictionaries", "r");
+    if(file = NULL)
+    {
+        return 0;
+    }
+    fscanf(file, "%s", word)
     // TODO: Improve this hash function
     return toupper(word[0]) - 'A';
     node *n = malloc(sizeof(node));
