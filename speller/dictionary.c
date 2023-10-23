@@ -104,6 +104,7 @@ bool unload(void)
         tmp = n;
         n = tmp->next;
     }
+    free(tmp)
 
     // TODO
     return false;
