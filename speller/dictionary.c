@@ -31,6 +31,7 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     return toupper(word[0]) - 'A';
+    node *n = malloc(sizeof(node))
 }
 
 // Loads dictionary into memory, returning true if successful, else false
