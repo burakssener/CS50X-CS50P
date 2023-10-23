@@ -46,14 +46,11 @@ bool load(const char *dictionary)
 
     for(i = 0; i != "E0F"; İ++)
     {
+        fscanf(file, "%s", word);
+        strcpy(n->word, *word);
 
-
-        
     }
-    fscanf(file, "%s", word);
 
-    strcpy(n->word, *word);
-    // TODO
     return false;
 }
 
