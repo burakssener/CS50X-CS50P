@@ -40,8 +40,9 @@ bool check(const char *word)
             }
         n = n->next;
         }
-        return false;
         free(n);
+        return false;
+
 }
 
 // Hashes word to a number
@@ -84,7 +85,6 @@ bool load(const char *dictionary)
     }
     fclose(file);
     free(new_comer);
-    free(file);
     free(n);
 
     return true;
