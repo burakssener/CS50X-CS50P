@@ -57,6 +57,7 @@ bool load(const char *dictionary)
 {
     char *word = malloc(sizeof(char) * 25);
     FILE *file = fopen(dictionary, "r");
+    node *n = malloc(sizeof(node));
 
     if(file == NULL)
     {
@@ -67,10 +68,18 @@ bool load(const char *dictionary)
     {
         fscanf(file, "%s", word);
         int index = hash(word) % N;
-        node *n = malloc(sizeof(node));
-        strcpy(n->word, word);
-        n->next = table[index];
-        table[index]= n;
+        if(table[index] == NULL)
+        {
+            table[index] = word;
+        }
+        else
+        {
+            strcpy(n->word, word);
+            n->next = table[index];
+            table[index]= n;
+
+        }
+
     }
     close(file);
 
