@@ -36,8 +36,8 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    node *n = malloc(sizeof(node));
-    FILE *file = fopen("dictionaries", "r");
+
+    FILE *file = fopen(*dictionary, "r");
 
     if(file = NULL)
     {
@@ -47,7 +47,9 @@ bool load(const char *dictionary)
     for(i = 0; i != "E0F"; İ++)
     {
         fscanf(file, "%s", word);
+        node *n = malloc(sizeof(node));
         strcpy(n->word, *word);
+
 
     }
 
