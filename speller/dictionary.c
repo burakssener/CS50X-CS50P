@@ -119,7 +119,7 @@ bool unload(void)
     node *tmp = malloc(sizeof(node));
     for(i=0; i < N; i++)
     {
-        tmp = table[i]->next;
+        tmp = table[i];
         n = tmp->next;
         while(n->next != NULL)
         {
