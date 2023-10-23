@@ -95,8 +95,9 @@ unsigned int size(void)
 bool unload(void)
 {
     node *n = malloc(sizeof(node));
-    n = table[0]->next;
-    tmp = n
+    node *tmp = malloc(sizeof(node));
+    tmp = table[0]->next;
+    n= tmp->next;
     // TODO
     return false;
 }
