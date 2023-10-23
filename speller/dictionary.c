@@ -96,15 +96,21 @@ bool unload(void)
 {
     node *n = malloc(sizeof(node));
     node *tmp = malloc(sizeof(node));
-    tmp = table[0]->next;
-    n = tmp->next;
-    while(n->next != NULL)
+    for(i=0, i < N; i++)
     {
-        free(tmp)
-        tmp = n;
+        tmp = table[i]->next;
         n = tmp->next;
+        while(n->next != NULL)
+        {
+            free(tmp)
+            tmp = n;
+            n = tmp->next;
+        }
+        free(tmp);
+
+
+
     }
-    free(tmp)
 
     // TODO
     return false;
