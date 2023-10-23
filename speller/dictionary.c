@@ -63,11 +63,14 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
+    node *n = malloc(sizeof(node));
+    
+    table[i]->next
     for(i = 0; i < N; i++)
     {
         for(j = 0; j != NULL; j++)
         {
-            if(table[j]->next = NULL)
+            if(table[i]->next = NULL)
             {
 
             }
