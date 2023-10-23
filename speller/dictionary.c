@@ -73,7 +73,7 @@ unsigned int size(void)
         while(n != NULL)
         {
             total += 1;
-            a = n
+            n = n->next;
         }
     }
     return 0;
