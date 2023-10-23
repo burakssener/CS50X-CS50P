@@ -94,6 +94,8 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
+    node *n = malloc(sizeof(node));
+    n = table
     // TODO
     return false;
 }
