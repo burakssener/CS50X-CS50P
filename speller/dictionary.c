@@ -27,11 +27,11 @@ bool check(const char *word)
         n = table[index]->next;
         while(n != NULL)
         {
-            for(i =0 ; i < strlen(word); i++)
-            {
-                if(strcasecmp(word[i], (n->word)[i] == 1)
+            statement = strcasecmp(word, (n->word));
+
+                if(statement == 1)
                 {
-                    break;
+                    
                 }
 
             }
