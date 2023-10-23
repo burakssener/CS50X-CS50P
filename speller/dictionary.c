@@ -97,9 +97,12 @@ bool unload(void)
     node *n = malloc(sizeof(node));
     node *tmp = malloc(sizeof(node));
     tmp = table[0]->next;
-    while(n->next == )
-    n= tmp->next;
-    free(tmp)
+    while(n->next != NULL)
+    {
+        n= tmp->next;
+        free(tmp)
+    }
+
     // TODO
     return false;
 }
