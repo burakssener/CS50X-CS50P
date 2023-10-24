@@ -57,7 +57,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    node *new_comer = malloc(sizeof(node));
+    char newcomer[LENGTH + 1];
     node *n = malloc(sizeof(node));
     FILE *file = fopen(dictionary, "r");
     if(file == NULL)
@@ -66,17 +66,17 @@ bool load(const char *dictionary)
     }
 
 
-    while(fscanf(file, "%s", new_comer->word) != EOF)
+    while(fscanf(file, "%s", newcomer) != EOF)
     {
-        fscanf(file, "%s", new_comer->word);
-        int index = hash(new_comer->word) % N;
+        fscanf(file, "%s", newcomer);
+        int index = hash(newcomer) % N;
         if(table[index] == NULL)
         {
-            table[index] = new_comer;
+            table[index] = newcomer;
         }
         else
         {
-            strcpy(n->word, new_comer->word);
+            strcpy(n->word, newcomer);
             n->next = table[index];
             table[index]= n;
 
@@ -84,7 +84,6 @@ bool load(const char *dictionary)
 
     }
     fclose(file);
-    free(new_comer);
 
 
     return true;
