@@ -29,7 +29,7 @@ bool check(const char *word)
 {
     node *n = malloc(sizeof(node));
     int index = hash(word);
-    n = table[index]->next;
+    n = table[index];
         while(n != NULL)
         {
          bool statement = strcasecmp(word, (n->word));
