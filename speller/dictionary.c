@@ -73,7 +73,7 @@ bool load(const char *dictionary)
         if(table[index] == NULL)
         {
             table[index] = malloc(sizeof(node));
-            table[index]->word = newcomer;
+            strcpy(table[index]->word, newcomer);
         }
         else
         {
