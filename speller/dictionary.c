@@ -58,13 +58,12 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     node *new_comer = malloc(sizeof(node));
+    node *n = malloc(sizeof(node));
     FILE *file = fopen(dictionary, "r");
     if(file == NULL)
     {
         return false;
     }
-    node *n = malloc(sizeof(node));
-
 
 
     while(fscanf(file, "%s", new_comer->word) != EOF)
