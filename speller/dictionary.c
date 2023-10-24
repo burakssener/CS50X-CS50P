@@ -72,7 +72,7 @@ bool load(const char *dictionary)
         int index = hash(newcomer) % N;
         if(table[index] == NULL)
         {
-            table[index] = newcomer;
+            table[index]->word = newcomer;
         }
         else
         {
