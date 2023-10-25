@@ -134,14 +134,14 @@ bool unload(void)
     for(i=0; i < N; i++)
     {
         node *n = table[i];
-        while(n->next != NULL)
+        while(n != NULL)
         {
-            tmp = n->next;
-            free(n);
-            n = tmp;
-            tmp = tmp->next;
+            node *tmp = n;
+            n = n->next;
+            free(tmp);
+
         }
-        free(n);
+        if(n == NULL)
 
     }
     return true;
