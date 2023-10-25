@@ -133,10 +133,8 @@ bool unload(void)
 
     for(i=0; i < N; i++)
     {
-        hash
-        node *n = table[index];
-        node *tmp;
-        while(tmp->next != NULL)
+        node *n = table[i];
+        while(n->next != NULL)
         {
             tmp = n->next;
             free(n);
