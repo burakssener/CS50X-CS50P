@@ -78,8 +78,7 @@ bool load(const char *dictionary)
         int index = hash(newcomer) % N;
         if(table[index] == NULL)
         {
-            table[index] = malloc(sizeof(node));
-            strcpy(table[index]->word, newcomer);
+            strcpy(table[index], newcomer);
             table[index]->next = NULL;
             word_number++;
         }
