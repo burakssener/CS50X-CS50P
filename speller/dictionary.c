@@ -97,12 +97,12 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    /*if(word_number == 0)
+    if(!(word_number > 0))
     {
         return 0;
     }
-    return word_number;*/
-    node *n = malloc(sizeof(node));
+    return word_number;
+    /*node *n = malloc(sizeof(node));
     int total = 0, i;
 
 
@@ -116,7 +116,7 @@ unsigned int size(void)
         }
     }
     free(n);
-    return total;
+    return total;*/
 
 }
 
