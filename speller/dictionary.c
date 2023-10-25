@@ -76,20 +76,10 @@ bool load(const char *dictionary)
         /**pword_number += 1;*/
         fscanf(file, "%s", newcomer);
         int index = hash(newcomer) % N;
-        if(table[index] == NULL)
-        {
-            strcpy(table[index], newcomer);
-            table[index]->next = NULL;
-            word_number++;
-        }
-        else
-        {
-            strcpy(n->word, newcomer);
-            n->next = table[index];
-            table[index]= n;
-            word_number++;
-
-        }
+        strcpy(n->word, newcomer);
+        n->next = table[index];
+        table[index]= n;
+        word_number++;
 
     }
     fclose(file);
