@@ -129,14 +129,14 @@ unsigned int size(void)
 bool unload(void)
 {
     int i;
-    node *n = malloc(sizeof(node));
-    node *tmp = malloc(sizeof(node));
+
+
     for(i=0; i < N; i++)
     {
-        tmp = table[i];
-        n = tmp->next;
+        node *n = table[index];
         while(n->next != NULL)
         {
+            node *tmp = n->next
             free(tmp);
             tmp = n;
             n = tmp->next;
