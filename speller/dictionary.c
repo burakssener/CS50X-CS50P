@@ -20,8 +20,7 @@ node;
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
-/*int word_number = 0;
-int *pword_number = &word_number; */
+int word_number = 0;
 
 // Hash table
 node *table[N];
@@ -78,12 +77,14 @@ bool load(const char *dictionary)
             table[index] = malloc(sizeof(node));
             strcpy(table[index]->word, newcomer);
             table[index]->next = NULL;
+            word_number++;
         }
         else
         {
             strcpy(n->word, newcomer);
             n->next = table[index];
             table[index]= n;
+            word_number++;
 
         }
 
