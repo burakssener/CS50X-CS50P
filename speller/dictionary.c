@@ -31,18 +31,18 @@ bool check(const char *word)
     node *n = malloc(sizeof(node));
     int index = hash(word);
     n = table[index];
-        while(n != NULL)
-        {
-         bool statement = strcasecmp(word, (n->word));
+    while(n != NULL)
+    {
+        bool statement = strcasecmp(word, (n->word));
 
-            if(statement == 0)
-            {
-                return true;
-            }
-        n = n->next;
+        if(statement == 0)
+        {
+            return true;
         }
-        free(n);
-        return false;
+        n = n->next;
+    }
+    free(n);
+    return false;
 
 }
 
