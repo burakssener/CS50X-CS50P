@@ -41,7 +41,7 @@ person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
     person *person_1 = malloc(sizeof(person));
-    
+
 
 
 
@@ -75,7 +75,7 @@ person *create_family(int generations)
     }
 
     // TODO: Return newly created person
-    return NULL;
+    return person_1;
 }
 
 // Free `p` and all ancestors of `p`.
