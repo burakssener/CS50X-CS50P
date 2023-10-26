@@ -13,6 +13,8 @@ char char_value;
 int main(void)
 {
     // Get input words from both players
+    while(1)
+    {
     string word1 = get_string("Player 1: ");
     string word2 = get_string("Player 2: ");
 
@@ -24,7 +26,7 @@ int main(void)
 
     if (score1 > score2)
     {
-        printf("Player 1 wins!");
+        printf("Player 1 wins! \n");
     }
     else if (score1 == score2)
     {
@@ -32,7 +34,8 @@ int main(void)
     }
     else if (score2 > score1)
     {
-        printf("Player 2 wins!");
+        printf("Player 2 wins! \n");
+    }
     }
 }
 
