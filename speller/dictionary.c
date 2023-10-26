@@ -76,6 +76,12 @@ bool load(const char *dictionary)
         /**pword_number += 1;*/
         fscanf(file, "%s", newcomer);
         int index = hash(newcomer) % N;
+         if(table[index] == NULL)
+        {
+            table[index] = malloc(sizeof(node));
+            strcpy(table[index]->word, newcomer);
+            table[index]->next = NULL;
+        }
         strcpy(n->word, newcomer);
         n->next = table[index];
         table[index]= n;
