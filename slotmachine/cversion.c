@@ -15,15 +15,15 @@ int get_deposit(void)
     int input;
     while(1)
     {
-        printf("Determine the deposit please");
+        printf("Determine the deposit please: ");
         scanf("%d", &input);
         if ( input > 0)
         {
-            return input;
+            break;
         }
         else
         {
-            printf("the deposit must be positive");
+            printf("the deposit must be positive \n");
         }
     }
     return input;
