@@ -3,6 +3,12 @@ def deposit():
         amount = input("What would you like to deposit? $")
         if amount.isdigit():
             amount = int(amount)
-            break
+            if amount > 0:
+                break
+            else:
+                printf("Amount Must be positive")
         else:
-            return
+            print("Please print a number")
+    return amount
+
+deposit()
