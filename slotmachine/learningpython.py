@@ -44,7 +44,7 @@ def get_bet():
 def main():
     balance = deposit()
     line = get_line_num()
-    while true:
+    while True:
         bet = get_bet()
         if bet > balance:
             print("You can't exceed your deposit.")
