@@ -1,14 +1,15 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 
 
 int get_deposit(int num)
 {
     int input;
-    while(True)
+    while(true)
     {
         printf("Determine the deposit please");
-        scanf("%d", input);
+        scanf("%d", &input);
         if ( input > 0)
         {
             break;
