@@ -12,3 +12,11 @@ def deposit():
     return amount
 
 deposit()
+
+def main()
+    balance = deposit()
+
+
+
+
+main()
