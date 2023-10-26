@@ -1,18 +1,25 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+int get_deposit(int num);
 
+
+
+int main (void)
+{
+    get_deposit();
+}
 
 int get_deposit(int num)
 {
     int input;
-    while(true)
+    while(1)
     {
         printf("Determine the deposit please");
         scanf("%d", &input);
         if ( input > 0)
         {
-            break;
+            return input;
         }
         else
         {
@@ -20,9 +27,4 @@ int get_deposit(int num)
         }
     }
     return input;
-}
-
-int main (void)
-{
-    get_deposit();
 }
