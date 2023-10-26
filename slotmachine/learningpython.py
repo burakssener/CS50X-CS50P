@@ -45,12 +45,14 @@ def main():
     balance = deposit()
     line = get_line_num()
     while true:
-        if get_bet() * line > balance:
+        bet = get_bet()
+        if bet > balance:
             print("You can't exceed your deposit.")
         else:
-            bet = get_bet() * line
+            total_bet = get_bet() * line
+            break
 
-    print(f"You bet on {line} lines. The total amount that you bet is ${bet}")
+    print(f"You bet on {line} lines. The total amount that you bet is ${total_bet}")
 
 main()
 
