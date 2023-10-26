@@ -14,7 +14,20 @@ int main (void)
 
     deposit = get_deposit();
     line = get_line_num();
-    bet = get_bet() * line;
+    while(1)
+    {
+         bet = get_bet() * line;
+         if (bet > deposit)
+         {
+            printf("You can't exceed your deposit");
+         }
+         else
+         {
+            break;
+         }
+
+    }
+
     printf("You bet on %d lines. The total amount that you bet is $ %d", line, bet);
 }
 
