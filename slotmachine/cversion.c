@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int get_deposit(int num);
+int get_deposit(void);
 
 
 
@@ -10,7 +10,7 @@ int main (void)
     get_deposit();
 }
 
-int get_deposit(int num)
+int get_deposit(void)
 {
     int input;
     while(1)
