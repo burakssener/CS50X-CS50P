@@ -18,7 +18,7 @@ int main(void)
     string word1 = get_string("Player 1: ");
     string word2 = get_string("Player 2: ");
 
-    if (word1 == "kesis" || word2 == "kesis")
+    if (strcmp("kesis", word1) || strcmp("kesis", word1))
     {
         printf("kesisler her zaman kazanır dedimmm");
         break;
