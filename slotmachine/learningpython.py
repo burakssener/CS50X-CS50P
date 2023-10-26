@@ -36,6 +36,8 @@ def get_bet():
                 break
             else:
                 print("You are exceeded limit or under thee limit")
+        else:
+            print("Please Enter a number")
     return bet
 
 
