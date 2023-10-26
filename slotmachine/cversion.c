@@ -1,3 +1,7 @@
+#include<stdio.h>
+
+
+
 int get_deposit(int num)
 {
     int input;
@@ -11,8 +15,13 @@ int get_deposit(int num)
         }
         else
         {
-            printf("please )
+            printf("the deposit must be positive");
         }
     }
     return input;
+}
+
+int main (void)
+{
+    get_deposit();
 }
