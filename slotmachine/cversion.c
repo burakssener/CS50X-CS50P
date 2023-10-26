@@ -19,7 +19,7 @@ int main (void)
          bet = get_bet() * line;
          if (bet > deposit)
          {
-            printf("You can't exceed your deposit");
+            printf("You can't exceed your deposit  \n");
          }
          else
          {
