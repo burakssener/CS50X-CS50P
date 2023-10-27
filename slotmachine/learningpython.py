@@ -21,6 +21,7 @@ def print_slot(columns):
                 print(column[row], "|")
             else:
                 print (column[row])
+        print()
 
 
 
