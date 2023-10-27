@@ -16,8 +16,14 @@ symbol_count = {
 
 def print_slot(columns):
     for row in range(len(columns[0])):
-        for column in enumerate(columns):
-            print(column[row], "|")
+        for i, column in enumerate(columns):
+            if i < len(columns):
+                print(column[row], "|")
+            else
+                print (column[row])
+
+
+
 def get_slot(rows, cols, symbols):
     all_symbols = []
     for symbol, symbol_count in symbols.items():
@@ -38,6 +44,8 @@ def get_slot(rows, cols, symbols):
     return columns
 
 
+
+
 def deposit():
     while True:
         amount = input("What would you like to deposit? $")
@@ -51,6 +59,8 @@ def deposit():
             print("Please print a number")
     return amount
 
+
+
 def get_line_num():
     while True:
         line = input(f"What is the number of lines that you want to bet on between 1 to {MAX_LINES} lines? ")
@@ -61,6 +71,8 @@ def get_line_num():
             else:
                 print("A line must be between 1 and 3")
     return line
+
+
 
 
 def get_bet():
@@ -77,6 +89,8 @@ def get_bet():
     return bet
 
 
+
+
 def main():
     balance = deposit()
     line = get_line_num()
@@ -87,9 +101,9 @@ def main():
         else:
             break
 
-
-
     print(f"You bet on {line} lines. The total amount that you bet is ${bet}")
+    slots = get_slot(ROWS, COLS, symbol_count)
+    print_slot(slots)
 
 main()
 
