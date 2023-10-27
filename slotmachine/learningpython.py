@@ -21,7 +21,7 @@ def print_slot(columns):
                 print(column[row], "|")
             else:
                 print (column[row])
-        print()
+        print(" ")
 
 
 
@@ -36,7 +36,7 @@ def get_slot(rows, cols, symbols):
         column = []
         current_symbols = all_symbols[:]
         for _ in range(rows):
-            value = random.choices(current_symbols)
+            value = random.choice(current_symbols)
             current_symbols.remove(value)
             column.append(value)
 
