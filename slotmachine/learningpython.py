@@ -14,7 +14,21 @@ symbol_count = {
     "D": 8
 }
 
+symbol_value = {
+    "A": 5,
+    "B": 4,
+    "C": 3,
+    "D": 2
+}
 
+
+def check_winning(columns, lines, bet, values):
+    for line in range(lines):
+        symbol = columns[0][line]
+        for symbols in range(columns):
+            if symbol != columns[symbols][line]:
+                return 0;
+        return 1;
 
 
 
