@@ -15,8 +15,12 @@ symbol_count = {
 }
 
 def print_slot(columns):
-    for item in len(columns[0]):
-        
+    for col in columns:
+        if(len(columns[0]))
+        printf(col[0], |)
+
+
+
 
 
 def get_slot(rows, cols, symbols):
