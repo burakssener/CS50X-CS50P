@@ -27,7 +27,7 @@ def check_winning(columns, lines, bet, values):
     winning_lines = []
     for line in range(lines):
         symbol = columns[0][line]
-        for column in columns[]:
+        for column in columns:
             if symbol != column[line]:
                 break
         else:
@@ -137,8 +137,10 @@ def main():
     print(f"You bet on {line} lines. The total amount that you bet is ${bet}")
     slots = get_slot(ROWS, COLS, symbol_count)
     print_slot(slots)
-    winnings = check(winnings, slots, bet, symbol_value)
+    winnings, winning_lines = check(winnings, slots, bet, symbol_value)
     print(f"You won {winnings}.")
+    printf(f"You won on lines: ", *winning_lines)
+
 main()
 
 
