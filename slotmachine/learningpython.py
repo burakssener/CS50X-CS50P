@@ -135,7 +135,8 @@ def main():
     print(f"You bet on {line} lines. The total amount that you bet is ${bet}")
     slots = get_slot(ROWS, COLS, symbol_count)
     print_slot(slots)
-
+    winnings = check(winnings, slots, bet, symbol_value)
+    print(f"You won {winnings}.")
 main()
 
 
