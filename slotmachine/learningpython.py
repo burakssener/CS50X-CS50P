@@ -12,6 +12,7 @@ symbol_count = {
     "D": 8
 }
 def get_slot(rows, cols, symbols):
+    
 
 
 
