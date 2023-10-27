@@ -14,6 +14,10 @@ symbol_count = {
     "D": 8
 }
 
+
+
+
+
 def print_slot(columns):
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
@@ -22,6 +26,7 @@ def print_slot(columns):
             else:
                 print(column[row], end="")
         print()
+
 
 
 
@@ -44,6 +49,10 @@ def get_slot(rows, cols, symbols):
         columns.append(column)
     return columns
 
+
+
+
+
 def deposit():
     while True:
         amount = input("What would you like to deposit? $")
@@ -56,6 +65,8 @@ def deposit():
         else:
             print("Please print a number")
     return amount
+
+
 
 
 
@@ -73,6 +84,8 @@ def get_line_num():
 
 
 
+
+
 def get_bet():
     while True:
         bet = input(f"What is the amount of the money you want to bet for each line between {MIN_BET} to {MAX_BET}? $")
@@ -85,6 +98,9 @@ def get_bet():
         else:
             print("Please Enter a number")
     return bet
+
+
+
 
 
 
@@ -109,36 +125,6 @@ main()
 
 
 
-
-def print_slot(columns):
-    for row in range(len(columns[0])):
-        for i, column in enumerate(columns):
-            if i != len(columns) - 1:
-                print(column[row], end =" | ")
-            else:
-                print (column[row], end="")
-        print(" ")
-
-
-
-def get_slot(rows, cols, symbols):
-    all_symbols = []
-    for symbol, symbol_count in symbols.items():
-        for _ in range(symbol_count):
-            all_symbols.append(symbol)
-
-    columns = []
-    for _ in range(cols):
-        column = []
-        current_symbols = all_symbols[:]
-        for _ in range(rows):
-            value = random.choice(current_symbols)
-            current_symbols.remove(value)
-            column.append(value)
-
-        columns.append(column)
-
-    return columns
 
 """def print_slot(columns):
     for row in range(len(columns[0])):
