@@ -24,6 +24,7 @@ symbol_value = {
 
 def check_winning(columns, lines, bet, values):
     winnings = 0
+    winning_lines = []
     for line in range(lines):
         symbol = columns[0][line]
         for column in columns[]:
@@ -31,7 +32,8 @@ def check_winning(columns, lines, bet, values):
                 break
         else:
             winnings += values[symbol] * bet
-    return winnings
+            winning_lines.append(lines + 1)
+    return winnings, winning_lines
 
 
 
