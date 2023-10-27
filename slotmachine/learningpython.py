@@ -1,6 +1,12 @@
 MAX_LINES = 3
 MIN_BET = 1
 MAX_BET = 100
+ROWS 
+def get_slot(rows, cols, symbols):
+
+
+
+
 
 def deposit():
     while True:
@@ -50,6 +56,8 @@ def main():
             print("You can't exceed your deposit.")
         else:
             break
+
+
 
     print(f"You bet on {line} lines. The total amount that you bet is ${bet}")
 
