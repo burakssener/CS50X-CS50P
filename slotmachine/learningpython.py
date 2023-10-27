@@ -23,12 +23,15 @@ symbol_value = {
 
 
 def check_winning(columns, lines, bet, values):
+    winnings = 0
     for line in range(lines):
         symbol = columns[0][line]
         for column in columns[]:
             if symbol != column[line]:
                 break
-        else: 
+        else:
+            winnings += values[symbol] * bet
+    return winnings
 
 
 
