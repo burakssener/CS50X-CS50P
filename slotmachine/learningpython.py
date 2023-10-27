@@ -140,8 +140,12 @@ def spin():
 
 def main():
     balance = deposit()
-    while
-
+    while True:
+        print("Current Balance is ${balance}", balance)
+        spin = input("Press enter to play.(q to quit.)")
+        if spin == "q":
+            break
+        balance += spin()
 
 main()
 
