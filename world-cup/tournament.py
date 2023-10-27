@@ -15,6 +15,8 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
+    with open(2019w.csv) as file:
+        reader =csv.Dictreader(file):
     # TODO: Read teams into memory from file
 
     counts = {}
