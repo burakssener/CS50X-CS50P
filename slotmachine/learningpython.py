@@ -1,3 +1,5 @@
+import
+
 MAX_LINES = 3
 MIN_BET = 1
 MAX_BET = 100
@@ -12,9 +14,21 @@ symbol_count = {
     "D": 8
 }
 def get_slot(rows, cols, symbols):
-    
+    all_symbols = []
+    for symbol, symbol_count in symbols.items():
+        for _ in range(symbol_count):
+            all_symbols.append(symbol)
 
+    columns = []
+    for _ in range(cols):
+        column = []
+        current_symbols = all_symbols[:]
+        for _ in range(rows):
+            value = random.choices(all_symbols)
+            current_symbols.remove(value)
+            column.append(value)
 
+        columns.append(column)
 
 
 
