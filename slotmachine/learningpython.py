@@ -15,9 +15,13 @@ symbol_count = {
 }
 
 def print_slot(columns):
-    for col in columns:
-        if(len(columns[0]))
-        printf(col[0], |)
+    for row in range(len(columns[0])):
+        for i, column in enumerate(columns):
+            if i < len(columns) - 1:
+                print(column[row], end =" | ")
+            else:
+                print(column[row], end="")
+        print()
 
 
 
@@ -30,10 +34,10 @@ def get_slot(rows, cols, symbols):
             all_symbols.append(symbol)
 
     columns = []
-    for _ in cols:
+    for _ in range(cols):
         current_symbols = all_symbols[:]
         column = []
-        for _ in rows:
+        for _ in range(rows):
             value = random.choice(all_symbols)
             current_symbols.remove(value)
             column.append(value)
