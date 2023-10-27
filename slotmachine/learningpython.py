@@ -13,6 +13,9 @@ symbol_count = {
     "C": 6,
     "D": 8
 }
+
+def print_slot(columns):
+    
 def get_slot(rows, cols, symbols):
     all_symbols = []
     for symbol, symbol_count in symbols.items():
@@ -30,6 +33,7 @@ def get_slot(rows, cols, symbols):
 
         columns.append(column)
 
+    return columns
 
 
 def deposit():
