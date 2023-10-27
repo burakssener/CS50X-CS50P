@@ -1,4 +1,4 @@
-import
+import random
 
 MAX_LINES = 3
 MIN_BET = 1
@@ -19,7 +19,7 @@ def print_slot(columns):
         for i, column in enumerate(columns):
             if i < len(columns):
                 print(column[row], "|")
-            else
+            else:
                 print (column[row])
 
 
