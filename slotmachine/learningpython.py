@@ -120,12 +120,7 @@ def get_bet():
 
 
 
-
-
-
-
-def main():
-    balance = deposit()
+def spin():
     line = get_line_num()
     while True:
         bet = get_bet() * line
@@ -140,6 +135,13 @@ def main():
     winnings, winning_lines = check_winning(slots, line, bet, symbol_value)
     print(f"You won {winnings}.")
     print(f"You won on lines:",*winning_lines)
+    return winning_lines - bet
+
+
+def main():
+    balance = deposit()
+    while
+
 
 main()
 
