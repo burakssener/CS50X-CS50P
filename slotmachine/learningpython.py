@@ -16,7 +16,7 @@ symbol_count = {
 
 def print_slot(columns):
     for row in range(len(columns[0])):
-        for column in columns:
+        for column in enumerate(columns):
             print(column[row], "|")
 def get_slot(rows, cols, symbols):
     all_symbols = []
