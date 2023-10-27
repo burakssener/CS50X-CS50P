@@ -15,15 +15,7 @@ symbol_count = {
 }
 
 def print_slot(columns):
-    for row in range(len(columns[0])):
-        for i, column in enumerate(columns):
-            if i != len(columns) - 1:
-                print(column[row], end =" | ")
-            else:
-                print (column[row], end="")
-        print(" ")
-
-
+    
 
 def get_slot(rows, cols, symbols):
     all_symbols = []
@@ -32,20 +24,15 @@ def get_slot(rows, cols, symbols):
             all_symbols.append(symbol)
 
     columns = []
-    for _ in range(cols):
-        column = []
+    for _ in cols:
         current_symbols = all_symbols[:]
-        for _ in range(rows):
-            value = random.choice(current_symbols)
+        column = []
+        for _ in rows:
+            value = random.choice(all_symbols)
             current_symbols.remove(value)
             column.append(value)
-
         columns.append(column)
-
     return columns
-
-
-
 
 def deposit():
     while True:
@@ -112,4 +99,64 @@ main()
 
 
 
+
+def print_slot(columns):
+    for row in range(len(columns[0])):
+        for i, column in enumerate(columns):
+            if i != len(columns) - 1:
+                print(column[row], end =" | ")
+            else:
+                print (column[row], end="")
+        print(" ")
+
+
+
+def get_slot(rows, cols, symbols):
+    all_symbols = []
+    for symbol, symbol_count in symbols.items():
+        for _ in range(symbol_count):
+            all_symbols.append(symbol)
+
+    columns = []
+    for _ in range(cols):
+        column = []
+        current_symbols = all_symbols[:]
+        for _ in range(rows):
+            value = random.choice(current_symbols)
+            current_symbols.remove(value)
+            column.append(value)
+
+        columns.append(column)
+
+    return columns
+
+"""def print_slot(columns):
+    for row in range(len(columns[0])):
+        for i, column in enumerate(columns):
+            if i != len(columns) - 1:
+                print(column[row], end =" | ")
+            else:
+                print (column[row], end="")
+        print(" ")
+
+
+
+def get_slot(rows, cols, symbols):
+    all_symbols = []
+    for symbol, symbol_count in symbols.items():
+        for _ in range(symbol_count):
+            all_symbols.append(symbol)
+
+    columns = []
+    for _ in range(cols):
+        column = []
+        current_symbols = all_symbols[:]
+        for _ in range(rows):
+            value = random.choice(current_symbols)
+            current_symbols.remove(value)
+            column.append(value)
+
+        columns.append(column)
+
+    return columns"""
 
