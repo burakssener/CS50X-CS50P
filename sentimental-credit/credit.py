@@ -25,12 +25,12 @@ while (input != 0):
 if (odd + even) % 10 != 0:
     print("INVALID")
     exit()
-
+print(two_digits)
 if ((i == 15) and (two_digits == 34 or two_digits == 37)):
     print("AMEX")
 elif (i == 16 and (51 <= two_digits <= 55)):
     print("MASTERCARD")
-elif (i == 14 and (51 <= two_digits <= 55)):
+elif (i == 14 and (40 <= two_digits <= 49)):
     print("VISA")
 else:
     print("INVALID")
