@@ -20,7 +20,7 @@ def main():
         reader =csv.DictReader(file)
         for row in reader:
             teams.append(row["team"])""",
-    teams = {}
+    teams = []
     with open("2019w.csv", "r") as file:
         reader =csv.DictReader(file)
         for row in reader:
