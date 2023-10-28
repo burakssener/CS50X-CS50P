@@ -25,17 +25,17 @@ if (odd + even) % 10 != 0:
     print("INVALID")
     exit()
 
-two_digits = int(input[0:2])
+two_digits = int(str(input)[0:2])
 
-if length == 15 and (two_digits == 34 or two_digits == 37):
+if i == 15 and (two_digits == 34 or two_digits == 37):
     print("AMEX")
-elif length == 16 and (51 <= two_digits <= 55):
+elif i == 16 and (51 <= two_digits <= 55):
     print("MASTERCARD")
-elif length == 14 and two_digits in range(40,49):
+elif i == 14 and two_digits in range(40,49):
     print("VISA")
 else:
     print("INVALID")
-    
+
 """while True:
     input = input("Enter a Credit card number")
     length = len(input)
