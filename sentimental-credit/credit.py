@@ -18,7 +18,7 @@ while (input != 0):
             term = (term % 10) + 1
         even += term
     else:
-        odd += term
+        odd += digits
     i += 1
 
 if (odd + even) % 10 != 0:
