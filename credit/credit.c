@@ -49,7 +49,7 @@ int main(void)
 
 
         }
-        else if ((i + 1) == 16 && digit[i] == 5 && (digit[i - 1]<=4 && digit[i - 1]>=1))
+        else if ((i + 1) == 16 && digit[i] == 5 && (digit[i - 1]<=5 && digit[i - 1]>=1))
         {
             printf("MASTERCARD\n");
 
