@@ -30,17 +30,17 @@ int main(void)
     the_S = 1.0 * sentences / words * 100;
     index = 0.0588 * the_L - 0.296 * the_S - 15.8;
     grade = round(index);
-    if(grade <= 1)
+    if(grade < 1)
     {
-        printf("Grade 1 \n");
+        printf("Before Grade 1\n");
     }
-    else if(grade >= 16)
+    else if(grade > 16)
     {
-        printf("Grade 16 \n");
+        printf("Grade 16+\n");
     }
     else
     {
-        printf("Grade %d \n", grade);
+        printf("Grade %d\n", grade);
     }
 
 
