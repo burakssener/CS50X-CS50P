@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    double index;
+    double index, the_L, the_S;
     int i, word = 0, letter = 0, sentence = 0;
     char *input = get_string("Text: ");
 
@@ -26,6 +26,6 @@ int main(void)
     }
     word = word + 1;
     the_L = 1.0 * letter / words * 100;
-    the_S = 1.0 * sentence / words
-    /*index = 0.0588 * L - 0.296 * S - 15.8;*/
+    the_S = 1.0 * sentence / words * 100;
+    index = 0.0588 * the_L - 0.296 * the_S - 15.8;
 }
