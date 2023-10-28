@@ -5,14 +5,15 @@
 
 while True:
     input = input("Enter a Credit card number")
+    length = len(input)
     if input.isdigit():
         input = int(input)
         break
 
 list = []
-for num in range(input):
-    list.append(int(num))
-for i in range(input):
+for num in range(length):
+    list.append(int(input[num]))
+for i in range(length):
     if i % 2 == 1:
         term = input[i] * 2
         if(term > 9):
