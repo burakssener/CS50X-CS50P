@@ -17,6 +17,9 @@ def main():
     teams = []
     with open(2019w.csv) as file:
         reader =csv.Dictreader(file):
+        for row in reader:
+            teams.append(row[teams])
+    print(teams)
     # TODO: Read teams into memory from file
 
     counts = {}
