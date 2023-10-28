@@ -3,9 +3,7 @@
 
 int main(void)
 {
-    int input;
-
-    input = get_int("Please provide a credit number");
+    long input = get_long("Please provide a credit number");
 
 
 }
