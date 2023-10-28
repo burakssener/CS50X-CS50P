@@ -24,10 +24,11 @@ def main():
     with open("2019w.csv", "r") as file:
         reader =csv.DictReader(file)
         for row in reader:
-            if row["team"] in teams:
-                row["team"] += 1
+            team = row["team"]
+            if team in teams:
+                teams[team] += 1
             else:
-                row["team"] = 1
+                teams[team] = 1
     # TODO: Read teams into memory from file
 
     counts = {"team": "rating"}
