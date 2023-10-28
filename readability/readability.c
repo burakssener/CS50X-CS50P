@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <math.h>
 
 int main(void)
 {
@@ -35,7 +36,7 @@ int main(void)
     }
     else if(grade >= 16)
     {
-        printf("Grade 16");
+        printf("Grade 16\n");
     }
     else
     {
