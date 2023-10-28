@@ -9,7 +9,7 @@ int main(void)
 
     for(i = 0; i!= '/0'; i++)
     {
-        if(isinput[i])
+        if(isblank(input[i]))
 
     }
 
