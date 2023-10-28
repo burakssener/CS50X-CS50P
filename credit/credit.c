@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int digit[], i = 0, luhns_1 = 0, luhns_2 = 0 ;
+    int digit[25], i = 0, luhns_1 = 0, luhns_2 = 0 ;
     long input = get_long("Please provide a credit number");
     while(!(input / 10 == 0))
     {
@@ -13,7 +13,7 @@ int main(void)
     }
     digit[i] = input;
 
-    for(digit_num = 0; digit_num <= i; digit_num++ )
+    for(int digit_num = 0; digit_num <= i; digit_num++ )
     {
         if(digit_num % 2 == 1)
         {
@@ -32,13 +32,13 @@ int main(void)
     }
     else
     {
-        if ((i + 1) == 15)
+        if ((i + 1) == 15 && digit[i] == 3 && (digit[i - 1] == 4 || digit[i - 1] == 7))
         {
             printf("AMEX\n");
 
 
         }
-        else if ((i + 1) == 16) && digit[i] == 5 && digit[i - 1] == {1 , 2 , 3, 4}
+        else if ((i + 1) == 16 && digit[i] == 5 && (digit[i - 1]<=4 && digit[i - 1]>=1))
         {
             printf("MASTERCARD\n");
 
