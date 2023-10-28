@@ -15,7 +15,13 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
+    file = sys.argv[1]
 
+    with open(file, "r") as file:
+        reader = csv.DictReader(file)
+        for rows in reader:
+            rows[team] = int(rows[team])
+            teams.append(rows)
     # TODO: Read teams into memory from file
 
     counts = {}
