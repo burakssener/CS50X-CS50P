@@ -5,4 +5,17 @@
 
 input = input("Enter a Credit card number")
 
-F
+for i in range(input):
+    if i % 2 == 1:
+        term = input[i] * 2
+        if(term > 9):
+            term = (term % 10) + 1
+        even += term
+    else:
+        odd += input[i]
+
+if (odd + even) % 10 != 0:
+    print("INVALID")
+
+
+
