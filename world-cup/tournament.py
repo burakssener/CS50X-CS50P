@@ -14,21 +14,8 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
-    """teams = []
-
-    with open("2019w.csv", "r") as file:
-        reader =csv.DictReader(file)
-        for row in reader:
-            teams.append(row["team"])""",
     teams = []
-    with open("2019w.csv", "r") as file:
-        reader =csv.DictReader(file)
-        for row in reader:
-            team["rating"] = int(team["rating"])
-            if team in teams:
-                teams[team] += 1
-            else:
-                teams[team] = 1
+
     # TODO: Read teams into memory from file
 
     counts = {}
