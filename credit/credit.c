@@ -30,19 +30,28 @@ int main(void)
         printf("INVALID");
         return 0;
     }
-
-    if ((i + 1) == 15)
+    else
     {
+        if ((i + 1) == 15)
+        {
+            printf("AMEX\n");
+
+
+        }
+        else if ((i + 1) == 16)
+        {
+            printf("MASTERCARD\n");
+
+        }
+        else if ((i + 1) == 13 && (i + 1) == 16)
+        {
+            printf("VISA\n");
+
+        }
 
     }
-    else if ((i + 1) == 16)
-    {
 
-    }
-    else if ((i + 1) == 13 && (i + 1) == 16)
-    {
 
-    }
 
 
 }
