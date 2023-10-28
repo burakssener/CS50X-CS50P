@@ -5,7 +5,7 @@ int main(void)
 {
     int digit[100], i = 0, luhns_1 = 0, luhns_2 = 0 ;
     long input = get_long("Please provide a credit number: ");
-    while(!(input / 10 == 0))
+    while(input > 10)
     {
         digit[i] = input % 10;
         input = input / 10;
