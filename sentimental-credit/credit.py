@@ -19,6 +19,7 @@ while (input > 9):
         even += term
     else:
         odd += term
+    i += 1
 
 
 """while True:
