@@ -18,7 +18,7 @@ def main():
     with open("2019w.csv", "r") as file:
         reader =csv.DictReader(file)
         for row in reader:
-            teams.append(row[teams])
+            teams.append(row["team"])
     print(teams)
     # TODO: Read teams into memory from file
 
