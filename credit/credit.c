@@ -38,12 +38,12 @@ int main(void)
 
 
         }
-        else if ((i + 1) == 16)
+        else if ((i + 1) == 16) && digit[i] == 5 && digit[i - 1] == {1 , 2 , 3, 4}
         {
             printf("MASTERCARD\n");
 
         }
-        else if ((i + 1) == 13 && (i + 1) == 16)
+        else if (((i + 1) == 13 || (i + 1) == 16) && digit[i] == 4)
         {
             printf("VISA\n");
 
