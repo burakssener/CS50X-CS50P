@@ -8,10 +8,10 @@ ROWS = 3
 COLS = 3
 
 symbol_count = {
-    "A": 15,
-    "B": 20,
-    "C": 35,
-    "D": 45
+    "A": 6,
+    "B": 6,
+    "C": 10,
+    "D": 10
 }
 
 symbol_value = {
