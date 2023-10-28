@@ -9,7 +9,7 @@ while True:
         input = int(input)
         break
 i, even, odd = 0, 0, 0
-while (input > 9):
+while (input != 0):
     digit = input % 10
     input = input // 10
     if i % 2 == 1:
@@ -21,7 +21,21 @@ while (input > 9):
         odd += term
     i += 1
 
+if (odd + even) % 10 != 0:
+    print("INVALID")
+    exit()
 
+two_digits = int(input[0:2])
+
+if length == 15 and (two_digits == 34 or two_digits == 37):
+    print("AMEX")
+elif length == 16 and (51 <= two_digits <= 55):
+    print("MASTERCARD")
+elif length == 14 and two_digits in range(40,49):
+    print("VISA")
+else:
+    print("INVALID")
+    
 """while True:
     input = input("Enter a Credit card number")
     length = len(input)
