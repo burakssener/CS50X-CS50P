@@ -15,8 +15,8 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
-    with open(argv[2], "r") as file:
-        reader =csv.Dictreader(file)
+    with open("2019w.csv", "r") as file:
+        reader =csv.DictReader(file)
         for row in reader:
             teams.append(row[teams])
     print(teams)
