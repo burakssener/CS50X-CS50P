@@ -4,7 +4,7 @@
 # Visa 13 or 16 digits starts with 4
 
 input = input("Enter a Credit card number")
-
+input
 for i in range(input):
     if i % 2 == 1:
         term = input[i] * 2
@@ -16,6 +16,13 @@ for i in range(input):
 
 if (odd + even) % 10 != 0:
     print("INVALID")
+    exit()
 
+item_num = len(input)
+print(input[0:1])
+
+"""if item_num == 15 and (input[0:1] == 34 or input[0:1]== 37):
+    print("AMEX")
+elif item_num == 16 and """
 
 
