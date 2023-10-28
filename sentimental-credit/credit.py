@@ -30,7 +30,7 @@ if ((i == 15) and (two_digits == 34 or two_digits == 37)):
     print("AMEX")
 elif (i == 16 and (51 <= two_digits <= 55)):
     print("MASTERCARD")
-elif (i == 14 and (40 <= two_digits <= 49)):
+elif (i == 14 and (two_digits // 10)  == 4):
     print("VISA")
 else:
     print("INVALID")
