@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int digit[100], i = 0, luhns_1 = 0, luhns_2 = 0 ;
+    int digit[100], i = 0, luhns_1 = 0, luhns_2 = 0, term ;
     long input = get_long("Please provide a credit number: ");
     while(input > 10)
     {
@@ -17,7 +17,18 @@ int main(void)
     {
         if(digit_num % 2 == 1)
         {
-            luhns_1 += digit[digit_num] * 2;
+            term = digit[digit_num] * 2;
+            if(term > 9)
+            {
+                term = (term % 10) + 1;
+                luhns_1 += term;
+
+            }
+            else
+            {
+                luhns_1 += term;
+
+            }
         }
         else
         {
