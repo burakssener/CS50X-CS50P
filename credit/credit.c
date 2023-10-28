@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int digit[], i = 0;
+    int digit[], i = 0, luhns = 1;
     long input = get_long("Please provide a credit number");
     while(!(input / 10 == 0))
     {
@@ -12,6 +12,12 @@ int main(void)
         i += 1;
     }
     digit[i] = input;
+
+    for(digit_num = 1; digit_num <= i; digit_num+=2 )
+    {
+        luhns *= digit[digit_num];
+    }
+    if()
 
     if ((i + 1) == 15)
     {
@@ -23,7 +29,7 @@ int main(void)
     }
     else if ((i + 1) == 13 && (i + 1) == 16)
     {
-        
+
     }
 
 
