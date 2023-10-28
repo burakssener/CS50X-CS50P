@@ -6,6 +6,7 @@
 while True:
     input = input("Enter a Credit card number")
     if input.isdigit():
+        input = int(input)
         break
 
 list = []
