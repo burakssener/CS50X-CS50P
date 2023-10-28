@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int digit[], i = 0, luhns = 1;
+    int digit[], i = 0, luhns_1 = 0, luhns_2 = 0 ;
     long input = get_long("Please provide a credit number");
     while(!(input / 10 == 0))
     {
@@ -15,7 +15,9 @@ int main(void)
 
     for(digit_num = 1; digit_num <= i; digit_num+=2 )
     {
-        luhns *= digit[digit_num];
+        luhns_2 += digit[digit_num - 1]
+        luhns_1 += digit[digit_num] * 2;
+
     }
     if()
 
