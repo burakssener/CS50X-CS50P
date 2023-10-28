@@ -27,7 +27,7 @@ if (odd + even) % 10 != 0:
     exit()
 
 two_digits = int(input[0:2])
-print(two_digits)
+
 if length == 15 and (two_digits == 34 or two_digits == 37):
     print("AMEX")
 elif length == 16 and (51 <= two_digits <= 55):
