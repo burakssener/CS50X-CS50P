@@ -25,6 +25,6 @@ int main(void)
 
     }
     word = word + 1;
-
+    the_L = 1.0 * letter / words * 100;
     /*index = 0.0588 * L - 0.296 * S - 15.8;*/
 }
