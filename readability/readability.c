@@ -5,14 +5,18 @@
 int main(void)
 {
     double index;
-    int word = 0;
+    int word = 0, letter = 0;
     char *input = get_string("Text: ");
 
     for(i = 0; i!= '/0'; i++)
     {
         if(isblank(input[i]))
         {
-            word+=1;
+            word += 1;
+        }
+        if(islower(input[i]) || isupper(input[i]))
+        {
+            letter += 1:
         }
 
 
