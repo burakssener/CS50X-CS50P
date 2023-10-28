@@ -13,12 +13,23 @@ int main(void)
     }
     digit[i] = input;
 
-    for(digit_num = 1; digit_num <= i; digit_num+=2 )
+    for(digit_num = 0; digit_num <= i; digit_num++ )
     {
-        luhns_1 += digit[digit_num] * 2;
-        luhns_2 += digit[digit_num - 1]
+        if(digit_num % 2 == 1)
+        {
+            luhns_1 += digit[digit_num] * 2;
+        }
+        else
+        {
+            luhns_2 += digit[digit_num];
+        }
+
     }
-    if()
+    if((luhns_1 + luhns_2) % 10 != 0)
+    {
+        printf("INVALID");
+        return 0;
+    }
 
     if ((i + 1) == 15)
     {
