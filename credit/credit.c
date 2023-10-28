@@ -4,7 +4,7 @@
 int main(void)
 {
     int digit[25], i = 0, luhns_1 = 0, luhns_2 = 0 ;
-    long input = get_long("Please provide a credit number");
+    long input = get_long("Please provide a credit number: ");
     while(!(input / 10 == 0))
     {
         digit[i] = input % 10;
@@ -27,7 +27,7 @@ int main(void)
     }
     if((luhns_1 + luhns_2) % 10 != 0)
     {
-        printf("INVALID");
+        printf("INVALID\n");
         return 0;
     }
     else
