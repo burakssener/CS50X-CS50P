@@ -6,7 +6,6 @@
 while True:
     input = input("Enter a Credit card number")
     if input.isdigit():
-        one_digit = int(input[0:1])
         two_digits = int(input[0:2])
         input = int(input)
         break
@@ -31,7 +30,7 @@ if ((i == 15) and (two_digits == 34 or two_digits == 37)):
     print("AMEX")
 elif (i == 16 and (51 <= two_digits <= 55)):
     print("MASTERCARD")
-elif (i == 14 and one_digit == 4):
+elif ((i == 13 or i == 16) and (40 <= two_digits <= 49)):
     print("VISA")
 else:
     print("INVALID")
