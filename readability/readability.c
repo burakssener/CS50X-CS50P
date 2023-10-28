@@ -18,7 +18,7 @@ int main(void)
         {
             letter += 1;
         }
-        if(input[i] == '!' || input[i] == '.' ||input[i] == '?')
+        if(input[i] == '!' || input[i] == '.' || input[i] == '?')
         {
             sentence += 1;
         }
