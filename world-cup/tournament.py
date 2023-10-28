@@ -30,11 +30,11 @@ def main():
                 row["team"] = 1
     # TODO: Read teams into memory from file
 
-    counts = {}
+    counts = {"team": "rating"}
     # TODO: Simulate N tournaments and keep track of win counts
     for _ in range(N):
         winner = simulate_tournament(teams)
-        if winner in counts:
+        if winner in counts[team]:
             counts[winner] += 1
         else:
             counts[winner] = 0
