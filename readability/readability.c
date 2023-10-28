@@ -24,7 +24,7 @@ int main(void)
         }
 
     }
-    printf("%d %d %d", word, letter, sentence);
+    word = word + 1;
 
     /*index = 0.0588 * L - 0.296 * S - 15.8;*/
 }
