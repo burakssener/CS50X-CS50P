@@ -10,7 +10,7 @@ while True:
         break
 
 list = []
-for num in range(len(input)):
+for num in range(input):
     list.append(int(num))
 for i in range(input):
     if i % 2 == 1:
