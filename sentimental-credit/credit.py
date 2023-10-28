@@ -15,7 +15,7 @@ while (input != 0):
     input = input // 10
     if i % 2 == 1:
         term = digit * 2
-        if(term > 9):
+        if (term > 9):
             term = (term % 10) + 1
         even += term
     else:
@@ -26,11 +26,11 @@ if (odd + even) % 10 != 0:
     print("INVALID")
     exit()
 print(two_digits)
-if ((i == 15) and (two_digits == 34 or two_digits == 37)):
+if (i == 15) and (two_digits == 34 or two_digits == 37):
     print("AMEX")
-elif (i == 16 and (51 <= two_digits <= 55)):
+elif i == 16 and (51 <= two_digits <= 55):
     print("MASTERCARD")
-elif ((i == 13 or i == 16) and two_digits in range (40, 49)):
+elif (i == 13 or i == 16) and two_digits in range (40, 49):
     print("VISA")
 else:
     print("INVALID")
