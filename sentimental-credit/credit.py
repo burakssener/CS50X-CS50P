@@ -8,9 +8,16 @@ while True:
     if input.isdigit():
         input = int(input)
         break
+i = 0
 while (input > 9):
     digit = input % 10
-    input = input / 10
+    input = input // 10
+    if i % 2 == 1:
+        term = int(input[i]) * 2
+        if(term > 9):
+            term = (term % 10) + 1
+            even += term
+
 """while True:
     input = input("Enter a Credit card number")
     length = len(input)
