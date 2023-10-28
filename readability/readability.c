@@ -5,7 +5,7 @@
 int main(void)
 {
     double index;
-    int word = 0, letter = 0;
+    int word = 0, letter = 0, sentence = 0;
     char *input = get_string("Text: ");
 
     for(i = 0; i!= '/0'; i++)
@@ -16,9 +16,12 @@ int main(void)
         }
         if(islower(input[i]) || isupper(input[i]))
         {
-            letter += 1:
+            letter += 1;
         }
-
+        if(input[i] == '!' || input[i] == '.' ||input[i] == '?')
+        {
+            sentence += 1;
+        }
 
     }
 
