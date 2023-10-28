@@ -7,7 +7,14 @@ int main(void)
 {
     double index, the_L, the_S;
     int i, words = 0, letters = 0, sentences = 0, grade;
-    char *input = get_string("Text: ");
+    /*char *input = get_string("Text: ");*/
+    char *input = "How are you? It was so nice to meet you last week in Sydney at the sales meeting. How was the rest of your trip? Did you see any kangaroos? I hope you got home to Mexico City OK.
+
+Anyway, I have the documents about the new Berlin offices. We're going to be open in three months. I moved here from London just last week. They are very nice offices, and the location is perfect. There are lots of restaurants, cafés and banks in the area. There's also public transport; we are next to an U-Bahn (that is the name for the metro here). Maybe you can come and see them one day? I would love to show you Berlin, especially in the winter. You said you have never seen snow – you will see lots here!
+
+Here's a photo of you and me at the restaurant in Sydney. That was a very fun night! Remember the singing Englishman? Crazy! Please send me any other photos you have of that night. Good memories.
+
+Please give me your email address and I will send you the documents."
 
     for(i = 0; input[i] != '\0'; i++)
     {
