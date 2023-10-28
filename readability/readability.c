@@ -32,15 +32,15 @@ int main(void)
     grade = round(index);
     if(grade <= 1)
     {
-        printf("Grade 1");
+        printf("Grade 1 \n");
     }
     else if(grade >= 16)
     {
-        printf("Grade 16\n");
+        printf("Grade 16 \n");
     }
     else
     {
-        printf("Grade %d", grade);
+        printf("Grade %d \n", grade);
     }
 
 
