@@ -14,12 +14,20 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
-    teams = []
+    """teams = []
 
     with open("2019w.csv", "r") as file:
         reader =csv.DictReader(file)
         for row in reader:
-            teams.append(row["team"])
+            teams.append(row["team"])""",
+    teams = {}
+    with open("2019w.csv", "r") as file:
+        reader =csv.DictReader(file)
+        for row in reader:
+            if row["team"] in teams:
+                row["team"] += 1
+            else:
+                row["team"] = 1
     # TODO: Read teams into memory from file
 
     counts = {}
