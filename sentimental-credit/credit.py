@@ -3,8 +3,14 @@
 #master card 16 digits, starts with 51, 52, 53, 54, or 55
 # Visa 13 or 16 digits starts with 4
 
-input = input("Enter a Credit card number")
-input
+while True:
+    input = input("Enter a Credit card number")
+    if input.isdigit():
+        break
+
+list = []
+for num in range(len(input)):
+    list.append(int(num))
 for i in range(input):
     if i % 2 == 1:
         term = input[i] * 2
