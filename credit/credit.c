@@ -15,9 +15,8 @@ int main(void)
 
     for(digit_num = 1; digit_num <= i; digit_num+=2 )
     {
-        luhns_2 += digit[digit_num - 1]
         luhns_1 += digit[digit_num] * 2;
-
+        luhns_2 += digit[digit_num - 1]
     }
     if()
 
