@@ -5,10 +5,10 @@
 int main(void)
 {
     double index;
-    int word = 0, letter = 0, sentence = 0;
+    int i, word = 0, letter = 0, sentence = 0;
     char *input = get_string("Text: ");
 
-    for(i = 0; i!= '/0'; i++)
+    for(i = 0; input[i] != '/0'; i++)
     {
         if(isblank(input[i]))
         {
@@ -24,6 +24,7 @@ int main(void)
         }
 
     }
+    printf("%d %d %d", word, letter, sentence);
 
     index = 0.0588 * L - 0.296 * S - 15.8;
 }
