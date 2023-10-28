@@ -24,7 +24,7 @@ def main():
     with open("2019w.csv", "r") as file:
         reader =csv.DictReader(file)
         for row in reader:
-            team = row["team"]
+            team["rating"] = int(team["rating"])
             if team in teams:
                 teams[team] += 1
             else:
