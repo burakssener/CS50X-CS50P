@@ -5,6 +5,14 @@
 
 while True:
     input = input("Enter a Credit card number")
+    if input.isdigit():
+        input = int(input)
+        break
+while (input > 9):
+    digit = input % 10
+    input = input / 10
+"""while True:
+    input = input("Enter a Credit card number")
     length = len(input)
     if input.isdigit():
         break
@@ -35,5 +43,5 @@ elif length == 16 and (51 <= two_digits <= 55):
 elif length == 14 and two_digits in range(40,49):
     print("VISA")
 else:
-    print("INVALID")
+    print("INVALID")"""
 
