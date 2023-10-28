@@ -19,7 +19,6 @@ def main():
         reader =csv.DictReader(file)
         for row in reader:
             teams.append(row["team"])
-    print(teams)
     # TODO: Read teams into memory from file
 
     counts = {}
