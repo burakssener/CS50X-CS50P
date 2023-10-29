@@ -28,7 +28,9 @@ def main():
     # TODO: Check database for matching profiles
     for rows in csv_file:
         for i in range(len(strs)):
-            if int(rows[strs[i]]) != int(information[strs[i]]):
+            if int(rows[strs[i]]) == int(information[strs[i]]):
+                continue
+            else:
                 break
         return rows["name"]
 
