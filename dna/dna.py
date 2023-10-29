@@ -8,24 +8,17 @@ def main():
     if len(sys.argv) != 3:
         sys.exit()
 
+    # TODO: Read database file into a variable
     csv_file = []
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         for rows in reader:
             csv_file.append(rows)
-    text = []
-    with open(sys.argv[2], "r") as file2:
-        reader2 = csv.reader(file2)
-        for info in reader2:
-            text.append(info)
-
-
-    print(text)
-
-
-    # TODO: Read database file into a variable
 
     # TODO: Read DNA sequence file into a variable
+
+    with open(sys.argv[2], "r") as file2:
+        txt_file = file2.read()
 
     # TODO: Find longest match of each STR in DNA sequence
 
