@@ -5,11 +5,11 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if len(argv) != 3:
+    if len(sys.argv) != 3:
         sys.exit()
 
     list = []
-    with open(argv[1], "r") as file:
+    with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         for rows in reader:
             list.append(rows)
