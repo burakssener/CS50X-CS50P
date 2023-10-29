@@ -31,10 +31,10 @@ def main():
         for i in range(len(strs)):
             if int(rows[strs[i]]) != int(information[strs[i]]):
                 break
-            else:
-                a = a + 1
+            a = a + 1
             if(a == 8):
                 print(rows["name"])
+                sys.exit()
 
 
 
