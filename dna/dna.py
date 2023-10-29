@@ -26,9 +26,9 @@ def main():
     for str in strs:
         information[str] = longest_match(txt_file, str)
     # TODO: Check database for matching profiles
+    print(csv_file)
     
 
-    return
 
 
 def longest_match(sequence, subsequence):
