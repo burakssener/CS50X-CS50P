@@ -30,7 +30,7 @@ def main():
         for i in range(len(strs)):
             if int(rows[strs[i]]) != int(information[strs[i]]):
                 break
-        print(rows["name"])
+            print(rows["name"])
 
 
 
