@@ -13,9 +13,15 @@ def main():
         reader = csv.DictReader(file)
         for rows in reader:
             csv_file.append(rows)
-
+    text = []
     with open(sys.argv[2], "r") as file2:
-        print(file2)
+        reader2 = csv.reader(file2)
+        for info in reader2:
+            text.append(info)
+
+
+    print(text)
+
 
     # TODO: Read database file into a variable
 
