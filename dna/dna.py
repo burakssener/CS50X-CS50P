@@ -27,7 +27,12 @@ def main():
         information[str] = longest_match(txt_file, str)
     # TODO: Check database for matching profiles
     print(csv_file)
-    
+    for rows in csv_file:
+        for i in range(8):
+            if information[i] != row[i + 1]:
+                break
+        return row[0]
+
 
 
 
