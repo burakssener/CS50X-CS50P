@@ -24,9 +24,9 @@ def main():
     information = {}
     strs = ['AGATC','TTTTTTCT','AATG','TCTAG','GATA','TATC','GAAA','TCTG']
     for str in strs:
-        information[str] = longest_match(sys.argv[2], str)
-    print(information)
+        information[str] = longest_match(txt_file, str)
     # TODO: Check database for matching profiles
+    
 
     return
 
