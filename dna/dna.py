@@ -6,7 +6,9 @@ def main():
 
     # TODO: Check for command-line usage
     if len(argv) != 4:
-        exit()
+        sys.exit()
+
+    
     # TODO: Read database file into a variable
 
     # TODO: Read DNA sequence file into a variable
