@@ -29,8 +29,8 @@ def main():
     for rows in csv_file:
         for i in range(len(strs)):
             if int(rows[strs[i]]) != int(information[strs[i]]):
-                continue
-        return rows["name"]
+                break
+            return rows["name"]
 
 
 
