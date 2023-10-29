@@ -22,9 +22,8 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     information = {}
-    strs = []
-    for key in csv_file[1:]:
-        strs.append(key)
+    strs = list(csv_file[0].keys())
+    strs.remove("name")
     for str in strs:
         information[str] = longest_match(txt_file, str)
     # TODO: Check database for matching profiles
