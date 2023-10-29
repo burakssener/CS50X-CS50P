@@ -35,7 +35,7 @@ def main():
             if(a == 8):
                 print(rows["name"])
                 sys.exit()
-
+    print("No match")
 
 
 """"if int(rows[strs[i]]) != int(information[strs[i]]):
