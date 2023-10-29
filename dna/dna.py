@@ -8,14 +8,18 @@ def main():
     if len(sys.argv) != 3:
         sys.exit()
 
-    list = []
+    csv_file = []
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         for rows in reader:
-            list.append(rows)
+            csv_file.append(rows)
+    txt_file = []
+    with open(sys.argv[2], "r") as file2:
+        reader2 = csv.reader(file2)
+        for rows in reader2:
+            txt_file.append(rows)
 
-    print(list)
-
+    print(txt_file)
     # TODO: Read database file into a variable
 
     # TODO: Read DNA sequence file into a variable
