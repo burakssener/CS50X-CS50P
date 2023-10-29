@@ -22,7 +22,9 @@ def main():
 
     print(txt_file)
     # TODO: Find longest match of each STR in DNA sequence
-    longest_match(sys.argv[2], )
+    strs = [AGATC,TTTTTTCT,AATG,TCTAG,GATA,TATC,GAAA,TCTG]
+    for str in strs:
+        longest_match(sys.argv[2], str)
 
     # TODO: Check database for matching profiles
 
