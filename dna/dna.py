@@ -34,7 +34,9 @@ def main():
 
 
 
-
+""""if int(rows[strs[i]]) != int(information[strs[i]]):
+                continue
+            print(rows["name"])"""
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
 
