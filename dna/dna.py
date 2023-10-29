@@ -33,7 +33,7 @@ def main():
             if int(rows[strs[i]]) != int(information[strs[i]]):
                 break
             a = a + 1
-            if(a == 8):
+            if(a == len(strs)):
                 print(rows["name"])
                 sys.exit()
     print("No match")
