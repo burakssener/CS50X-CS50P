@@ -20,6 +20,7 @@ def main():
     with open(sys.argv[2], "r") as file2:
         txt_file = file2.read()
 
+    print(txt_file)
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
