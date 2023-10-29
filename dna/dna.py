@@ -20,12 +20,12 @@ def main():
     with open(sys.argv[2], "r") as file2:
         txt_file = file2.read()
 
-    print(txt_file)
     # TODO: Find longest match of each STR in DNA sequence
+    information = {}
     strs = [AGATC,TTTTTTCT,AATG,TCTAG,GATA,TATC,GAAA,TCTG]
     for str in strs:
-        longest_match(sys.argv[2], str)
-
+        information[str] = longest_match(sys.argv[2], str)
+    print(information)
     # TODO: Check database for matching profiles
 
     return
