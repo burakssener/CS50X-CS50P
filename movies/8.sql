@@ -1,1 +1,3 @@
-SELECT 
+SELECT name
+FROM people
+JOIN
