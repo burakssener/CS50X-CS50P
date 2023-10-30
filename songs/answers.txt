@@ -1,0 +1,2 @@
+To characterize every listener we need to use profiling to make connection between songs so after we match people musics and characteristics new datas always make perfect our algorithm.
+The first data may not be accurate and it is difficult to match peoples other behavior with people and it can make process more difficult.
