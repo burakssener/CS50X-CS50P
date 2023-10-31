@@ -29,6 +29,6 @@ WHERE month = 7 AND day = 28 AND hour = 10;
 SELECT *
 FROM (SELECT *
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND hour = 10 AND activity = "entrance")
-WHERE month = 7 AND day = 28 AND hour = 10 AND activity = "exit";
+WHERE month = 7 AND day = 28 AND hour = 9 AND activity = "entrance")
+WHERE month = 7 AND day = 28 AND hour = 11 AND activity = "exit";
 
