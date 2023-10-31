@@ -56,13 +56,13 @@ WHERE caller IN (SELECT phone_number
 FROM people
 WHERE license_plate IN (SELECT license_plate
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND activity = "exit")))
+WHERE month = 7 AND (hour = 9 OR hour = 10) AND day = 28 AND activity = "exit")))
 AND receiver IN (SELECT phone_number
 FROM people
 WHERE license_plate IN (SELECT license_plate
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND activity = "exit")))
+WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND activity = "exit")));
