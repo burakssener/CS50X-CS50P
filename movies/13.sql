@@ -1,4 +1,6 @@
-SELECT SELECT movie_id
+SELECT name
+FROM people
+SELECT movie_id
 FROM stars
 WHERE person_id = (
 SELECT id
