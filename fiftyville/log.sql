@@ -97,7 +97,9 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 
 -- we need to determine where they are flying to eleminate candidates
 
-SELECT origin_airport_id
+SELECT full_name
+FROM airports
+WHERE id IN (SELECT origin_airport_id
 FROM flights
 WHERE id IN (SELECT flight_id
 FROM passengers
@@ -108,4 +110,7 @@ WHERE license_plate IN (SELECT license_plate
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit"))))
+WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")))));
+
+
+--THERE IS ONLY ONE PEOPLE THAT FLIED FROM FIFTYVILLE AIRPORT
