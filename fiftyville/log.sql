@@ -22,6 +22,5 @@ WHERE month = 7 AND day = 28 AND street = "Humphrey Street";
 
 SELECT *
 FROM bakery_security_logs
-LIMIT 10;
+WHERE month = 7 AND day = 28 AND hour = 16;
 
-WHERE month = 7 AND minute = 36 AND day = 28 AND hour = 16;
