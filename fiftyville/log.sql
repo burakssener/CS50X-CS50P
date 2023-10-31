@@ -67,11 +67,11 @@ WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entran
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")));
 
---looking for interviews of these people
+--looking for the passport_number of these people
 
 SELECT *
 FROM interviews
-WHERE name = (SELECT name
+WHERE name IN (SELECT name
 FROM people
 WHERE license_plate IN (SELECT license_plate
 FROM bakery_security_logs
