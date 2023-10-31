@@ -1,1 +1,1 @@
-SEL
+SELECT 
