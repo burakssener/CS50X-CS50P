@@ -19,3 +19,9 @@ WHERE month = 7 AND day = 28 AND street = "Humphrey Street";
 -- | Littering took place at 16:36. No known witnesses.
 
 --BAKERY AND 16.36
+
+SELECT *
+FROM bakery_security_logs
+LIMIT 10;
+
+WHERE month = 7 AND minute = 36 AND day = 28 AND hour = 16;
