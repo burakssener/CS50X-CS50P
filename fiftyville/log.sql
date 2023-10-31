@@ -47,3 +47,22 @@ FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND  activity = "entrance" AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND activity = "exit"));
+
+-- Phone calls that happened on the case day from these people and phone numbers as a receiver or caller
+
+SELECT *
+FROM phone_calls
+WHERE caller IN (SELECT phone_number
+FROM people
+WHERE license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND activity = "exit")))
+AND receiver IN (SELECT phone_number
+FROM people
+WHERE license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND activity = "exit")))
