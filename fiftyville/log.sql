@@ -26,11 +26,24 @@ WHERE month = 7 AND day = 28 AND hour = 10;
 
 
 
---PEOPLE'S LICENCE PLATES THAT ENTER AND EXIT TO THE BAKERY :
+--PEOPLE'S LICENCE PLATES THAT ENTER AND EXIT TO THE BAKERY IN THE DAY THAR DUCK IS STOLEN:
 SELECT license_plate
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND  activity = "entrance" AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND activity = "exit");
 
-SELE
+-- looking phone calls TABLE
+SELECT *
+FROM phone_calls
+LIMIT 10
+
+-- learning phone numbers of these people with names
+
+SELECT phone_number, name
+FROM people
+WHERE license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND activity = "exit"));
