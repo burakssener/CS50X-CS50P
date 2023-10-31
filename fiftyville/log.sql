@@ -44,9 +44,9 @@ SELECT phone_number, name
 FROM people
 WHERE license_plate IN (SELECT license_plate
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND activity = "exit"));
+WHERE month = 7 AND day = 28 AND (hour = 10 0R hour = 11) AND activity = "exit"));
 
 -- Phone calls that happened on the case day from these people and phone numbers as a receiver or caller
 
