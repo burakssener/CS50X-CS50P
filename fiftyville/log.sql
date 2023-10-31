@@ -38,9 +38,9 @@ SELECT *
 FROM phone_calls
 LIMIT 10
 
--- learning phone numbers of these people with names
+-- learning phone numbers of these people with names and passport_number
 
-SELECT phone_number, name
+SELECT *
 FROM people
 WHERE license_plate IN (SELECT license_plate
 FROM bakery_security_logs
@@ -67,14 +67,30 @@ WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entran
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")));
 
---looking for the passport_number of these people
-
-SELECT *
-FROM interviews
-WHERE name IN (SELECT name
+--looking for the id of the flights that are happened by these people with their passport_numbers
+SELECT flight_id
+FROM passengers
+WHERE passport_number IN
+(SELECT passport_number
 FROM people
 WHERE license_plate IN (SELECT license_plate
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")));
+
+
+-- looking flights that match with flight ids that We found
+
+SELECT *
+FROM flights
+WHERE id IN (SELECT flight_id
+FROM passengers
+WHERE passport_number IN
+(SELECT passport_number
+FROM people
+WHERE license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit"))));
