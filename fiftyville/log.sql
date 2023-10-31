@@ -18,7 +18,7 @@ WHERE month = 7 AND day = 28 AND street = "Humphrey Street";
 --– each of their interview transcripts mentions the bakery. |
 -- | Littering took place at 16:36. No known witnesses.
 
---BAKERY AND 16.36
+--BAKERY AND 10.15
 
 SELECT *
 FROM bakery_security_logs
