@@ -26,8 +26,8 @@ WHERE month = 7 AND day = 28 AND hour = 10;
 
 
 
---PEOPLE THAT ENTER AND EXIT TO THE BAKERY :
-SELECT *
+--PEOPLE'S LICENCE PLATES THAT ENTER AND EXIT TO THE BAKERY :
+SELECT license_plate
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND  activity = "entrance" AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
