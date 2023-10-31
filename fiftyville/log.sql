@@ -97,7 +97,7 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 
 -- we need to determine where they are flying to eleminate candidates
 
-SELECT full_name
+SELECT full_name, id
 FROM airports
 WHERE id IN (SELECT origin_airport_id
 FROM flights
@@ -113,4 +113,5 @@ FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")))));
 
 
---THERE IS ONLY ONE PEOPLE THAT FLIED FROM FIFTYVILLE AIRPORT
+--THERE IS ONLY ONE airport THAT FLIED FROM FIFTYVILLE AIRPORT which is id = 8. We need to look the people that flied from airport 8
+
