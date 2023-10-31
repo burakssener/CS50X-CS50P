@@ -26,7 +26,7 @@ WHERE month = 7 AND day = 28 AND hour = 10;
 
 
 
---FIRINA HEM GİREN HEM CIKANLAR
+--PEOPLE THAT ENTER AND EXIT TO THE BAKERY :
 SELECT *
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND  activity = "entrance" AND license_plate IN (SELECT license_plate
