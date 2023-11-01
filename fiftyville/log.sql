@@ -91,6 +91,34 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 | 48        | 8496433585      | 7C   | 48 | 5                 | 8                      | 2021 | 7     | 30  | 18   | 28     |
 +-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
 
+-- ordering by passport_number to see if someone came to the city before the event and escape from city after the event
+
+SELECT *
+FROM passengers
+JOIN flights
+ON passengers.flight_id = flights.id
+WHERE passport_number IN
+(SELECT passport_number
+FROM people
+WHERE license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")))
+ORDER BY passport_number;
+
+
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
+| flight_id | passport_number | seat | id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
+| 36        | 1695452385      | 3B   | 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
+| 2         | 2963008352      | 6C   | 2  | 2                 | 8                      | 2021 | 7     | 30  | 12   | 44     |
+| 20        | 2963008352      | 6B   | 20 | 6                 | 8                      | 2021 | 7     | 28  | 15   | 22     |
+| 39        | 2963008352      | 8C   | 39 | 5                 | 8                      | 2021 | 7     | 27  | 22   | 37     |
+| 11        | 8496433585      | 5D   | 11 | 8                 | 12                     | 2021 | 7     | 30  | 13   | 7      |
+| 36        | 8496433585      | 7B   | 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
+| 48        | 8496433585      | 7C   | 48 | 5                 | 8                      | 2021 | 7     | 30  | 18   | 28     |
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
 --looking airport_ids to understand where they are flying and when
 SELECT *
 FROM airports
