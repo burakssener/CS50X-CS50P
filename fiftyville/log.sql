@@ -115,7 +115,6 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 
 --THERE IS ONLY ONE airport THAT FLIED FROM FIFTYVILLE AIRPORT which is id = 8. We need to look the people that flied from airport 8
 
-keşiş keşiş keşiş keşiş keşiş keşiş keşiş keşiş keşiş keşiş keşiş keşiş keşişkeşişkeşişkeşişkeşiş keşiş keşiş keşiş keşiş 
 
 airports
 flights
