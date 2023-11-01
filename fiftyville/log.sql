@@ -126,8 +126,6 @@ SELECT *
 FROM flights
 JOIN passengers
 ON passengers.flight_id = flights.id
-JOIN
-ON flights.origin_airport_id = airports.id
 WHERE passport_number IN
 (SELECT passport_number
 FROM people
