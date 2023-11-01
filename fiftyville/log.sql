@@ -139,6 +139,16 @@ LIMIT 10;
 | 10 | CDG          | Charles de Gaulle Airport               | Paris         |
 +----+--------------+-----------------------------------------+---------------+
 
+-- bank accounts of these people
+
+
+
+
+
+
+
+
+
 -- Phone calls from these people and phone numbers as a receiver or caller
 
 SELECT *
