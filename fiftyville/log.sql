@@ -27,7 +27,7 @@ WHERE month = 7 AND day = 28 AND hour = 10;
 
 
 --PEOPLE'S LICENCE PLATES THAT ENTER AND EXIT TO THE BAKERY IN THE TIME THAT DUCK IS STOLEN:
-SELECT license_plate
+SELECT *
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
