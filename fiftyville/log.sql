@@ -65,6 +65,31 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 | 467400 | Luca    | (389) 555-5198 | 8496433585      | 4328GD8       |
 +--------+---------+----------------+-----------------+---------------+
 
+--looking for the id of the flights that are happened by these people with their passport_numbers
+SELECT *
+FROM passengers
+JOIN
+WHERE passport_number IN
+(SELECT passport_number
+FROM people
+WHERE license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")));
+
++-----------+-----------------+------+
+| flight_id | passport_number | seat |
++-----------+-----------------+------+
+| 2         | 2963008352      | 6C   |
+| 11        | 8496433585      | 5D   |
+| 20        | 2963008352      | 6B   |
+| 36        | 1695452385      | 3B   |
+| 36        | 8496433585      | 7B   |
+| 39        | 2963008352      | 8C   |
+| 48        | 8496433585      | 7C   |
++-----------+-----------------+------+
+
 -- Phone calls from these people and phone numbers as a receiver or caller
 
 SELECT *
@@ -84,17 +109,7 @@ WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entran
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")));
 
---looking for the id of the flights that are happened by these people with their passport_numbers
-SELECT flight_id
-FROM passengers
-WHERE passport_number IN
-(SELECT passport_number
-FROM people
-WHERE license_plate IN (SELECT license_plate
-FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
-FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")));
+
 
 
 -- looking flights that match with flight ids that We found
