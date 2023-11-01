@@ -141,7 +141,7 @@ LIMIT 10;
 
 -- bank accounts of these people
 
-SELECT
+SELECT *
 FROM atm_transactions
 WHERE account_number IN (
 SELECT account_number
