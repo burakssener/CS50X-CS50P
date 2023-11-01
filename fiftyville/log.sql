@@ -68,7 +68,8 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 --looking for the id of the flights that are happened by these people with their passport_numbers
 SELECT *
 FROM passengers
-JOIN
+JOIN flights
+ON passengers.flight_id = flights.id
 WHERE passport_number IN
 (SELECT passport_number
 FROM people
@@ -78,17 +79,17 @@ WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entran
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")));
 
-+-----------+-----------------+------+
-| flight_id | passport_number | seat |
-+-----------+-----------------+------+
-| 2         | 2963008352      | 6C   |
-| 11        | 8496433585      | 5D   |
-| 20        | 2963008352      | 6B   |
-| 36        | 1695452385      | 3B   |
-| 36        | 8496433585      | 7B   |
-| 39        | 2963008352      | 8C   |
-| 48        | 8496433585      | 7C   |
-+-----------+-----------------+------+
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
+| flight_id | passport_number | seat | id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
+| 2         | 2963008352      | 6C   | 2  | 2                 | 8                      | 2021 | 7     | 30  | 12   | 44     |
+| 11        | 8496433585      | 5D   | 11 | 8                 | 12                     | 2021 | 7     | 30  | 13   | 7      |
+| 20        | 2963008352      | 6B   | 20 | 6                 | 8                      | 2021 | 7     | 28  | 15   | 22     |
+| 36        | 1695452385      | 3B   | 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
+| 36        | 8496433585      | 7B   | 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
+| 39        | 2963008352      | 8C   | 39 | 5                 | 8                      | 2021 | 7     | 27  | 22   | 37     |
+| 48        | 8496433585      | 7C   | 48 | 5                 | 8                      | 2021 | 7     | 30  | 18   | 28     |
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
 
 -- Phone calls from these people and phone numbers as a receiver or caller
 
