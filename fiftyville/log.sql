@@ -141,11 +141,11 @@ LIMIT 10;
 
 -- bank accounts of these people
 
-SELECT account_number
+SELECT *
 FROM bank_accounts
-JOIN
-ON bank_accounts.person_id =people.person_id
-WHERE  IN (SELECT person_id
+JOIN people
+ON bank_accounts.person_id = people.person_id
+WHERE person_id IN (SELECT person_id
 FROM people
 WHERE license_plate IN (SELECT license_plate
 FROM bakery_security_logs
