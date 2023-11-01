@@ -119,7 +119,7 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 
 airports
 
-flights
+ON flights.origin_airport_id = airports.id
 
 ON passengers.flight_id = flights_id
 
