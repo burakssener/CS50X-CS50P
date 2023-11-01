@@ -141,6 +141,22 @@ LIMIT 10;
 
 -- bank accounts of these people
 
+SELECT account_number
+FROM bank_accounts
+JOIN
+ON bank_accounts.person_id =people.person_id
+WHERE  IN (SELECT person_id
+FROM people
+WHERE license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")));
+
+
+
+
+-- TRANSACTIONS
 SELECT *
 FROM atm_transactions
 WHERE account_number IN (
