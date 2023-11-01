@@ -56,6 +56,15 @@ WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entran
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit"));
 
++--------+---------+----------------+-----------------+---------------+
+|   id   |  name   |  phone_number  | passport_number | license_plate |
++--------+---------+----------------+-----------------+---------------+
+| 221103 | Vanessa | (725) 555-4692 | 2963008352      | 5P2BI95       |
+| 243696 | Barry   | (301) 555-4174 | 7526138472      | 6P58WS2       |
+| 398010 | Sofia   | (130) 555-0289 | 1695452385      | G412CB7       |
+| 467400 | Luca    | (389) 555-5198 | 8496433585      | 4328GD8       |
++--------+---------+----------------+-----------------+---------------+
+
 -- Phone calls from these people and phone numbers as a receiver or caller
 
 SELECT *
