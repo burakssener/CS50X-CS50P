@@ -168,7 +168,6 @@ SELECT *
 FROM bank_accounts
 JOIN people
 ON bank_accounts.person_id = people.id
-WHERE person_id IN 
 
 
 
