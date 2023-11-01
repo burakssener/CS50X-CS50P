@@ -121,6 +121,6 @@ airports
 
 flights
 
-passengers
+ON passengers.flight_id = flights_id
 
 people
