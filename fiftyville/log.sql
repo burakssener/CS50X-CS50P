@@ -164,7 +164,7 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 
 -- TRANSACTIONS
 
-SELECT account_numbers
+SELECT *
 FROM bank_accounts
 JOIN people
 ON bank_accounts.person_id = people.id
