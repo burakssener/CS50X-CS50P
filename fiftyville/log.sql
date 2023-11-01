@@ -164,7 +164,37 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 
 -- TRANSACTIONS
 
+SELECT *
+FROM atm_transactions
+WHERE account_number IN (SELECT account_number
+FROM bank_accounts
+JOIN people
+ON bank_accounts.person_id = people.id
+WHERE person_id IN (SELECT id
+FROM people
+WHERE license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit"))));
 
++------+----------------+------+-------+-----+----------------------+------------------+--------+
+|  id  | account_number | year | month | day |     atm_location     | transaction_type | amount |
++------+----------------+------+-------+-----+----------------------+------------------+--------+
+| 7    | 28500762       | 2021 | 7     | 26  | Leggett Street       | deposit          | 75     |
+| 48   | 56171033       | 2021 | 7     | 26  | Leggett Street       | deposit          | 50     |
+| 183  | 56171033       | 2021 | 7     | 27  | Blumberg Boulevard   | deposit          | 20     |
+| 246  | 28500762       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 48     |
+| 292  | 56171033       | 2021 | 7     | 28  | Daboin Sanchez Drive | deposit          | 70     |
+| 386  | 56171033       | 2021 | 7     | 29  | Blumberg Boulevard   | withdraw         | 85     |
+| 391  | 56171033       | 2021 | 7     | 29  | Daboin Sanchez Drive | withdraw         | 20     |
+| 441  | 56171033       | 2021 | 7     | 29  | Humphrey Lane        | withdraw         | 90     |
+| 759  | 56171033       | 2021 | 7     | 30  | Humphrey Lane        | withdraw         | 55     |
+| 778  | 56171033       | 2021 | 7     | 30  | Blumberg Boulevard   | withdraw         | 40     |
+| 844  | 56171033       | 2021 | 7     | 31  | Daboin Sanchez Drive | deposit          | 80     |
+| 909  | 56171033       | 2021 | 7     | 31  | Carvalho Road        | withdraw         | 75     |
+| 1295 | 56171033       | 2021 | 8     | 1   | Carvalho Road        | withdraw         | 55     |
++------+----------------+------+-------+-----+----------------------+------------------+--------+
 
 
 
