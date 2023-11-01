@@ -113,17 +113,19 @@ FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")))));
 
 
---THERE IS ONLY ONE airport THAT FLIED FROM FIFTYVILLE AIRPORT which is id = 8. We need to look the people that flied from airport 8
+--THERE IS ONLY ONE PEOPLE THAT FLIED FROM FIFTYVILLE AIRPORT which is id = 8. We need to look the people that flied from airport 8
 
 
 airports
 flights
 passengers
-
 ON flights.origin_airport_id = airports.id
 
-ON passengers.flight_id = flights_id
 
-IN
+SELECT *
+FROM flights
+JOIN passengerS
+ON passengers.flight_id = flights.id
+LIMIT 10;
 
 people
