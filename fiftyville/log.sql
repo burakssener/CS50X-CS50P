@@ -142,7 +142,8 @@ LIMIT 10;
 -- bank accounts of these people
 
 
-
+SELECT account_number
+FROM 
 
 
 
