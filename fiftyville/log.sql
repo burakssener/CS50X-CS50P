@@ -153,10 +153,28 @@ WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entran
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")));
 
++----------------+-----------+---------------+--------+-------+----------------+-----------------+---------------+
+| account_number | person_id | creation_year |   id   | name  |  phone_number  | passport_number | license_plate |
++----------------+-----------+---------------+--------+-------+----------------+-----------------+---------------+
+| 28500762       | 467400    | 2014          | 467400 | Luca  | (389) 555-5198 | 8496433585      | 4328GD8       |
+| 56171033       | 243696    | 2018          | 243696 | Barry | (301) 555-4174 | 7526138472      | 6P58WS2       |
++----------------+-----------+---------------+--------+-------+----------------+-----------------+--
 
 
 
 -- TRANSACTIONS
+
+SELECT account_numbers
+FROM bank_accounts
+JOIN people
+ON bank_accounts.person_id = people.id
+WHERE person_id IN (SELECT id
+FROM people
+WHERE license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")));
 SELECT *
 FROM atm_transactions
 WHERE account_number IN (
