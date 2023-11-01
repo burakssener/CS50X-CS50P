@@ -91,6 +91,26 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 | 48        | 8496433585      | 7C   | 48 | 5                 | 8                      | 2021 | 7     | 30  | 18   | 28     |
 +-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
 
+--looking airport_ids to understand where they are flying and when
+SELECT *
+FROM airports
+LIMIT 10;
+
++----+--------------+-----------------------------------------+---------------+
+| id | abbreviation |                full_name                |     city      |
++----+--------------+-----------------------------------------+---------------+
+--| 1  | ORD          | O'Hare International Airport            | Chicago       |
+--| 2  | PEK          | Beijing Capital International Airport   | Beijing       |
+--| 3  | LAX          | Los Angeles International Airport       | Los Angeles   |
+--| 4  | LGA          | LaGuardia Airport                       | New York City |
+--| 5  | DFS          | Dallas/Fort Worth International Airport | Dallas        |
+--| 6  | BOS          | Logan International Airport             | Boston        |
+| 7  | DXB          | Dubai International Airport             | Dubai         |
+| 8  | CSF          | Fiftyville Regional Airport             | Fiftyville    |
+| 9  | HND          | Tokyo International Airport             | Tokyo         |
+| 10 | CDG          | Charles de Gaulle Airport               | Paris         |
++----+--------------+-----------------------------------------+---------------+
+
 -- Phone calls from these people and phone numbers as a receiver or caller
 
 SELECT *
