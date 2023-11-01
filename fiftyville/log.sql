@@ -144,8 +144,8 @@ LIMIT 10;
 SELECT *
 FROM bank_accounts
 JOIN people
-ON bank_accounts.person_id = people.person_id
-WHERE person_id IN (SELECT person_id
+ON bank_accounts.person_id = people.id
+WHERE person_id IN (SELECT id
 FROM people
 WHERE license_plate IN (SELECT license_plate
 FROM bakery_security_logs
