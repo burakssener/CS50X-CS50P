@@ -70,6 +70,8 @@ SELECT *
 FROM passengers
 JOIN flights
 ON passengers.flight_id = flights.id
+JOIN people
+ON people.passport_number = passengers.passport_number
 WHERE passport_number IN
 (SELECT passport_number
 FROM people
