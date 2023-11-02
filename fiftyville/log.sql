@@ -310,6 +310,13 @@ I heard the thief say that they were planning to take the earliest flight out of
 -- lucia and the helper is with him which is 1695452385, she entered bakery before the event exitted after the event, before entering withdraw money, and take a morning
 -- ticket from her friend for the next day as these information match with the interviews, Lucia is the guilty. Now  the problem is who helped to Lucia:
 
+
+SELECT 
+
+
+
+
+
 --the receiver of the phone the person who got the ticket for lucia so we can check his number to find who is he
 
 SELECT *
