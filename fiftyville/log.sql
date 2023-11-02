@@ -305,10 +305,23 @@ I heard the thief say that they were planning to take the earliest flight out of
 
 --passport_number which is 1695452385 and 8496433585 are the only persont that are match our time and other criterias and lucia is 8496433585, it means the guilty is
 -- lucia and the helper is with him which is 1695452385, she entered bakery before the event exitted after the event, before entering withdraw money, and take a morning
--- ticket from her friend for the next day as these information match with the interviews, Lucia is the guilty.
+-- ticket from her friend for the next day as these information match with the interviews, Lucia is the guilty. Now  the problem is who helped to Lucia:
 
+--the receiver of the phone the person who got the ticket for lucia so we can check his number to find who is he
 
+SELECT *
+FROM people
+WHERE phone_number = "(609) 555-5876";
 
++--------+---------+----------------+-----------------+---------------+
+|   id   |  name   |  phone_number  | passport_number | license_plate |
++--------+---------+----------------+-----------------+---------------+
+| 561160 | Kathryn | (609) 555-5876 | 6121106406      | 4ZY7I8T       |
++--------+---------+----------------+-----------------+---------------+
+
+--before understand who is kathryn, I need to check all airports that Lucia visited to understand his last place
+
+SELECT 
 
 
 
