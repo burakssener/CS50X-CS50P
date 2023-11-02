@@ -306,14 +306,25 @@ I heard the thief say that they were planning to take the earliest flight out of
 | 12 | DEL          | Indira Gandhi International Airport     | Delhi         |
 +----+--------------+-----------------------------------------+---------------+
 
---passport_number which is 1695452385 and 8496433585 are the only persont that are match our time and other criterias and lucia is 8496433585, it means the guilty is
--- lucia and the helper is with him which is 1695452385, she entered bakery before the event exitted after the event, before entering withdraw money, and take a morning
--- ticket from her friend for the next day as these information match with the interviews, Lucia is the guilty. Now  the problem is who helped to Lucia:
-
+--passport_number which is 1695452385 and 8496433585 are the only persont that are match our time and other criterias and lucia is 8496433585
 
 SELECT *
 From people
 WHERE passport_number = "1695452385" OR passport_number = "8496433585";
++--------+-------+----------------+-----------------+---------------+
+|   id   | name  |  phone_number  | passport_number | license_plate |
++--------+-------+----------------+-----------------+---------------+
+| 398010 | Sofia | (130) 555-0289 | 1695452385      | G412CB7       |
+| 467400 | Luca  | (389) 555-5198 | 8496433585      | 4328GD8       |
++--------+-------+----------------+-----------------+---------------+
+
+-- it means the guilty is
+-- lucia and the helper is with him which is 1695452385, she entered bakery before the event exitted after the event, before entering withdraw money, and take a morning
+-- ticket from her friend for the next day as these information match with the interviews, Lucia is the guilty. Now  the problem is who helped to Lucia:
+
+SELECT *
+FROM phone_calls
+WHERE (caller = "(389) 555-5198" OR receiver = "(389) 555-5198") AND month = 7 AND day = 28;
 
 
 
