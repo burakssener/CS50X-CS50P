@@ -221,27 +221,28 @@ GROUP BY account_number;
 | 56171033       | 220           | 420            |
 +----------------+---------------+----------------+
 
--- After this point I suspected from only Barry who has 56171033 account_number and check all information of him But I realized I didn't checked the internviews section
-
-
-
---
+-- After this point I suspected from only Barry who has 56171033 account_number and check all information of him
+--But I realized I didn't checked the internviews section
 
 SELECT *
 FROM interviews
 WHERE month = 7 AND day BETWEEN 27 AND 29;
 
-| 157 | Charlotte | 2021 | 7     | 27  | “He was in the house about half an hour, and I could catch glimpses of him in the windows of the sitting-room, pacing up and down, talking excitedly, and waving his arms. Of her I could see nothing. Presently he emerged, looking even more flurried than before.
-As he stepped up to the cab, he pulled a gold watch from his pocket and looked at it earnestly, ‘Drive like the devil,’ he shouted, ‘first to Gross & Hankey’s in Regent Street,
-and then to the Church of St. Monica in the Edgeware Road. Half a guinea if you do it in twenty minutes!’ |
-| 158 | Jose      | 2021 | 7     | 28  | “Ah,” said he, “I forgot that I had not seen you for some weeks. It is a little souvenir from the King of Bohemia in return for my assistance in the case of the Irene Adler papers.”                                                                                                                                                                                                                                                                                                                                                                           |
-| 159 | Eugene    | 2021 | 7     | 28  | “I suppose,” said Holmes, “that when Mr. Windibank came back from France he was very annoyed at your having gone to the ball.”                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| 160 | Barbara   | 2021 | 7     | 28  | “You had my note?” he asked with a deep harsh voice and a strongly marked German accent. “I told you that I would call.” He looked from one to the other of us, as if uncertain which to address.                                                                                                                                                                                                                                                                                                                                                               |
-| 161 | Ruth      | 2021 | 7     | 28  | Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away. If you have security footage from the bakery parking lot, you might want to look for cars that left the parking lot in that time frame.                                                                                                                                                                                                                                                                                                      |
-| 162 | Eugene    | 2021 | 7     | 28  | I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery, I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.                                                                                                                                                                                                                                                                                                                                             |
-| 163 | Raymond   | 2021 | 7     | 28  | As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.                                                                                                                                                                                                                                             |
-| 191 | Lily      | 2021 | 7     | 28  | Our neighboring courthouse has a very annoying rooster that crows loudly at 6am every day. My sons Robert and Patrick took the rooster to a city far, far away, so it may never bother us again. My sons have successfully arrived in Paris.                                                                                                                                                                                                                                                                                                                    |
-
+| id  |   name    | year | month | day |
+| 157 | Charlotte | 2021 | 7     | 27  | “He was in the house about half an hour, and I could catch glimpses of him in the windows of the sitting-room, pacing up and down, talking excitedly, and waving his arms.
+Of her I could see nothing. Presently he emerged, looking even more flurried than before. As he stepped up to the cab, he pulled a gold watch from his pocket and looked at it earnestly,
+‘Drive like the devil,’ he shouted, ‘first to Gross & Hankey’s in Regent Street, and then to the Church of St. Monica in the Edgeware Road. Half a guinea if you do it in twenty minutes!’ |
+| 158 | Jose      | 2021 | 7     | 28  | “Ah,” said he, “I forgot that I had not seen you for some weeks. It is a little souvenir from the King of Bohemia in return for my assistance in the case of the Irene Adler papers.”
+| 159 | Eugene    | 2021 | 7     | 28  | “I suppose,” said Holmes, “that when Mr. Windibank came back from France he was very annoyed at your having gone to the ball.”
+| 160 | Barbara   | 2021 | 7     | 28  | “You had my note?” he asked with a deep harsh voice and a strongly marked German accent. “I told you that I would call.”
+He looked from one to the other of us, as if uncertain which to address.
+| 161 | Ruth      | 2021 | 7     | 28  | Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away.
+If you have security footage from the bakery parking lot, you might want to look for cars that left the parking lot in that time frame.
+| 162 | Eugene    | 2021 | 7     | 28  | I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emmas bakery,
+I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
+| 163 | Raymond   | 2021 | 7     | 28  | As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call,
+I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
+My sons Robert and Patrick took the rooster to a city far, far away, so it may never bother us again. My sons have successfully arrived in Paris.
 
 
 -- Phone calls from these people and phone numbers as a receiver or caller
