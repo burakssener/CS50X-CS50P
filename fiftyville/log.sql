@@ -252,7 +252,7 @@ I was walking by the ATM on Leggett Street and saw the thief there withdrawing s
 
 ...> | 246  | 28500762       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 48     |  -- THIS IS LUCA
 
---
+-- IF LUCA called someone in around stealing time 100% she is the burglar
 
 
 As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call,
