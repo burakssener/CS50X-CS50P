@@ -246,9 +246,13 @@ My sons Robert and Patrick took the rooster to a city far, far away, so it may n
 
 
 
--- THE IMPORTANT ONE IS
+-- THE IMPORTANT ONES IS
 I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emmas bakery,
 I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
+
+...> | 246  | 28500762       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 48     |  -- THIS IS LUCA
+
+--
 
 
 As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call,
