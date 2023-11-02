@@ -238,6 +238,14 @@ AND name = "Barry";
 
 
 
+--
+
+SELECT *
+FROM interviews
+WHERE month = 7 AND day BETWEEN 27 AND 29;
+
+
+
 
 
 -- Phone calls from these people and phone numbers as a receiver or caller
