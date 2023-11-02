@@ -16,24 +16,24 @@ WHERE month = 7 AND day = 28;
 | 163 | Raymond | 2021 | 7     | 28  | As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket. |
 | 191 | Lily    | 2021 | 7     | 28  | Our neighboring courthouse has a very annoying rooster that crows loudly at 6am every day. My sons Robert and Patrick took the rooster to a city far, far away, so it may never bother us again. My sons have successfully arrived in Paris.
 
--
-SELECT hour as exit_hour, minute as exit_minute
-FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "exit";
+-- Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away. If you have security footage from the bakery parking lot, you might want to look for cars that left the parking lot in that time frame.
 
 SELECT *
 FROM bakery_security_logs
-JOIN
-WHERE month = 7 AND (hour = 10 OR hour = 11) AND day = 28 AND activity = "entrance"
+JOIN people
+ON bakery_security_logs.license_plate = people.license_plate
+WHERE month = 7 AND day = 28 AND (hour BETWEEN 10 AND 11) AND day = 28 AND minute <= 25 AND activity = "exit";
 
++-----+------+-------+-----+------+--------+----------+---------------+--------+---------+----------------+-----------------+---------------+
+| id  | year | month | day | hour | minute | activity | license_plate |   id   |  name   |  phone_number  | passport_number | license_plate |
++-----+------+-------+-----+------+--------+----------+---------------+--------+---------+----------------+-----------------+---------------+
+| 260 | 2021 | 7     | 28  | 10   | 16     | exit     | 5P2BI95       | 221103 | Vanessa | (725) 555-4692 | 2963008352      | 5P2BI95       |
+| 261 | 2021 | 7     | 28  | 10   | 18     | exit     | 94KL13X       | 686048 | Bruce   | (367) 555-5533 | 5773159633      | 94KL13X       |
+| 262 | 2021 | 7     | 28  | 10   | 18     | exit     | 6P58WS2       | 243696 | Barry   | (301) 555-4174 | 7526138472      | 6P58WS2       |
+| 263 | 2021 | 7     | 28  | 10   | 19     | exit     | 4328GD8       | 467400 | Luca    | (389) 555-5198 | 8496433585      | 4328GD8       |
+| 264 | 2021 | 7     | 28  | 10   | 20     | exit     | G412CB7       | 398010 | Sofia   | (130) 555-0289 | 1695452385      | G412CB7       |
+| 265 | 2021 | 7     | 28  | 10   | 21     | exit     | L93JTIZ       | 396669 | Iman    | (829) 555-5269 | 7049073643      | L93JTIZ       |
+| 266 | 2021 | 7     | 28  | 10   | 23     | exit     | 322W7JE       | 514354 | Diana   | (770) 555-1861 | 3592750733      | 322W7JE       |
+| 267 | 2021 | 7     | 28  | 10   | 23     | exit     | 0NTHK55       | 560886 | Kelsey  | (499) 555-9472 | 8294398571      | 0NTHK55       |
++-----+------+-------+-----+------+--------+----------+---------------+--------+---------+----------------+-----------------+---------------+
 
-
-license_plate IN (SELECT license_plate
-FROM bakery_security_logs
-WHERE month = 7 AND (hour = 10 OR hour = 11) AND day = 28 AND activity = "exit");
-
-SELECT license_plate
-FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
-FROM bakery_security_logs
-WHERE month = 7 AND (hour = 10 OR hour = 11) AND day = 28 AND activity = "exit");
