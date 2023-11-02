@@ -340,9 +340,26 @@ ORDER BY day;
 +-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
 
 -- There is a conflict because lucia is buying ticket for 7.29 mornıng from fiftyville to  New York but it seems she also bought a ticket for 7.30 and the destination is DELHI.
--- I will solve the issue later but lets focus on kathryrn
+-- I will solve the issue later but lets focus on kathryrn. In the interviews he tells the story as a "they"
+In the call,
+I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
 
+--It means kathryrn should escape too, so we can confirm that she is a helper.
+SELECT *
+FROM flights
+WHERE flights.id =(SELECT flight_id
+FROM passengers
+WHERE passport_number = (SELECT passport_number
+FROM people
+WHERE phone_number = "(609) 555-5876"));
 
++----+-------------------+------------------------+------+-------+-----+------+--------+
+| id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
++----+-------------------+------------------------+------+-------+-----+------+--------+
+| 34 | 8                 | 5                      | 2021 | 7     | 28  | 17   | 20     |
++----+-------------------+------------------------+------+-------+-----+------+--------+
+
+--She flight to somewhere else at this point
 
 -- Phone calls from these people and phone numbers as a receiver or caller
 
