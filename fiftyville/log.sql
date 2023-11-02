@@ -346,7 +346,9 @@ SELECT *
 FROM passengers
 JOIN flights
 ON passengers.flight_id = flights.id
-WHERE passport_number = 
+WHERE passport_number = (SELECT passport_number
+FROM people
+Where phone_number = "(996) 555-8899");
 
 --the receiver of the phone the person who got the ticket for lucia so we can check his number to find who is he
 
