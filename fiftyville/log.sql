@@ -223,6 +223,18 @@ GROUP BY account_number;
 
 -- After this point I suspected from only Barry who has 56171033 account_number and check all information of him
 
+SELECT *
+FROM bank_accounts
+JOIN people
+ON bank_accounts.person_id = people.id
+WHERE person_id IN (SELECT id
+FROM people
+WHERE license_plate IN (/ AND  activity = "entrance" AND license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")));
+
+
+
 
 
 -- Phone calls from these people and phone numbers as a receiver or caller
