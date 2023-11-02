@@ -346,18 +346,18 @@ I heard the thief say that they were planning to take the earliest flight out of
 
 --It means kathryrn should escape too, so we can confirm that she is a helper.
 SELECT *
-FROM flights
-WHERE flights.id =(SELECT flight_id
 FROM passengers
+JOIN flights
+ON passengers.flight_id = flights.id
 WHERE passport_number = (SELECT passport_number
 FROM people
-WHERE phone_number = "(609) 555-5876"));
+WHERE phone_number = "(609) 555-5876");
 
-+----+-------------------+------------------------+------+-------+-----+------+--------+
-| id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
-+----+-------------------+------------------------+------+-------+-----+------+--------+
-| 34 | 8                 | 5                      | 2021 | 7     | 28  | 17   | 20     |
-+----+-------------------+------------------------+------+-------+-----+------+--------+
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
+| flight_id | passport_number | seat | id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
+| 34        | 6121106406      | 2A   | 34 | 8                 | 5                      | 2021 | 7     | 28  | 17   | 20     |
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
 
 --She flight to somewhere else at this point
 
