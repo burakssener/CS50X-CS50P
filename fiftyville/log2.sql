@@ -37,3 +37,23 @@ WHERE month = 7 AND day = 28 AND (hour BETWEEN 10 AND 11) AND day = 28 AND minut
 | 267 | 2021 | 7     | 28  | 10   | 23     | exit     | 0NTHK55       | 560886 | Kelsey  | (499) 555-9472 | 8294398571      | 0NTHK55       |
 +-----+------+-------+-----+------+--------+----------+---------------+--------+---------+----------------+-----------------+---------------+
 
+
+--I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery, I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
+-- before 10.15, leggett street, withdrawing money
+
+SELECT *
+FROM atm_transactions
+WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
+
++-----+----------------+------+-------+-----+----------------+------------------+--------+
+| id  | account_number | year | month | day |  atm_location  | transaction_type | amount |
++-----+----------------+------+-------+-----+----------------+------------------+--------+
+| 246 | 28500762       | 2021 | 7     | 28  | Leggett Street | withdraw         | 48     |
+| 264 | 28296815       | 2021 | 7     | 28  | Leggett Street | withdraw         | 20     |
+| 266 | 76054385       | 2021 | 7     | 28  | Leggett Street | withdraw         | 60     |
+| 267 | 49610011       | 2021 | 7     | 28  | Leggett Street | withdraw         | 50     |
+| 269 | 16153065       | 2021 | 7     | 28  | Leggett Street | withdraw         | 80     |
+| 288 | 25506511       | 2021 | 7     | 28  | Leggett Street | withdraw         | 20     |
+| 313 | 81061156       | 2021 | 7     | 28  | Leggett Street | withdraw         | 30     |
+| 336 | 26013199       | 2021 | 7     | 28  | Leggett Street | withdraw         | 35     |
++-----+----------------+------+-------+-----+----------------+------------------+--------+
