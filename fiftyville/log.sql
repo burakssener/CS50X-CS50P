@@ -91,7 +91,7 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 | 48        | 8496433585      | 7C   | 48 | 5                 | 8                      | 2021 | 7     | 30  | 18   | 28     |
 +-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
 
--- ordering by passport_number to see if someone came to the city before the event and escape from city after the event
+-- ordering by date to see if someone came to the city before the event and escape from city after the event
 
 SELECT *
 FROM passengers
