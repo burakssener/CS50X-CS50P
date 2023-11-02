@@ -123,3 +123,14 @@ FROM foursuspect));
 | (609) 555-5876 | (389) 555-5198 | 7     | 28  | 60       | Kathryn     | 6121106406      | Luca          | 8496433585        |
 | (770) 555-1861 | (725) 555-3243 | 7     | 28  | 49       | Diana       | 3592750733      | Philip        | 3391710505        |
 +----------------+----------------+-------+-----+----------+-------------+-----------------+---------------+-------------------+
+
+SELECT flights.origin_airport_id, a1.id ,flights.origin_airport_id, a2.id , flights.month, flights.day, flights.hour, flights.minute
+FROM flights
+JOIN airports as a1
+ON flights.origin_airport_id = a1.id
+JOIN airports as a2
+ON flights.origin_airport_id = a2.id
+
+SELECT *
+FROM flights
+LIMIT 10;
