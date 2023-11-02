@@ -43,6 +43,8 @@ WHERE month = 7 AND day = 28 AND (hour BETWEEN 10 AND 11) AND day = 28 AND minut
 
 SELECT *
 FROM atm_transactions
+JOIN People
+ON atm_transactions.
 WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
 
 +-----+----------------+------+-------+-----+----------------+------------------+--------+
