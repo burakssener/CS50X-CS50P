@@ -273,13 +273,38 @@ WHERE (caller = "(389) 555-5198" OR receiver = "(389) 555-5198") AND month = 7 A
 
 In the call,
 I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
-My sons Robert and Patrick took the rooster to a city far, far away, so it may never bother us again. My sons have successfully arrived in Paris.
 
+--AS WE QUERY ABOVE, MORNING IN THE 29TH OF JUNE THR HELPER BOUGHT A PLANE TICKET FROM FIFTYVILLE WHICH IS ID = 8
 
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
+| flight_id | passport_number | seat | id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
+| 39        | 2963008352      | 8C   | 39 | 5                 | 8                      | 2021 | 7     | 27  | 22   | 37     |
+| 20        | 2963008352      | 6B   | 20 | 6                 | 8                      | 2021 | 7     | 28  | 15   | 22     |
+| 36        | 1695452385      | 3B   | 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
+| 36        | 8496433585      | 7B   | 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
+| 2         | 2963008352      | 6C   | 2  | 2                 | 8                      | 2021 | 7     | 30  | 12   | 44     |
+| 11        | 8496433585      | 5D   | 11 | 8                 | 12                     | 2021 | 7     | 30  | 13   | 7      |
+| 48        | 8496433585      | 7C   | 48 | 5                 | 8                      | 2021 | 7     | 30  | 18   | 28     |
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
 
++----+--------------+-----------------------------------------+---------------+
+| id | abbreviation |                full_name                |     city      |
++----+--------------+-----------------------------------------+---------------+
+--| 1  | ORD          | O'Hare International Airport            | Chicago       |
+--| 2  | PEK          | Beijing Capital International Airport   | Beijing       |
+--| 3  | LAX          | Los Angeles International Airport       | Los Angeles   |
+--| 4  | LGA          | LaGuardia Airport                       | New York City |
+--| 5  | DFS          | Dallas/Fort Worth International Airport | Dallas        |
+--| 6  | BOS          | Logan International Airport             | Boston        |
+| 7  | DXB          | Dubai International Airport             | Dubai         |
+| 8  | CSF          | Fiftyville Regional Airport             | Fiftyville    |
+| 9  | HND          | Tokyo International Airport             | Tokyo         |
+| 10 | CDG          | Charles de Gaulle Airport               | Paris         |
++----+--------------+-----------------------------------------+---------------+
 
-
-
+--passport_number which is 1695452385 and 8496433585 are the only persont that are match our time and other criterias and lucia is 8496433585, it means the guilty is
+-- lucia she entered bakery before the event exitted after the event
 
 
 
