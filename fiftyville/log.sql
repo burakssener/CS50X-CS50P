@@ -311,7 +311,9 @@ I heard the thief say that they were planning to take the earliest flight out of
 -- ticket from her friend for the next day as these information match with the interviews, Lucia is the guilty. Now  the problem is who helped to Lucia:
 
 
-SELECT 
+SELECT *
+From people
+WHERE passport_number = "1695452385" OR passport_number = "8496433585";
 
 
 
