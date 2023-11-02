@@ -87,12 +87,29 @@ WHERE month = 7 AND day = 28 AND (hour BETWEEN 10 AND 11) AND day = 28 AND minut
 | 246 | 28500762       | 2021 | 7     | 28  | Leggett Street | withdraw         | 48     | 28500762       | 467400    | 2014          | 467400 | Luca  | (389) 555-5198 | 8496433585      | 4328GD8       |
 +-----+----------------+------+-------+-----+----------------+------------------+--------+----------------+-----------+---------------+--------+-------+--------------
 
--- Now all suspected people are Bruce, Diana, Iman and Luca
+-- Now all suspected people are Bruce, Diana, Iman and Luca and I create view to write this table again and again.
+
+CREATE VIEW foursuspect AS
+SELECT *
+FROM atm_transactions
+JOIN bank_accounts
+ON bank_accounts.account_number = atm_transactions.account_number
+JOIN people
+ON people.id =bank_accounts.person_id
+WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw" AND license_plate IN (SELECT people.license_plate
+FROM bakery_security_logs
+JOIN people
+ON bakery_security_logs.license_plate = people.license_plate
+WHERE month = 7 AND day = 28 AND (hour BETWEEN 10 AND 11) AND day = 28 AND minute <= 25 AND activity = "exit");
+
 
 -- We need to look people that around the time of event, who makes phone call less than a minute
 --As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
 
-
 SELECT *
 FROM phone_calls
-WHERE month = 7 AND day = 28 AND duration <= 60 AND (caller IN () receiver IN ());
+JOIN people
+ON people.phone_number = phone_calls.caller
+WHERE month = 7 AND day = 28 AND duration <= 60 AND (caller IN (SELECT phone_number
+FROM foursuspect) OR receiver IN (SELECT phone_number
+FROM foursuspect));
