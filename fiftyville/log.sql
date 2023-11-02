@@ -252,24 +252,25 @@ I was walking by the ATM on Leggett Street and saw the thief there withdrawing s
 
 ...> | 246  | 28500762       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 48     |  -- THIS IS LUCA
 
--- IF LUCA called someone in around stealing time 100% she is the burglar
+-- IF LUCA called someone around less than a minute, she is more and more suspected
 
 | 28500762       | 467400    | 2014          | 467400 | Luca  | (389) 555-5198 | 8496433585      | 4328GD8       |
-
-
-SELECT *
-FROM phone_calls
-JOIN people
-WHERE caller = ("(389) 555-5198" OR receiver = "(389) 555-5198") AND month = 7 AND day = 28;
-
-
-
-
-
 
 As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call,
 I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
 My sons Robert and Patrick took the rooster to a city far, far away, so it may never bother us again. My sons have successfully arrived in Paris.
+
+SELECT *
+FROM phone_calls
+JOIN people
+WHERE (caller = "(389) 555-5198" OR receiver = "(389) 555-5198") AND month = 7 AND day = 28;
+
+
+
+
+
+
+
 
 
 
