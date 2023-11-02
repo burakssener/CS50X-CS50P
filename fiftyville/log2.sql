@@ -92,6 +92,7 @@ WHERE month = 7 AND day = 28 AND (hour BETWEEN 10 AND 11) AND day = 28 AND minut
 -- We need to look people that around the time of event, who makes phone call less than a minute
 --As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
 
+
 SELECT *
 FROM phone_calls
 WHERE month = 7 AND day = 28 AND duration <= 60 AND (caller IN () receiver IN ());
