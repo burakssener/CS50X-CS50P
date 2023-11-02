@@ -124,7 +124,7 @@ FROM foursuspect));
 | (770) 555-1861 | (725) 555-3243 | 7     | 28  | 49       | Diana       | 3592750733      | Philip        | 3391710505        |
 +----------------+----------------+-------+-----+----------+-------------+-----------------+---------------+-------------------+
 
-SELECT flights.origin_airport_id, a1.id ,flights.origin_airport_id, a2.id , flights.month, flights.day, flights.hour, flights.minute
+SELECT flights.origin_airport_id, a1.city ,flights.origin_airport_id, a2.city , flights.month, flights.day, flights.hour, flights.minute
 FROM flights
 JOIN airports as a1
 ON flights.origin_airport_id = a1.id
