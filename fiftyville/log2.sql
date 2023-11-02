@@ -1,3 +1,4 @@
+--The first step is understanding crime scene reports to determine what we have
 SELECT description
 FROM crime_scene_reports
 WHERE month = 7 AND day = 28 AND street = "Humphrey Street";
@@ -16,6 +17,7 @@ WHERE month = 7 AND day = 28;
 | 163 | Raymond | 2021 | 7     | 28  | As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket. |
 | 191 | Lily    | 2021 | 7     | 28  | Our neighboring courthouse has a very annoying rooster that crows loudly at 6am every day. My sons Robert and Patrick took the rooster to a city far, far away, so it may never bother us again. My sons have successfully arrived in Paris.
 
+-- Firstly I looked at time that matches with the interview below the guilty needs to exit the bakery between 10.15 and 10.25 in the 28 july
 -- Sometime within ten minutes of the theft, I saw the thief get into a car in the bakery parking lot and drive away. If you have security footage from the bakery parking lot, you might want to look for cars that left the parking lot in that time frame.
 
 SELECT *
@@ -37,9 +39,9 @@ WHERE month = 7 AND day = 28 AND (hour BETWEEN 10 AND 11) AND day = 28 AND minut
 | 267 | 2021 | 7     | 28  | 10   | 23     | exit     | 0NTHK55       | 560886 | Kelsey  | (499) 555-9472 | 8294398571      | 0NTHK55       |
 +-----+------+-------+-----+------+--------+----------+---------------+--------+---------+----------------+-----------------+---------------+
 
+-- After that ı looked who withdraw money in the specified times which are before 10.15, leggett street, withdrawing money from the interview below
 
 --I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery, I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
--- before 10.15, leggett street, withdrawing money
 
 SELECT *
 FROM atm_transactions
@@ -68,7 +70,39 @@ JOIN bank_accounts
 ON bank_accounts.account_number = atm_transactions.account_number
 JOIN people
 ON people.id =bank_accounts.person_id
-WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"; AND license_plate IN (SELECT license_plate
+WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw" AND license_plate IN (SELECT people.license_plate
+FROM bakery_security_logs
+JOIN people
+ON bakery_security_logs.license_plate = people.license_plate
+WHERE month = 7 AND day = 28 AND (hour BETWEEN 10 AND 11) AND day = 28 AND minute <= 25 AND activity = "exit");
+
+-- After that We need to find intersection of these people to find only do both of them
+
++-----+----------------+------+-------+-----+----------------+------------------+--------+----------------+-----------+---------------+--------+-------+----------------+-----------------+---------------+
+| id  | account_number | year | month | day |  atm_location  | transaction_type | amount | account_number | person_id | creation_year |   id   | name  |  phone_number  | passport_number | license_plate |
++-----+----------------+------+-------+-----+----------------+------------------+--------+----------------+-----------+---------------+--------+-------+----------------+-----------------+---------------+
+| 267 | 49610011       | 2021 | 7     | 28  | Leggett Street | withdraw         | 50     | 49610011       | 686048    | 2010          | 686048 | Bruce | (367) 555-5533 | 5773159633      | 94KL13X       |
+| 336 | 26013199       | 2021 | 7     | 28  | Leggett Street | withdraw         | 35     | 26013199       | 514354    | 2012          | 514354 | Diana | (770) 555-1861 | 3592750733      | 322W7JE       |
+| 288 | 25506511       | 2021 | 7     | 28  | Leggett Street | withdraw         | 20     | 25506511       | 396669    | 2014          | 396669 | Iman  | (829) 555-5269 | 7049073643      | L93JTIZ       |
+| 246 | 28500762       | 2021 | 7     | 28  | Leggett Street | withdraw         | 48     | 28500762       | 467400    | 2014          | 467400 | Luca  | (389) 555-5198 | 8496433585      | 4328GD8       |
++-----+----------------+------+-------+-----+----------------+------------------+--------+----------------+-----------+---------------+--------+-------+--------------
+
+-- Now all suspected people are Bruce, Diana, Iman and Luca
+
+-- We need to look people that around the time of event, who makes phone call less than a minute
+--As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
+
+SELECT *
+FROM phone_calls
+WHERE month = 7 AND day = 28 AND duration <= 60 AND (caller IN () OR receiver IN ());
+
+SELECT phone_number
+FROM atm_transactions
+JOIN bank_accounts
+ON bank_accounts.account_number = atm_transactions.account_number
+JOIN people
+ON people.id =bank_accounts.person_id
+WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw" AND license_plate IN (SELECT people.license_plate
 FROM bakery_security_logs
 JOIN people
 ON bakery_security_logs.license_plate = people.license_plate
