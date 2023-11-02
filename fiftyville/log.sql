@@ -324,7 +324,7 @@ WHERE passport_number = "1695452385" OR passport_number = "8496433585";
 
 SELECT *
 FROM phone_calls
-WHERE (caller = "(389) 555-5198" OR receiver = "(389) 555-5198") AND month = 7 AND day = 28;
+WHERE (caller = "(389) 555-5198" OR receiver = "(389) 555-5198") OR (caller = "(130) 555-0289" OR receiver = "(130) 555-0289")  AND month = 7 AND day = 28;
 
 
 
