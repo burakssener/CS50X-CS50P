@@ -304,7 +304,8 @@ I heard the thief say that they were planning to take the earliest flight out of
 +----+--------------+-----------------------------------------+---------------+
 
 --passport_number which is 1695452385 and 8496433585 are the only persont that are match our time and other criterias and lucia is 8496433585, it means the guilty is
--- lucia she entered bakery before the event exitted after the event
+-- lucia and the helper is with him which is 1695452385, she entered bakery before the event exitted after the event, before entering withdraw money, and take a morning
+-- ticket from her friend for the next day as these information match with the interviews, Lucia is the guilty.
 
 
 
