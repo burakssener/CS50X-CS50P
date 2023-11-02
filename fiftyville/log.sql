@@ -105,18 +105,18 @@ FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")))
-ORDER BY passport_number;
+ORDER BY day;
 
 
 +-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
 | flight_id | passport_number | seat | id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
 +-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
-| 36        | 1695452385      | 3B   | 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
-| 2         | 2963008352      | 6C   | 2  | 2                 | 8                      | 2021 | 7     | 30  | 12   | 44     |
-| 20        | 2963008352      | 6B   | 20 | 6                 | 8                      | 2021 | 7     | 28  | 15   | 22     |
 | 39        | 2963008352      | 8C   | 39 | 5                 | 8                      | 2021 | 7     | 27  | 22   | 37     |
-| 11        | 8496433585      | 5D   | 11 | 8                 | 12                     | 2021 | 7     | 30  | 13   | 7      |
+| 20        | 2963008352      | 6B   | 20 | 6                 | 8                      | 2021 | 7     | 28  | 15   | 22     |
+| 36        | 1695452385      | 3B   | 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
 | 36        | 8496433585      | 7B   | 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
+| 2         | 2963008352      | 6C   | 2  | 2                 | 8                      | 2021 | 7     | 30  | 12   | 44     |
+| 11        | 8496433585      | 5D   | 11 | 8                 | 12                     | 2021 | 7     | 30  | 13   | 7      |
 | 48        | 8496433585      | 7C   | 48 | 5                 | 8                      | 2021 | 7     | 30  | 18   | 28     |
 +-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
 --looking airport_ids to understand where they are flying and when
@@ -176,25 +176,26 @@ WHERE license_plate IN (SELECT license_plate
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit"))));
+WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit"))))
+ORDER BY day;
 
 +------+----------------+------+-------+-----+----------------------+------------------+--------+
-|  id  | account_number | year | month | day |     atm_location     | transaction_type | amount |
-+------+----------------+------+-------+-----+----------------------+------------------+--------+
-| 7    | 28500762       | 2021 | 7     | 26  | Leggett Street       | deposit          | 75     |
-| 48   | 56171033       | 2021 | 7     | 26  | Leggett Street       | deposit          | 50     |
-| 183  | 56171033       | 2021 | 7     | 27  | Blumberg Boulevard   | deposit          | 20     |
-| 246  | 28500762       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 48     |
-| 292  | 56171033       | 2021 | 7     | 28  | Daboin Sanchez Drive | deposit          | 70     |
-| 386  | 56171033       | 2021 | 7     | 29  | Blumberg Boulevard   | withdraw         | 85     |
-| 391  | 56171033       | 2021 | 7     | 29  | Daboin Sanchez Drive | withdraw         | 20     |
-| 441  | 56171033       | 2021 | 7     | 29  | Humphrey Lane        | withdraw         | 90     |
-| 759  | 56171033       | 2021 | 7     | 30  | Humphrey Lane        | withdraw         | 55     |
-| 778  | 56171033       | 2021 | 7     | 30  | Blumberg Boulevard   | withdraw         | 40     |
-| 844  | 56171033       | 2021 | 7     | 31  | Daboin Sanchez Drive | deposit          | 80     |
-| 909  | 56171033       | 2021 | 7     | 31  | Carvalho Road        | withdraw         | 75     |
-| 1295 | 56171033       | 2021 | 8     | 1   | Carvalho Road        | withdraw         | 55     |
-+------+----------------+------+-------+-----+----------------------+------------------+--------+
+   ...> |  id  | account_number | year | month | day |     atm_location     | transaction_type | amount |
+   ...> +------+----------------+------+-------+-----+----------------------+------------------+--------+
+   ...> | 7    | 28500762       | 2021 | 7     | 26  | Leggett Street       | deposit          | 75     |
+   ...> | 246  | 28500762       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 48     |
+   ...> | 48   | 56171033       | 2021 | 7     | 26  | Leggett Street       | deposit          | 50     |
+   ...> | 183  | 56171033       | 2021 | 7     | 27  | Blumberg Boulevard   | deposit          | 20     |
+   ...> | 292  | 56171033       | 2021 | 7     | 28  | Daboin Sanchez Drive | deposit          | 70     |
+   ...> | 386  | 56171033       | 2021 | 7     | 29  | Blumberg Boulevard   | withdraw         | 85     |
+   ...> | 391  | 56171033       | 2021 | 7     | 29  | Daboin Sanchez Drive | withdraw         | 20     |
+   ...> | 441  | 56171033       | 2021 | 7     | 29  | Humphrey Lane        | withdraw         | 90     |
+   ...> | 759  | 56171033       | 2021 | 7     | 30  | Humphrey Lane        | withdraw         | 55     |
+   ...> | 778  | 56171033       | 2021 | 7     | 30  | Blumberg Boulevard   | withdraw         | 40     |
+   ...> | 844  | 56171033       | 2021 | 7     | 31  | Daboin Sanchez Drive | deposit          | 80     |
+   ...> | 909  | 56171033       | 2021 | 7     | 31  | Carvalho Road        | withdraw         | 75     |
+   ...> | 1295 | 56171033       | 2021 | 8     | 1   | Carvalho Road        | withdraw         | 55     |
+   ...> +------+----------------+------+-------+-----+----------------------+------------------+--------+
 
 
 -- transaction amoun ordering
