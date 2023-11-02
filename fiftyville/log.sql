@@ -264,7 +264,7 @@ As the thief was leaving the bakery, they called someone who talked to them for 
 
 SELECT *
 FROM phone_calls
-WHERE (caller = "(389) 555-5198" OR receiver = "(389) 555-5198") AND month = 7 AND day = 28 AND duration <= 60;
+WHERE (caller = "(389) 555-5198" OR receiver = "(389) 555-5198") AND month = 7 AND day = 28;
 
 +-----+----------------+----------------+------+-------+-----+----------+
 | id  |     caller     |    receiver    | year | month | day | duration |
@@ -373,6 +373,7 @@ WHERE (caller = "(609) 555-5876" AND receiver = "(389) 555-5198") OR (caller = "
 | 234 | (609) 555-5876 | (389) 555-5198 | 2021 | 7     | 28  | 60       |
 | 408 | (609) 555-5876 | (389) 555-5198 | 2021 | 7     | 30  | 255      |
 +-----+----------------+----------------+------+-------+-----+----------+
+
 
 -- Phone calls from these people and phone numbers as a receiver or caller
 
