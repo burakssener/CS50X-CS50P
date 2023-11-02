@@ -245,6 +245,14 @@ I heard the thief say that they were planning to take the earliest flight out of
 My sons Robert and Patrick took the rooster to a city far, far away, so it may never bother us again. My sons have successfully arrived in Paris.
 
 
+
+I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emmas bakery,
+I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.
+
+
+As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call,
+I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
+My sons Robert and Patrick took the rooster to a city far, far away, so it may never bother us again. My sons have successfully arrived in Paris.
 -- Phone calls from these people and phone numbers as a receiver or caller
 
 SELECT *
