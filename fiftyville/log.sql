@@ -221,6 +221,10 @@ GROUP BY account_number;
 | 56171033       | 220           | 420            |
 +----------------+---------------+----------------+
 
+-- After this point I suspected from only Barry who has 56171033 account_number and check all information of him
+
+
+
 -- Phone calls from these people and phone numbers as a receiver or caller
 
 SELECT *
