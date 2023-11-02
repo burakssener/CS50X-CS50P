@@ -68,7 +68,7 @@ JOIN bank_accounts
 ON bank_accounts.account_number = atm_transactions.account_number
 JOIN people
 ON people.id =bank_accounts.person_id
-WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"; AND name IN (SELECT name
+WHERE month = 7 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw"; AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
 JOIN people
 ON bakery_security_logs.license_plate = people.license_plate
