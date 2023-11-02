@@ -199,7 +199,7 @@ ORDER BY day;
 
 
 -- transaction amoun ordering
-SELECT SUM(amount)
+SELECT account_number, SUM(CASE WHEN  transaction_type = "deposit" THEN amount ELSE 0 END) AS total_deposit, SUM(CASE WHEN  transaction_type = "withdraw" THEN amount ELSE 0 END) AS total_withdraw
 FROM atm_transactions
 WHERE account_number IN (SELECT account_number
 FROM bank_accounts
@@ -214,7 +214,12 @@ FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit"))))
 GROUP BY account_number;
 
-
++----------------+---------------+----------------+
+| account_number | total_deposit | total_withdraw |
++----------------+---------------+----------------+
+| 28500762       | 75            | 48             |
+| 56171033       | 220           | 420            |
++----------------+---------------+----------------+
 
 -- Phone calls from these people and phone numbers as a receiver or caller
 
