@@ -254,10 +254,26 @@ I was walking by the ATM on Leggett Street and saw the thief there withdrawing s
 
 -- IF LUCA called someone in around stealing time 100% she is the burglar
 
+| 28500762       | 467400    | 2014          | 467400 | Luca  | (389) 555-5198 | 8496433585      | 4328GD8       |
+
 
 As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call,
 I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
 My sons Robert and Patrick took the rooster to a city far, far away, so it may never bother us again. My sons have successfully arrived in Paris.
+
+SELECT *
+FROM phone_calls
+JOIN people
+WHERE caller = "(389) 555-5198" OR receiver = "(389) 555-5198" AND month = 7 AND day = 28;
+
+
+
+
+
+
+
+
+
 -- Phone calls from these people and phone numbers as a receiver or caller
 
 SELECT *
@@ -276,7 +292,8 @@ WHERE license_plate IN (SELECT license_plate
 FROM bakery_security_logs
 WHERE month = 7 AND day = 28 AND (hour = 9 OR hour = 10) AND  activity = "entrance" AND license_plate IN (SELECT license_plate
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")));
+WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")))
+LIMIT 10;
 
 
 
