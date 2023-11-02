@@ -162,7 +162,7 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 
 
 
--- TRANSACTIONS
+-- TRANSACTIONS of these people 2 people that have bank account
 
 SELECT *
 FROM atm_transactions
