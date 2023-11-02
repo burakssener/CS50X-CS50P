@@ -197,6 +197,14 @@ WHERE month = 7 AND day = 28 AND (hour = 10 OR hour = 11) AND activity = "exit")
 +------+----------------+------+-------+-----+----------------------+------------------+--------+
 
 
+-- transaction amoun ordering
+SELECT *
+FROM atm_transactions
+ORDER BY amount DESC
+LIMIT 30
+
+
+
 -- Phone calls from these people and phone numbers as a receiver or caller
 
 SELECT *
