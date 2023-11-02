@@ -106,10 +106,20 @@ WHERE month = 7 AND day = 28 AND (hour BETWEEN 10 AND 11) AND day = 28 AND minut
 -- We need to look people that around the time of event, who makes phone call less than a minute
 --As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
 
-SELECT caller, receiver, month, day, duration, name as caller_name, passport_number as caller_passport
+SELECT phone_calls.caller, phone_calls.receiver, phone_calls.month, phone_calls.day, phone_calls.duration, p1.name as caller_name, p1.passport_number as caller_passport, p2.name as receiver_name, p2.passport_number as receiver_passport
 FROM phone_calls
-JOIN people
-ON people.phone_number = phone_calls.caller
+JOIN people as p1
+ON p1.phone_number = phone_calls.caller
+JOIN people as p2
+ON p2.phone_number = phone_calls.receiver
 WHERE month = 7 AND day = 28 AND duration <= 60 AND (caller IN (SELECT phone_number
 FROM foursuspect) OR receiver IN (SELECT phone_number
 FROM foursuspect));
+
++----------------+----------------+-------+-----+----------+-------------+-----------------+---------------+-------------------+
+|     caller     |    receiver    | month | day | duration | caller_name | caller_passport | receiver_name | receiver_passport |
++----------------+----------------+-------+-----+----------+-------------+-----------------+---------------+-------------------+
+| (367) 555-5533 | (375) 555-8161 | 7     | 28  | 45       | Bruce       | 5773159633      | Robin         | NULL              |
+| (609) 555-5876 | (389) 555-5198 | 7     | 28  | 60       | Kathryn     | 6121106406      | Luca          | 8496433585        |
+| (770) 555-1861 | (725) 555-3243 | 7     | 28  | 49       | Diana       | 3592750733      | Philip        | 3391710505        |
++----------------+----------------+-------+-----+----------+-------------+-----------------+---------------+-------------------+
