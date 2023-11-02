@@ -122,21 +122,22 @@ ORDER BY day;
 --looking airport_ids to understand where they are flying and when
 SELECT *
 FROM airports
-LIMIT 10;
 
 +----+--------------+-----------------------------------------+---------------+
 | id | abbreviation |                full_name                |     city      |
 +----+--------------+-----------------------------------------+---------------+
---| 1  | ORD          | O'Hare International Airport            | Chicago       |
---| 2  | PEK          | Beijing Capital International Airport   | Beijing       |
---| 3  | LAX          | Los Angeles International Airport       | Los Angeles   |
---| 4  | LGA          | LaGuardia Airport                       | New York City |
---| 5  | DFS          | Dallas/Fort Worth International Airport | Dallas        |
---| 6  | BOS          | Logan International Airport             | Boston        |
+| 1  | ORD          | --O'Hare International Airport            | Chicago       |
+| 2  | PEK          | Beijing Capital International Airport   | Beijing       |
+| 3  | LAX          | Los Angeles International Airport       | Los Angeles   |
+| 4  | LGA          | LaGuardia Airport                       | New York City |
+| 5  | DFS          | Dallas/Fort Worth International Airport | Dallas        |
+| 6  | BOS          | Logan International Airport             | Boston        |
 | 7  | DXB          | Dubai International Airport             | Dubai         |
 | 8  | CSF          | Fiftyville Regional Airport             | Fiftyville    |
 | 9  | HND          | Tokyo International Airport             | Tokyo         |
 | 10 | CDG          | Charles de Gaulle Airport               | Paris         |
+| 11 | SFO          | San Francisco International Airport     | San Francisco |
+| 12 | DEL          | Indira Gandhi International Airport     | Delhi         |
 +----+--------------+-----------------------------------------+---------------+
 
 -- bank accounts of these people
@@ -291,16 +292,18 @@ I heard the thief say that they were planning to take the earliest flight out of
 +----+--------------+-----------------------------------------+---------------+
 | id | abbreviation |                full_name                |     city      |
 +----+--------------+-----------------------------------------+---------------+
---| 1  | ORD          | O'Hare International Airport            | Chicago       |
---| 2  | PEK          | Beijing Capital International Airport   | Beijing       |
---| 3  | LAX          | Los Angeles International Airport       | Los Angeles   |
---| 4  | LGA          | LaGuardia Airport                       | New York City |
---| 5  | DFS          | Dallas/Fort Worth International Airport | Dallas        |
---| 6  | BOS          | Logan International Airport             | Boston        |
+| 1  | ORD          |-- O'Hare International Airport            | Chicago       |
+| 2  | PEK          | Beijing Capital International Airport   | Beijing       |
+| 3  | LAX          | Los Angeles International Airport       | Los Angeles   |
+| 4  | LGA          | LaGuardia Airport                       | New York City |
+| 5  | DFS          | Dallas/Fort Worth International Airport | Dallas        |
+| 6  | BOS          | Logan International Airport             | Boston        |
 | 7  | DXB          | Dubai International Airport             | Dubai         |
 | 8  | CSF          | Fiftyville Regional Airport             | Fiftyville    |
 | 9  | HND          | Tokyo International Airport             | Tokyo         |
 | 10 | CDG          | Charles de Gaulle Airport               | Paris         |
+| 11 | SFO          | San Francisco International Airport     | San Francisco |
+| 12 | DEL          | Indira Gandhi International Airport     | Delhi         |
 +----+--------------+-----------------------------------------+---------------+
 
 --passport_number which is 1695452385 and 8496433585 are the only persont that are match our time and other criterias and lucia is 8496433585, it means the guilty is
@@ -321,10 +324,23 @@ WHERE phone_number = "(609) 555-5876";
 
 --before understand who is kathryn, I need to check all airports that Lucia visited to understand his last place
 
-SELECT 
+SELECT *
+FROM passengers
+JOIN flights
+ON passengers.flight_id = flights.id
+WHERE passport_number = "8496433585"
+ORDER BY day;
 
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
+| flight_id | passport_number | seat | id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
+| 36        | 8496433585      | 7B   | 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
+| 11        | 8496433585      | 5D   | 11 | 8                 | 12                     | 2021 | 7     | 30  | 13   | 7      |
+| 48        | 8496433585      | 7C   | 48 | 5                 | 8                      | 2021 | 7     | 30  | 18   | 28     |
++-----------+-----------------+------+----+-------------------+------------------------+------+-------+-----+------+--------+
 
-
+-- There is a conflict because lucia is buying ticket for 7.29 mornıng from fiftyville to  New York but it seems she also bought a ticket for 7.30 and the destination is DELHI.
+-- I will solve the issue later but lets focus on kathryrn
 
 
 
