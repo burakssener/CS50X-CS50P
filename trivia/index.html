@@ -16,9 +16,9 @@
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
                 <h3> This is a Question </h3>
-                <button id = "answer1"> This is the answer </button>
-                <button id = "answer2"> This is the answer </button>
-                <button id = "answer3"> This is the answer </button>
+                <button class = "answer"> This is the answer </button>
+                <button class = "answer"> This is the answer </button>
+                <button class = "answer"> This is the answer </button>
                 <!-- TODO: Add multiple choice question here -->
             </div>
 
@@ -32,17 +32,10 @@
             </div>
         </div>
         <script>
-            document.querySelector("#answer1").onclick = function()
+            document.querySelectorAll(".answer").onclick = function()
             {
-                document.getElementById("answer1").style.color = "red";
-            }
-            document.querySelector("#answer2").onclick = function()
-            {
-                document.getElementById("answer2").style.color = "red";
-            }
-            document.querySelector("#answer3").onclick = function()
-            {
-                document.getElementById("answer3").style.color = "green";
+                if ()
+                document.getElementById(".answer").style.color = "green";
             }
 
         </script>
