@@ -34,7 +34,7 @@
         <script>
             document.querySelector("#button").addEventListener('click', function() {
                 let answer = document.querySelector('#input').value;
-                if (answer === "yes")
+                if (answer.toLowerCase() === "yes")
                 {
                     document.querySelector('#input').style.backgroundColor = "green";
                     document.querySelector('#input').innerHTML = "Correct!";
