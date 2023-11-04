@@ -29,11 +29,20 @@
                 <h3> This is a Question </h3>
                 <input id="input">
                 <button> Submit </button>
-                <h3>THIS IS A OPEN ENDED QUESTİON</h3>
             </div>
         </div>
         <script>
-            document.querySelector("#input").addEventListener('click')
+            document.querySelector("#input").addEventListener('submit', function() {
+                let answer = document.querySelector('#input').value;
+                if (answer === "yes")
+                {
+
+                }
+                else
+                {
+
+                }
+            })
 
             document.querySelector("#a_1").addEventListener('click', function() {
                 document.querySelector('#a_1').style.backgroundColor = "green";
