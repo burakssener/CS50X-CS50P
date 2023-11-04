@@ -17,9 +17,9 @@
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
                 <h3> This is a Question </h3>
-                <button class = "true"> This is the answer </button>
-                <button class = "false"> This is the answer </button>
-                <button class = "false"> This is the answer </button>
+                <button id = "a_1"> This is the answer </button>
+                <button id = "a_2"> This is the answer </button>
+                <button id = "a_3"> This is the answer </button>
                 <!-- TODO: Add multiple choice question here -->
             </div>
 
@@ -34,15 +34,15 @@
         </div>
         <script>
 
-            const elements = document.querySelectorAll('.true');
-            for(let i = 3; i>0; i--)
-            {
-                elements[i].eventListener('click', function(elements[i]) {
-                    elements[i].style.backgroundColor = green;
-                })
-            }
-
-
+            document.querySelector("#a_1").addEventListener('click', function() {
+                document.getElementbyId('#a_1').style.color = green;
+            })
+            document.querySelector("#a_2").addEventListener('click', function() {
+                document.getElementbyId('#a_2').style.color = red;
+            })
+            document.querySelector("#a_3").addEventListener('click', function() {
+                document.getElementbyId('#a_3').style.color = red;
+            })
 
         </script>
 
