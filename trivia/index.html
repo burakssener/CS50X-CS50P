@@ -27,12 +27,13 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <h3> This is a Question </h3>
-                <input>
+                <input id="input">
                 <button> Submit </button>
                 <h3>THIS IS A OPEN ENDED QUESTİON</h3>
             </div>
         </div>
         <script>
+            document.querySelector("#input").addEventListener('click')
 
             document.querySelector("#a_1").addEventListener('click', function() {
                 document.querySelector('#a_1').style.backgroundColor = "green";
