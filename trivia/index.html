@@ -36,10 +36,14 @@
                 let answer = document.querySelector('#input').value;
                 if (answer === "yes")
                 {
+                    document.querySelector('#input').style.backgroundColor = "green";
+                    document.querySelector('#input').innerHTML = "Correct!";
 
                 }
                 else
                 {
+                    document.querySelector('#input').style.backgroundColor = "red";
+                    document.querySelector('#input').innerHTML = "Incorrect!";
 
                 }
             })
