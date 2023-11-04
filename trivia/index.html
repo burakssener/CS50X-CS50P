@@ -34,12 +34,16 @@
         </div>
         <script>
 
-            document.querySelectorAll('.true').addEventListener('click', function() {
-                button.style.color = green;}
-            )
+            const elements = document.querySelectorAll('.true');
+            for(let i = 3; i>0; i--)
+            {
+                elements[i].eventListener('click', function(elements[i]) {
+                    elements[i].style.background = green;
+                })
+            }
 
-            document.querySelectorAll('.false').addEventListener('click', function() {
-                button.style.color = false;}
+
+
         </script>
 
 
