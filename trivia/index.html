@@ -35,14 +35,16 @@
         <script>
 
             document.querySelector("#a_1").addEventListener('click', function() {
-                document.getElementById('a_1').style.color = "green";
-                document
+                document.querySelector('#a_1').style.color = "green";
+                document.querySelector('#a_1').innerHTML = "Correct!";
             })
             document.querySelector("#a_2").addEventListener('click', function() {
-                document.getElementById('a_2').style.color = "red";
+                document.querySelector('#a_2').style.color = "red";
+                document.querySelector('#a_2').innerHTML = "Incorrect";
             })
             document.querySelector("#a_3").addEventListener('click', function() {
-                document.getElementById('a_3').style.color = "red";
+                document.querySelector('#a_3').style.color = "red";
+                document.querySelector('#a_3').innerHTML = "Incorrect";
             })
 
         </script>
