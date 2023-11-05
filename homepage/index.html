@@ -17,14 +17,25 @@
         <div class="texts">I love doing things that improve me in the area of data science but there are also the stuff that I love to do</div>
         <br>
         <form>
-            <input text="if you want to see what I love enter the password">
-            <button>Submit</button>
+            <p>"if you want to see what I love enter the password"</p>
+            <input type = "text" id="password">
+            <button id="click">Submit</button>
         </form>
-        <ul class="list">
+        <div id="lock"></div>
+    </body>
+    <script>
+        document.querySelector("#click").addEventListener('click', function() {
+            let the_real_password = "davidmalan";
+            let the_try = document.querySelector("#password");
+            if (the_real_passwrod === the_try)
+            {
+                document.queryselector("#lock").innerHTML = <ul class="list">
             <li><strong>Piano</strong></li>
             <li><mark>Calisthenics</mark></li>
-            <li>Spending time with my gf</li>
-        </ul>
+            <li><em>Spending time with my gf</em></li>
+        </ul>;
+            }
+        })
 
-    </body>
+    </script>
 </html>
