@@ -12,19 +12,34 @@ img{
         text-align: left;
     }
 
-    .headings {
+    h1 {
         background-color: #477bff;
         color: #fff;
         margin-bottom: 2rem;
         padding: 2rem 1rem;
         text-align: center;
-    }
-
-
-    h1 {
         font-family: 'Montserrat', sans-serif;
         font-size: 48px;
     }
+    h2 {
+        background-color: #003366;
+        color: #fff;
+        margin-bottom: 2rem;
+        padding: 2rem 1rem;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 36px;
+    }
+    h3 {
+        background-color: #477bff;
+        color: #fff;
+        margin-bottom: 2rem;
+        padding: 2rem 1rem;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+    }
+
 
     button, input[type="submit"] {
         background-color: #d9edff;
