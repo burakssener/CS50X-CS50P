@@ -13,31 +13,22 @@ img{
         text-align: left;
     }
 
+    .headings
+    {
+        border-radius: 20px 20px 20px 20px;
+
+    }
+
     h1 {
         background-color: #477bff;
-        color: #fff;
-        margin-bottom: 2rem;
-        padding: 2rem 1rem;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
         font-size: 48px;
     }
     h2 {
         background-color: #FD7702;
-        color: #fff;
-        margin-bottom: 2rem;
-        padding: 2rem 1rem;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
         font-size: 36px;
     }
     h3 {
         background-color: #477bff;
-        color: #fff;
-        margin-bottom: 2rem;
-        padding: 2rem 1rem;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
         font-size: 24px;
     }
 
