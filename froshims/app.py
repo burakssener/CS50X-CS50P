@@ -10,8 +10,8 @@ def index():
 
 @app.route("/register", methods=["POST"])
 def register():
-    name = request.form.get("name")
-    sport = request.form.get("sport")
+    name = request.form.get("Name")
+    sport = request.form.get("Sports")
     REGISTRANTS[name] = sport
     return render_template("success.html")
 
