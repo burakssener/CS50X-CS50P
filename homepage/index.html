@@ -18,7 +18,7 @@
         <br>
         <form>
             <p>"if you want to see what I love enter the password"</p>
-            <input type = "text" id="password">
+            <input type = "text" id="password" autocomplete ="off">
             <button id="click">Submit</button>
         </form>
         <div id="lock"></div>
@@ -27,7 +27,7 @@
         document.querySelector("#click").addEventListener('click', function() {
             let the_real_password = "davidmalan";
             let the_try = document.querySelector("#password").value;
-            if (the_real_passwrod === the_try)
+            if (the_real_password === the_try)
             {
                 document.queryselector("#lock").innerHTML = `
             <ul class="list">
@@ -35,7 +35,6 @@
                 <li><mark>Calisthenics</mark></li>
                 <li><em>Spending time with my gf</em></li>
             </ul>`;
-        </ul>';
             }
         })
 
