@@ -6,9 +6,8 @@
         <input autocomplete="off" autofocus name="Name" placeholder=" Your Name" type="text">
         <select name="sports">
             <option disabled selected>Sports</option>
-            <option value="Basketball">Basketball</option>
-            <option value="Soccer">Soccer</option>
-            <option value="Ultimate Frisbee">Ultimate Frisbee</option>
+            {% for sport in sports %}
+                <option value = "{{sport}}">{{sport}}</option>
         </select>
         <button type="submit">Register</button>
     </form>
