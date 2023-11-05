@@ -16,11 +16,9 @@
         <h3 class="headings">I am gonna keep things simple</h3>
         <div class="texts">I love doing things that improve me in the area of data science but there are also the stuff that I love to do</div>
         <br>
-        <form>
-            <p>"if you want to see what I love enter the password"</p>
-            <input type = "text" id="password" autocomplete ="off">
-            <button id="click">Submit</button>
-        </form>
+        <p>"if you want to see what I love, enter the password"</p>
+        <input type = "text" id="password" autocomplete ="off">
+        <button id="click">Submit</button>
         <div id="lock"></div>
     </body>
     <script>
@@ -29,7 +27,7 @@
             let the_try = document.querySelector("#password").value;
             if (the_real_password === the_try)
             {
-                document.queryselector("#lock").innerHTML = `
+                document.querySelector("#lock").innerHTML = `
             <ul class="list">
                 <li><strong>Piano</strong></li>
                 <li><mark>Calisthenics</mark></li>
