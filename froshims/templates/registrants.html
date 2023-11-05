@@ -2,10 +2,9 @@
 
 {% block body %}
     <ul>
-        {{registrants}}
+        {% for name in registrants %}
+            <li>{{name}}</li>
+        {% enfor %}
     </ul>
-
-
-
 
 {% endblock %}
