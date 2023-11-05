@@ -6,7 +6,7 @@ REGISTRANTS = {}
 SPORTS = ["Basketball", "Soccer", "Ultimate Frisbee"]
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", sports=SPORTS)
 
 @app.route("/register", methods=["POST"])
 def register():
