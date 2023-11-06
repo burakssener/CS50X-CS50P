@@ -27,6 +27,7 @@ def after_request(response):
 def index():
     if request.method == "POST":
         name = request.form.get("name")
+        date_string = request.form.get("date")
         date = datetime.strptime(date_string, "%Y-%m-%d")
         year = date.year
         month = date.month
