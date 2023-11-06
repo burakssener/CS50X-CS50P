@@ -42,12 +42,12 @@
                             <th>Name</th>
                             <th>Birthday</th>
                         </tr>
+                        {% for row in rows%}
                         <tr>
-                            {% for row in rows%}
                             <td>{{row["name"]}}</td>
-                            <td>{{row["day"]}} / {{row["month"]}} / {{row["year"]}}</td>
-                            {% endfor %}
+                            <td>{{row["day"]}} / {{row["month"]}}</td>
                         </tr>
+                        {% endfor %}
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
