@@ -16,22 +16,8 @@
                 <h2>Add a Birthday</h2>
                 <!-- TODO: Create a form for users to submit a name, a month, and a day -->
                 <form>
-                    <input action="/" method="post" name="">
-                    <select name="">
-                        <option disabled selected> Day </option>
-                        {% for i in range(1, 32) %}
-                            <option value="{{ i }}">{{ i }}</option>
-                        {% endfor %}
-                        <option></option>
-                    </select>
-                    <select name="">
-                        <option disabled selected> Month </option>
-                        <option></option>
-                    </select>
-                    <select name="">
-                        <option disabled selected> Year </option>
-                        <option></option>
-                    </select>
+                    <input action="/" method="post" >
+                    <input type="date" name="">
                     <button type="submit" > add </button>
                 </form>
             </div>
