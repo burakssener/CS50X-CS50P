@@ -26,8 +26,9 @@ def after_request(response):
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        request.args
-        db.execute(INSERT INTO birthdays (name, month, day))
+        name = request.form.get("name")
+        date = request.form.get("date")
+        db.execute(INSERT INTO birthdays (name, month, day), )
         return redirect("/")
 
     else:
