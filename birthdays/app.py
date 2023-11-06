@@ -26,7 +26,7 @@ def after_request(response):
 def index():
     if request.method == "POST":
 
-        db.execute(INSERT INTO birthdays )
+        db.execute(INSERT INTO birthdays (name, month, day))
 
         return redirect("/")
 
