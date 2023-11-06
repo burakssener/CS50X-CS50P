@@ -19,8 +19,8 @@
                     <input action="/" method="post" name="">
                     <select name="">
                         <option disabled selected> Day </option>
-                        {% for i in day_num %}
-                            <option value = "{{i}}" > {{i}} </option>
+                        {% for i in range(1, 32) %}
+                            <option value="{{ i }}">{{ i }}</option>
                         {% endfor %}
                         <option></option>
                     </select>
