@@ -3,6 +3,7 @@ import os
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
+DAY_NUM = 31
 # Configure application
 app = Flask(__name__)
 
