@@ -35,6 +35,6 @@ def index():
 
         # TODO: Display the entries in the database on index.html
 
-        return render_template("index.html")
+        return render_template("index.html", day_num= DAY_NUM )
 
 
