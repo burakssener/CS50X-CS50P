@@ -1,5 +1,5 @@
 import os
-
+from datetime import datetime
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
@@ -27,8 +27,11 @@ def after_request(response):
 def index():
     if request.method == "POST":
         name = request.form.get("name")
-        date = request.form.get("date")
-        """db.execute(INSERT INTO birthdays (name, day, month, date), VALUES(?, ?))"""
+        date = datetime.strptime(date_string, "%Y-%m-%d")
+        year = date.year
+        month = date.month
+        day = date.day
+        db.execute(INSERT INTO birthdays (name, day, month, date), VALUES(?, ?, ?, ?), name, )
         return redirect("/")
 
     else:
