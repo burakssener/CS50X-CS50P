@@ -45,7 +45,8 @@
                         <tr>
                             {% for row in rows%}
                             <td>{{row["name"]}}</td>
-                            <td>{{row["day"]}}/{{row["month"]}}/{{row["year"]}}</td>
+                            <td>{{row["day"]}} / {{row["month"]}} / {{row["year"]}}</td>
+                            {% endfor %}
                         </tr>
                     </thead>
                     <tbody>
