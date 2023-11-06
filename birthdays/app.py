@@ -25,14 +25,14 @@ def after_request(response):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    if request.method == "POST":
-        """request.args
-        db.execute(INSERT INTO birthdays (name, month, day))"""
-        return redirect("/")
+    """if request.method == "POST":
+        request.args
+        db.execute(INSERT INTO birthdays (name, month, day))
+        return redirect("/")"""
 
     else:
-
-        # TODO: Display the entries in the database on index.html
+        """
+        # Display the entries in the database on index.html
 
         return render_template("index.html", day_num= day_num )
 
