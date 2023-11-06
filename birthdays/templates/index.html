@@ -29,11 +29,12 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            {% for row in rows%}
-                                <td> {{row["name"]}}</td>
                             <th>Birthday</th>
-                                <td> {{row["month]}}/{{row["day]}}/{{row["year]}}</td>
-                            {% endfor %}
+                        </tr>
+                        <tr>
+                            {% for row in rows%}
+                            <td>{{row["name"]}}</td>
+                            <td>{{row["day"]}}/{{row["month"]}}/{{row["year"]}}</td>
                         </tr>
                     </thead>
                     <tbody>
