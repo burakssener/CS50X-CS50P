@@ -11,7 +11,6 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///birthdays.db")
-day_num = list(range(1,31))
 
 @app.after_request
 def after_request(response):
