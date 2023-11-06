@@ -32,7 +32,7 @@ def index():
             day = int(day)
         except ValueError:
             return redirect("/")
-        db.execute("INSERT INTO birthdays (name, day, month) VALUES(?, ?, ?, ?)", name, day, month)
+        db.execute("INSERT INTO birthdays (name, day, month) VALUES(?, ?, ?)", name, day, month)
         return redirect("/")
 
     else:
