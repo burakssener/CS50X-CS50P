@@ -26,7 +26,7 @@ def after_request(response):
 def index():
     if request.method == "POST":
 
-        db.execute
+        db.execute(INSERT INTO )
 
         return redirect("/")
 
