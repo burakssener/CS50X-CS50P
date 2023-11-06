@@ -18,13 +18,18 @@
                 <form>
                     <input action="/" method="post" name="">
                     <select name="">
-                        <option disabled selected> Days </option>
+                        <option disabled selected> Day </option>
+                        {% for i in 31 %}
+                            <option value = "{{i}}" > {{i}} </option>
+                        {% endfor %}
                         <option></option>
                     </select>
                     <select name="">
+                        <option disabled selected> Month </option>
                         <option></option>
                     </select>
                     <select name="">
+                        <option disabled selected> Year </option>
                         <option></option>
                     </select>
                     <button type="submit" > add </button>
