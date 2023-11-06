@@ -29,7 +29,13 @@
                     <thead>
                         <tr>
                             <th>Name</th>
+                            {% for row in rows%}
+                                <li> {{row["name"]}}</li>
+                            {% endfor %}
                             <th>Birthday</th>
+                            {% for row in rows%}
+                                <li> {{row["day"]}}/{{row["month"]}}/{{row["year"]}}</li>
+                            {% endfor %}
                         </tr>
                     </thead>
                     <tbody>
