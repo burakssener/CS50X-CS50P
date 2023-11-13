@@ -125,7 +125,7 @@ def register():
                 crpassword = request.form.get("cr_password")
                 users = db.execute("SELECT username FROM users WHERE username= ? ", username)
                 if  password != crpassword or username in users.values():
-                    return render_template("login.html")
+                    return apology("must provide password", 403)
                 else:
                     db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(password))
                     return render_template("login.html")
