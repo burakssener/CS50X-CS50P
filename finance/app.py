@@ -114,12 +114,12 @@ def register():
 
     elif request.method == "POST":
         username = request.form.get("r_username")
-        password = request.form.get("r_password")
+        password = generate_password_hash(request.form.get("r_password"))
         crpassword = request.form.get("cr_password")
-        if (len(username) == 0) or password != crpassword :
+        users = db.execute("SELECT * FROM users WHERE = ? ", username)
+        if len(username) == 0 or len(password) == 0 or password != crpassword or len(users) == 0:
             return apology
         elif password == crpassword:
-
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password)
 
 
