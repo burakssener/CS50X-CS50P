@@ -7,11 +7,9 @@
 {% block main %}
     <table class="table table-striped">
         <tr>
-            <th>
-                {% for item in symbol.keys()%}
-                    <td>{{item}}</td>
-                {% endfor %}
-            </th>
+            {% for item in symbol.keys()%}
+                <th>{{item}}</th>
+            {% endfor %}
         </tr>
         <tr>
             </td>
