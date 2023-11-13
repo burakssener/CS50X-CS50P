@@ -113,6 +113,7 @@ def register():
         return render_template("register.html")
 
     elif request.method == "POST":
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
         username  = request.form.get("#r_username")
         password = request.form.get("#r_password")
 
