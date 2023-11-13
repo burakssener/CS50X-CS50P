@@ -103,7 +103,7 @@ def logout():
 @login_required
 def quote():
     if request.method == "GET":
-        return render_template("")
+        return render_template("quote.html")
 
     elif request.method == "POST":
     return apology("TODO")
