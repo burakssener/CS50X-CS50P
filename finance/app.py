@@ -123,9 +123,9 @@ def register():
         password = generate_password_hash(request.form.get("r_password")),
         crpassword = request.form.get("cr_password")
 
-        users = db.execute("SELECT * FROM users WHERE username= ? ", username)
+        users = db.execute("SELECT username FROM users WHERE username= ? ", username)
 
-        if  password != crpassword or username in users:
+        if  password != crpassword or :
             return render_template("apology.html")
 
         else:
