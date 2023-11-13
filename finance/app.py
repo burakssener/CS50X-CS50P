@@ -121,23 +121,22 @@ def register():
             if not request.form.get("r_password") or not request.form.get("cr_password"):
                 return apology("must provide password", 403)
             else:
-                
+                password = generate_password_hash(request.form.get("r_password"))
+                crpassword = request.form.get("cr_password")
+                users = db.execute("SELECT username FROM users WHERE username= ? ", username)
+                if  password != crpassword or not username in users.values():
+                    return render_template("apology.html")
+                else:
+                    db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password)
+                    return render_template("login.html")
 
 
 
 
 
-        password = generate_password_hash(request.form.get("r_password")),
-        crpassword = request.form.get("cr_password")
 
-        users = db.execute("SELECT username FROM users WHERE username= ? ", username)
 
-        if  password != crpassword or not username in users.values():
-            return render_template("apology.html")
 
-        else:
-            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password)
-            return render_template("login.html")
 
 
 
