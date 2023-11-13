@@ -116,10 +116,17 @@ def register():
 
         if not request.form.get("r_username"):
             return apology("must provide username", 403)
-        username = request.form.get("r_username")
+        else:
+            username = request.form.get("r_username")
+            if not request.form.get("r_password") or not request.form.get("cr_password"):
+                return apology("must provide password", 403)
+            else:
+                
 
-        if not request.form.get("r_password") and not request.form.get("cr_password"):
-            return apology("must provide password", 403)
+
+
+
+
         password = generate_password_hash(request.form.get("r_password")),
         crpassword = request.form.get("cr_password")
 
