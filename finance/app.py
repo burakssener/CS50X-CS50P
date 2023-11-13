@@ -119,8 +119,9 @@ def register():
         users = db.execute("SELECT * FROM users WHERE username= ? ", username)
         if len(username) == 0 or len(password) == 0 or password != crpassword or len(users) == 0:
             return render_template("apology.html")
-        elif password == crpassword:
+        else:
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password)
+            return render_template("login.html")
 
 
 
