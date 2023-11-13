@@ -125,7 +125,7 @@ def register():
 
         users = db.execute("SELECT * FROM users WHERE username= ? ", username)
 
-        if  password != crpassword or len(users) != 0:
+        if  password != crpassword or username in users:
             return render_template("apology.html")
 
         else:
