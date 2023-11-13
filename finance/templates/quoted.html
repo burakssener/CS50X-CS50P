@@ -6,23 +6,24 @@
 
 {% block main %}
 
-    <div>
+    <tr>
         <th>
             {% for item in symbol%}
-                {% for key in item.keys()%}
-                    <td>{{}}</td>
-                {% endfor %}
-                {% endfor %}
-        </th>
-        <tr>
-            {% for item in symbol%}
-                {% for value in item.values()%}
-                    <td>{{value}}</td>
-                {% endfor %}
+                <td>{{item}}</td>
             {% endfor %}
 
-        </tr>
+        </th>
+    </tr>
+    <tr>
+        </td>
+            {% for item in symbol%}
+                <td>{{symbol[item]}}</td>
+            {% endfor %}
+
+        </td>
 
 
-    </div>
+    </tr>
+
+
 {% endblock %}
