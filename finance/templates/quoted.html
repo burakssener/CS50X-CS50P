@@ -5,25 +5,22 @@
 {% endblock %}
 
 {% block main %}
-
-    <tr>
-        <th>
-            {% for item in symbol%}
-                <td>{{item}}</td>
-            {% endfor %}
-
-        </th>
-    </tr>
-    <tr>
-        </td>
-            {% for item in symbol%}
-                <td>{{symbol[item]}}</td>
-            {% endfor %}
-
-        </td>
-
-
-    </tr>
+    <table>
+        <tr>
+            <th>
+                {% for item in symbol.keys()%}
+                    <td>{{item}}</td>
+                {% endfor %}
+            </th>
+        </tr>
+        <tr>
+            </td>
+                {% for item in symbol.values()%}
+                    <td>{{item}}</td>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
 
 
 {% endblock %}
