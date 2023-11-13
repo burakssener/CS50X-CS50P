@@ -116,7 +116,7 @@ def register():
         username = request.form.get("r_username")
         password = generate_password_hash(request.form.get("r_password"))
         crpassword = request.form.get("cr_password")
-        users = db.execute("SELECT * FROM users WHERE = ? ", username)
+        users = db.execute("SELECT * FROM users WHERE username= ? ", username)
         if len(username) == 0 or len(password) == 0 or password != crpassword or len(users) == 0:
             return apology
         elif password == crpassword:
