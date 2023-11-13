@@ -103,12 +103,11 @@ def logout():
 @login_required
 def quote():
     if request.method == "GET":
-        name = lookup("NFLX")
-        return render_template("quote.html", name=name)
+        return render_template("quote.html")
 
     elif request.method == "POST":
-        return render_template("quote.html")
-    return apology("TODO")
+        symbol = lookup(request.form.get("symbol"))
+        return render_template("quoted.html", symbol)
 
 
 @app.route("/register", methods=["GET", "POST"])
