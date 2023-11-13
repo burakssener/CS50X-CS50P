@@ -10,13 +10,15 @@
         <th>
             {% for item in symbol%}
                 {% for key in item.keys()%}
-            <td>{{key}}</td>
-            {% endfor %}
+                    <td>{{}}</td>
+                {% endfor %}
+                {% endfor %}
         </th>
         <tr>
             {% for item in symbol%}
                 {% for value in item.values()%}
-            <td>{{value}}</td>
+                    <td>{{value}}</td>
+                {% endfor %}
             {% endfor %}
 
         </tr>
