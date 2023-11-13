@@ -113,10 +113,15 @@ def register():
         return render_template("register.html")
 
     elif request.method == "POST":
-        username  = request.form.get("#r_username")
-        if request.form.get("#cr_password") == request.form.get("#r_password")
-        password = request.form.get("#r_password")
-        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password)
+        username  = request.form.get("r_username")
+        password = request.form.get("r_password")
+        crpassword = request.form.get("cr_password")
+        if len(username) == blank:
+            return apology
+        elif:
+        elif password == crpassword:
+
+            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password)
 
 
 
