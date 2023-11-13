@@ -113,10 +113,10 @@ def register():
         return render_template("register.html")
 
     elif request.method == "POST":
-        username  = request.form.get("r_username")
+        username = request.form.get("r_username")
         password = request.form.get("r_password")
         crpassword = request.form.get("cr_password")
-        if len(username) == blank:
+        if (len(username) == 0) or password != crpassword :
             return apology
         elif password == crpassword:
 
