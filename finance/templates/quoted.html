@@ -1,9 +1,30 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Quoted
+    Quote
 {% endblock %}
 
 {% block main %}
 
+    <div>
+        <th>
+            {% for i in range symbol%}
+            <td>
+                {{symbol.[i].keys()}}
+
+            </td>
+            {% endfor %}
+        </th>
+        <tr>
+            {% for i in range symbol%}
+            <td>
+                {{symbol.[i].values()}}
+
+            </td>
+            {% endfor %}
+
+        </tr>
+
+
+    </div>
 {% endblock %}
