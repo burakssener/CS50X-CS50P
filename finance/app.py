@@ -103,7 +103,8 @@ def logout():
 @login_required
 def quote():
     if request.method == "GET":
-        return render_template("quote.html")
+        name = lookup("NFLX")
+        return render_template("quote.html", name=name)
 
     elif request.method == "POST":
         return render_template("quote.html")
