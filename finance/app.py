@@ -117,7 +117,7 @@ def register():
         password = generate_password_hash(request.form.get("r_password"))
         crpassword = request.form.get("cr_password")
         users = db.execute("SELECT * FROM users WHERE username= ? ", username)
-        if len(username) == 0 or len(password) == 0 or password != crpassword or len(users) == 0:
+        if not request.form.get("r_username")  == 0 or len(password) == 0 or password != crpassword or len(users) == 0:
             return render_template("apology.html")
         else:
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password)
