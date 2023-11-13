@@ -114,6 +114,7 @@ def register():
 
     elif request.method == "POST":
         username  = request.form.get("#r_username")
+        if request.form.get("#cr_password") == request.form.get("#r_password")
         password = request.form.get("#r_password")
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password)
 
