@@ -106,6 +106,7 @@ def quote():
         return render_template("quote.html")
 
     elif request.method == "POST":
+        return render_template("quote.html")
     return apology("TODO")
 
 
