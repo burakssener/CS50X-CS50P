@@ -8,19 +8,15 @@
 
     <div>
         <th>
-            {% for i in range symbol%}
-            <td>
-                {{symbol.[i].keys()}}
-
-            </td>
+            {% for item in symbol%}
+                {% for key in item.keys()%}
+            <td>{{key}}</td>
             {% endfor %}
         </th>
         <tr>
-            {% for i in range symbol%}
-            <td>
-                {{symbol.[i].values()}}
-
-            </td>
+            {% for item in symbol%}
+                {% for value in item.values()%}
+            <td>{{value}}</td>
             {% endfor %}
 
         </tr>
