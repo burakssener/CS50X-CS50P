@@ -118,7 +118,6 @@ def register():
         crpassword = request.form.get("cr_password")
         if len(username) == blank:
             return apology
-        elif:
         elif password == crpassword:
 
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password)
