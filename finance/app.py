@@ -113,9 +113,10 @@ def register():
         return render_template("register.html")
 
     elif request.method == "POST":
-        rows = db.execute("INSERT INTO users () VALUES (?, ?) )
         username  = request.form.get("#r_username")
         password = request.form.get("#r_password")
+        rows = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, password)
+
 
 
 
