@@ -114,9 +114,6 @@ def register():
 
     elif request.method == "POST":
 
-
-
-
         if not request.form.get("r_username"):
             return apology("must provide username", 403)
         username = request.form.get("r_username")
