@@ -7,13 +7,13 @@
 {% block main %}
     <table class="table table-striped">
         <tr>
-            {% for item in users_data.keys()%}
+            {% for item in user_data.keys()%}
                 <th>{{item}}</th>
             {% endfor %}
         </tr>
         <tr>
             </td>
-                {% for item in users_data.values()%}
+                {% for item in user_data.values()%}
                     <td>{{item}}</td>
                 {% endfor %}
             </td>
