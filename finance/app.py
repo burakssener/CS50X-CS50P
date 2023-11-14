@@ -41,7 +41,15 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return render_template("buy.html")
+    if request.method = "GET":
+        return render_template("buy.html")
+
+    if request.method = "POST":
+        requ
+
+
+
+
 
 
 @app.route("/history")
