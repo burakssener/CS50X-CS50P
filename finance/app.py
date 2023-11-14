@@ -41,12 +41,19 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    if request.method = "GET":
+    if request.method == "GET":
         return render_template("buy.html")
 
-    if request.method = "POST":
-        request.form.get("stock_name")
-        if not request.form.get("stock_num")
+    elif request.method == "POST":
+
+        if not lookup(request.form.get("stock_name")):
+            return apology("must provide username", 403)
+        else:
+            stock_name = request.form.get("stock_name")
+            if not request.form.get("stock_num"):
+                return apology("must provide password", 403)
+            else:
+                stock_num = request.form.get("stock_num")
 
 
 
