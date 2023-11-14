@@ -67,7 +67,7 @@ def buy():
                     if updated == False:
                         db.execute("INSERT INTO users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
 
-                    user_data = db.execute("SELECT users_balance.stock_num AS Shares, users_balance.stock_name AS Name FROM users JOIN users_balance ON users_balance.user_id = users.id WHERE id = ?", session['user_id'])
+                    user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
                     return render_template("basket.html", user_data=user_data )
 
 
