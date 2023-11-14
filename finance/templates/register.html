@@ -21,6 +21,7 @@
 {% endblock %}
 
 CREATE TABLE users_balance (
-Order_ID int NOT NULL PRIMARY KEY,
+Stock_name int NOT NULL PRIMARY KEY,
+stock_name Stock_name text NOT NULL PRIMARY KEY,
 user_id int NOT NULL FOREIGN KEY REFERENCES users(id),
 );
