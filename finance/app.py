@@ -37,7 +37,7 @@ def index():
     """Show portfolio of stocks"""
     return apology("TODO")
 #added
-'''@app.route("/quoted", methods=["GET", "POST"])
+@app.route("/quoted", methods=["GET", "POST"])
 @login_required
 def quoted():
     """Buy shares of stock"""
@@ -49,7 +49,7 @@ def quoted():
         stock_num = request.form.get("stock_num")
         db.execute("INSERT INTO users_balance (user))
 
-        return render_template("basket.html")'''
+        return render_template("basket.html")
 
 
 
