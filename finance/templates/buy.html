@@ -7,16 +7,16 @@
 {% block main %}
     <form action="/buy" method="post">
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto"name="symbol" placeholder="Confirm Stock Name" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto"name="stock_name" placeholder="Confirm Stock Name" type="text">
         </div>
         <p class="lead"> How many stock do you want to buy ? </p>
-        <select>
+        <select name = stock_num >
             {% for i in range(1,5) %}
-            <option> {{i}} </option>
+            <option value="{{i}}"> {{i}} </option>
             {% endfor %}
 
         </select>
         <button class="btn btn-primary" type="submit">Buy</button>
-    </form>
+</form>
 
 {% endblock %}
