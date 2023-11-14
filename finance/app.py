@@ -47,7 +47,7 @@ def quoted():
     elif request.method == "POST":
         stock_name = request.form.get("stock_name")
         stock_num = request.form.get("stock_num")
-        db.execute("INSERT INTO users_balance (user))
+        db.execute("INSERT INTO users_balance (user_id))
 
         return render_template("basket.html")
 
