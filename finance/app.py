@@ -63,7 +63,7 @@ def buy():
                         if stock_name == stock["stock_name"]:
                             db.execute("UPDATE users_balance SET stock_num = ? WHERE user_id = ? AND stock_name = ?", stock["stock_num"] + stock_num, session['user_id'], stock_name )
                             updated = True
-                            break
+        
                     if updated == False:
                         db.execute("INSERT INTO users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
 
