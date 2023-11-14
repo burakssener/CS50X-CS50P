@@ -45,7 +45,8 @@ def buy():
         return render_template("buy.html")
 
     if request.method = "POST":
-        requ
+        request.form.get("stock_name")
+        if not request.form.get("stock_num")
 
 
 
