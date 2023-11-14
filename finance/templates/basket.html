@@ -5,8 +5,19 @@
 {% endblock %}
 
 {% block main %}
-    <p>{{user_data}}</p>
-
-
+    <table class="table table-striped">
+        <tr>
+            {% for item in users_data.keys()%}
+                <th>{{item}}</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            </td>
+                {% for item in users_data.values()%}
+                    <td>{{item}}</td>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
 
 {% endblock %}
