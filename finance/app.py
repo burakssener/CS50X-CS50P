@@ -131,6 +131,7 @@ def register():
                     return apology("must provide password", 403)
                 else:
                     db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(password))
+                    session["user_id"]
                     return render_template("login.html")
 
 
