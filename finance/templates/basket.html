@@ -9,14 +9,14 @@
         <tr>
             <th>Symbol</th>
             <th>Shares</th>
-            <th>Price</th>
-            <th>Total</th>
 
         </tr>
         <tr>
             </td>
-                {% for item in user_data.values()%}
-                    <td>{{item}}</td>
+                {% for dict in user_data%}
+                    {% for data in dict.values() %}
+                        <td>{{data}}</td>
+                    {% endfor %}
                 {% endfor %}
             </td>
         </tr>
