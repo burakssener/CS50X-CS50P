@@ -54,8 +54,6 @@ def buy():
                 return apology("must provide password", 403)
             else:
                 stock_num = request.form.get("stock_num")
-                rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
-                session["user_id"] = rows[0]["id"]
                 if db.execute("SELECT * FROM users WHERE id = ")
 
 
