@@ -36,23 +36,6 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     return apology("TODO")
-#added
-@app.route("/quoted", methods=["GET", "POST"])
-@login_required
-def quoted():
-    """Buy shares of stock"""
-    elif request.method == "GET":
-
-
-    elif request.method == "POST":
-        stock_name = request.form.get("stock_name")
-        stock_num = request.form.get("stock_num")
-        db.execute("INSERT INTO users_balance (user_id))
-
-        return render_template("basket.html")
-
-
-
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
