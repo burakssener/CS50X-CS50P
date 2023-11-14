@@ -43,7 +43,7 @@ def quoted():
     """Buy shares of stock"""
     stock_name = request.form.get("stock_name")
     stock_num = request.form.get("stock_num")
-    return render_template("quoted.html")
+    return render_template("basket.html")
 
 
 @app.route("/buy", methods=["GET", "POST"])
