@@ -11,15 +11,14 @@
             <th>Shares</th>
 
         </tr>
-        <tr>
-            </td>
-                {% for dict in user_data%}
-                    {% for data in dict.values() %}
-                        <td>{{data}}</td>
-                    {% endfor %}
+            {% for dict in user_data%}
+                <tr>
+                {% for data in dict.values() %}
+                    <td>{{data}}</td>
                 {% endfor %}
-            </td>
-        </tr>
+                </tr>
+            {% endfor %}
+
     </table>
 
 {% endblock %}
