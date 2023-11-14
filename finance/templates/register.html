@@ -19,3 +19,8 @@
         <button class="btn btn-primary" type="submit">Register</button>
     </form>
 {% endblock %}
+
+CREATE TABLE users_balance (
+Order_ID int NOT NULL PRIMARY KEY,
+user_id int NOT NULL FOREIGN KEY REFERENCES users(id),
+);
