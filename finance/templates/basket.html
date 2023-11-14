@@ -5,32 +5,8 @@
 {% endblock %}
 
 {% block main %}
-    <table class="table table-striped">
-        <tr>
-            {% for item in symbol.keys()%}
-                <th>{{item}}</th>
-            {% endfor %}
-        </tr>
-        <tr>
-            </td>
-                {% for item in symbol.values()%}
-                    <td>{{item}}</td>
-                {% endfor %}
-            </td>
-        </tr>
-    </table>
-    <form action="/buy" method="post">
-        <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto"name="stock_name" placeholder="Confirm Stock Name" type="text">
-        </div>
-        <p class="lead"> How many stock do you want to buy ? </p>
-        <select name = stock_num >
-            {% for i in range(1,5) %}
-            <option value="{{i}}"> {{i}} </option>
-            {% endfor %}
 
-        </select>
-        <button class="btn btn-primary" type="submit">Buy</button>
-    </form>
+    {% {{user_data}} %}
+
 
 {% endblock %}
