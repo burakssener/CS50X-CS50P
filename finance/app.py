@@ -60,7 +60,7 @@ def buy():
                      db.execute("UPDATE users SET cash = ? WHERE id = ?", user_data["cash"] - symbol["price"] * stock_num, session['user_id'] )
                     for stock in stock_data:
                         if stock_name == stock["stock_name"]:
-                            db.execute("INSERT INTO users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
+                            db.execute("UPDATE users_balance stock_num = ?, stock_name = ?, user_id = ? WHERE user_id = ?", stock["stock_num"] + stock_num, stock_name, session['user_id'], session['user_id'] )
                             break
                         else:
                             db.execute("INSERT INTO users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
