@@ -66,9 +66,9 @@ def buy():
 
                     if updated == False:
                         db.execute("INSERT INTO users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
-
+                    user_cash = db.execute("SELECT cash users WHERE id = ?", session['user_id'])
                     user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
-                    return render_template("basket.html", user_data=user_data )
+                    return render_template("basket.html", user_data=user_data, user_balance= user_cash)
                 else:
                     return apology("Not enough balance", 403)
 
