@@ -54,6 +54,7 @@ def buy():
                 return apology("must provide password", 403)
             else:
                 stock_num = request.form.get("stock_num")
+                if db.execute("SELECT * FROM users")
 
 
 
