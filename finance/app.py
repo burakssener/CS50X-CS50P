@@ -47,11 +47,11 @@ def buy():
     elif request.method == "POST":
         symbol = lookup(request.form.get("stock_name"))
         if not symbol:
-            return apology("must provide username", 403)
+            return apology("must provide stock name", 403)
         else:
             stock_name = symbol["symbol"]
             if not request.form.get("stock_num"):
-                return apology("must provide password", 403)
+                return apology("must provide stock share", 403)
             else:
                 stock_num = int(request.form.get("stock_num"))
                 user_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
@@ -63,12 +63,14 @@ def buy():
                         if stock_name == stock["stock_name"]:
                             db.execute("UPDATE users_balance SET stock_num = ? WHERE user_id = ? AND stock_name = ?", stock["stock_num"] + stock_num, session['user_id'], stock_name )
                             updated = True
-        
+
                     if updated == False:
                         db.execute("INSERT INTO users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
 
                     user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
                     return render_template("basket.html", user_data=user_data )
+                else:
+                    return apology("Not enough balance", 403)
 
 
 
