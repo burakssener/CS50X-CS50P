@@ -57,15 +57,15 @@ def buy():
                 user_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
                 if (user_data["cash"] >= symbol["price"] * stock_num):
                     stock_data = db.execute("SELECT stock_num, stock_name FROM users_balance WHERE user_id = ? ", session['user_id'])
-                     db.execute("UPDATE users SET cash = ? WHERE id = ?", user_data["cash"] - symbol["price"] * stock_num, session['user_id'] )
+                    db.execute("UPDATE users SET cash = ? WHERE id = ?", user_data["cash"] - symbol["price"] * stock_num, session['user_id'] )
+                    updated = False
                     for stock in stock_data:
                         if stock_name == stock["stock_name"]:
                             db.execute("UPDATE users_balance stock_num = ?, stock_name = ?, user_id = ? WHERE user_id = ?", stock["stock_num"] + stock_num, stock_name, session['user_id'], session['user_id'] )
+                            updated = True
                             break
-                        else:
-                            db.execute("INSERT INTO users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
-
-
+                    if updated == False:
+                        db.execute("INSERT INTO users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
 
                     user_data = db.execute("SELECT users.id, users.cash, users_balance.stock_num, users_balance.stock_name FROM users JOIN users_balance ON users_balance.user_id = users.id WHERE id = ?", session['user_id'])[0]
                     return render_template("basket.html", user_data=user_data )
