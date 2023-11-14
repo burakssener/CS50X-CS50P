@@ -41,9 +41,17 @@ def index():
 @login_required
 def quoted():
     """Buy shares of stock"""
-    stock_name = request.form.get("stock_name")
-    stock_num = request.form.get("stock_num")
-    return render_template("basket.html")
+    elif request.method == "GET":
+
+
+    elif request.method == "POST":
+        stock_name = request.form.get("stock_name")
+        stock_num = request.form.get("stock_num")
+        db.execute("INSERT INTO users_balance (user))
+
+        return render_template("basket.html")
+
+
 
 
 @app.route("/buy", methods=["GET", "POST"])
