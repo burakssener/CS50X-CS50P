@@ -45,8 +45,8 @@ def buy():
         return render_template("buy.html")
 
     elif request.method == "POST":
-
-        if not lookup(request.form.get("stock_name")):
+        symbol = lookup(request.form.get("stock_name"))
+        if not symbol:
             return apology("must provide username", 403)
         else:
             stock_name = request.form.get("stock_name")
@@ -54,7 +54,8 @@ def buy():
                 return apology("must provide password", 403)
             else:
                 stock_num = request.form.get("stock_num")
-                if db.execute("SELECT * FROM users WHERE id = ")
+                user_data = db.execute("SELECT * FROM users WHERE id = ?", session['user_id'])
+                if (user_data["cash"] >= symbol[] * stock_num )
 
 
 
