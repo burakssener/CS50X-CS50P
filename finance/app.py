@@ -212,7 +212,7 @@ def sell():
                 if stock_name == stock["stock_name"] and real_stock_num != stock_num:
                     db.execute("UPDATE users_balance SET stock_num = ? WHERE user_id = ? AND stock_name = ?", real_stock_num - stock_num, session['user_id'], stock_name )
                 if stock_name == stock["stock_name"] and real_stock_num == stock_num:
-                    db.execute("DELETE FROM users_balance WHERE user_id = ? stock_name = ?", session['user_id'], stock_name)
+                    db.execute("DELETE FROM users_balance WHERE user_id = ? AND stock_name = ?", session['user_id'], stock_name)
             user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session['user_id'])
             user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
             total_money = 0
