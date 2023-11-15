@@ -34,8 +34,12 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    """Show portfolio of stocks"""
-    return apology("TODO")
+    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session['user_id'])
+    user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
+    for stock_data in user_data:
+        stock_data["stock_price"] = lookup(stock_data["stock_name"])
+    return render_template("basket.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]))
+
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
