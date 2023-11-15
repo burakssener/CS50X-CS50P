@@ -191,5 +191,10 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
-    return render_template("sell.html", user_data = user_data)
+    if request.method == "GET":
+        user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
+        return render_template("sell.html", user_data = user_data)
+    elif request.method == "POST":
+        status = true
+        for dicts in user_data:
+            if dicts["Name"] == request.
