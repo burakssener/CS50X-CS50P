@@ -6,12 +6,13 @@
 
 {% block main %}
     <form action="/buy" method="post">
+        <label class="lead"> It is time to invest. </label>
+        <br><br>
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto"name="stock_name" placeholder="Stock Name" type="text">
         </div>
-        <label class="lead"> How many stock do you want to buy ? </label>
-        <br><br>
-        <input autocomplete="off" class="form-control mx-auto w-auto" min="0" name="stock_num" placeholder="Shares" type="number">
+
+        <input autocomplete="off" class="form-control mx-auto w-auto" min="1" name="stock_num" placeholder="Shares" type="number">
         <br>
         <button class="btn btn-primary" type="submit">Buy</button>
 </form>
