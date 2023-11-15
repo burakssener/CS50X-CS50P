@@ -195,7 +195,8 @@ def sell():
         user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
         return render_template("sell.html", user_data = user_data)
     elif request.method == "POST":
-        status = true
         for dicts in user_data:
-            if dicts["Name"] == request.form.get("stock_name")
-            request.form.get("stock_num")
+            if dicts["Name"] != request.form.get("stock_name"):
+                return apology("You don't have the stock you choosed", 403)
+            else:
+                return render_template("sell.html")
