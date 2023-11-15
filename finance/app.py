@@ -199,7 +199,7 @@ def sell():
             if dicts["Name"] != request.form.get("stock_name"):
                 return apology("You don't have the stock you choosed", 403)
             else:
-                symbol = lookup(request.form.get("stock_name"))
+                unit_price = int(lookup(request.form.get("stock_name"))["price"]
                 stock_num = int(request.form.get("stock_num"))
                 user_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
 
