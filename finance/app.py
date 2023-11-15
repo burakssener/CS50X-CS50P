@@ -196,39 +196,37 @@ def sell():
 
     elif request.method == "POST":
         symbol = lookup(request.form.get("stock_name"))
-        if not symbol:
-            return apology("must provide stock name", 403)
-        else:
-            stock_name = symbol["symbol"]
-            if not request.form.get("stock_num"):
-                return apology("must provide stock share", 403)
+        stock_data = db.execute("SELECT stock_num, stock_name FROM users_balance WHERE user_id = ? ", session['user_id'])
+        status = false
+        for stocks in stock_data:
+            if symbol["symbol"] == stocks["stock_name"]:
+                status = True
             else:
+                stock_name = symbol["symbol"]
                 stock_num = int(request.form.get("stock_num"))
                 user_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
-                if (user_data["cash"] >= symbol["price"] * stock_num):
-                    stock_data = db.execute("SELECT stock_num, stock_name FROM users_balance WHERE user_id = ? ", session['user_id'])
-                    db.execute("UPDATE users SET cash = ? WHERE id = ?", user_data["cash"] - symbol["price"] * stock_num, session['user_id'] )
-                    updated = False
-                    for stock in stock_data:
-                        if stock_name == stock["stock_name"]:
-                            db.execute("UPDATE users_balance SET stock_num = ? WHERE user_id = ? AND stock_name = ?", stock["stock_num"] + stock_num, session['user_id'], stock_name )
-                            updated = True
+                db.execute("UPDATE users SET cash = ? WHERE id = ?", user_data["cash"] + symbol["price"] * stock_num, session['user_id'] )
+                        updated = False
+                        for stock in stock_data:
+                            if stock_name == stock["stock_name"]:
+                                db.execute("UPDATE users_balance SET stock_num = ? WHERE user_id = ? AND stock_name = ?", stock["stock_num"] + stock_num, session['user_id'], stock_name )
+                                updated = True
 
-                    if updated == False:
-                        db.execute("INSERT INTO users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
-                    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session['user_id'])
-                    user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
-                    total_money = 0
-                    for stock_data in user_data:
-                        stock_data["stock_price"] = lookup(stock_data["Name"])["price"]
-                        stock_data["total"] = stock_data["stock_price"] * int(stock_data["Shares"])
-                        stock_data["stock_price"] = usd(stock_data["stock_price"])
-                        total_money += stock_data["total"]
-                        stock_data["total"] = usd(stock_data["total"])
-                    total_money += user_cash[0]["cash"]
-                    return render_template("basket.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]), total_money = usd(total_money))
-                else:
-                    return apology("Not enough balance", 403)
+                        if updated == False:
+                            db.execute("INSERT INTO users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
+                        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session['user_id'])
+                        user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
+                        total_money = 0
+                        for stock_data in user_data:
+                            stock_data["stock_price"] = lookup(stock_data["Name"])["price"]
+                            stock_data["total"] = stock_data["stock_price"] * int(stock_data["Shares"])
+                            stock_data["stock_price"] = usd(stock_data["stock_price"])
+                            total_money += stock_data["total"]
+                            stock_data["total"] = usd(stock_data["total"])
+                        total_money += user_cash[0]["cash"]
+                        return render_template("basket.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]), total_money = usd(total_money))
+                    else:
+                        return apology("Not enough balance", 403)
 
 
 
