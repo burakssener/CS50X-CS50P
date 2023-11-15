@@ -10,7 +10,8 @@
         <br><br>
         <div class="mb-3">
             <select autocomplete="off" autofocus class="form-control mx-auto w-auto"name="stock_name" placeholder="Stock Name" type="text">
-                <option>{% for %}</option>
+                {% for stocks in {{}}%}
+                <option></option>
         </div>
         <br>
         <input autocomplete="off" class="form-control mx-auto w-auto" min="1" name="stock_num" placeholder="Shares" type="number">
