@@ -38,7 +38,7 @@ def index():
     user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
     for stock_data in user_data:
         stock_data["stock_price"] = lookup(stock_data["Name"])["price"]
-        stock_data["TOTAL"]
+        stock_data["TOTAL"] = stock_data["stock_price"] * int(stock_data["Shares"])
     return render_template("basket.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]))
 
 
