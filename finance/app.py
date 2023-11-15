@@ -197,4 +197,4 @@ def sell():
     elif request.method == "POST":
         status = true
         for dicts in user_data:
-            if dicts["Name"] == request.
+            if dicts["Name"] == request.form.get("Name")
