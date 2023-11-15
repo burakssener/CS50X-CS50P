@@ -195,14 +195,21 @@ def sell():
         user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
         return render_template("sell.html", user_data = user_data)
     elif request.method == "POST":
+        stock_name = request.form.get("stock_name")
+        status = False
         for dicts in user_data:
-            if dicts["Name"] != request.form.get("stock_name"):
-                return apology("You don't have the stock you choosed", 403)
+            if dicts["Name"] == stock_name:
+                status = True
+                real_stock_num = dicts["Shares"]
+        if status == True:
+            unit_price = int(lookup(request.form.get("stock_name"))["price"])
+            stock_num = int(request.form.get("stock_num"))
+            if stock_num > real_stock_num:
+                return apology
             else:
-                unit_price = int(lookup(request.form.get("stock_name"))["price"])
-                stock_num = int(request.form.get("stock_num"))
-                user_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
+                db.execute("UPDATE users SET cash = ? WHERE id = ?", user_data["cash"] + unit_price * stock_num, session['user_id'] )
 
+a
 
 """symbol = lookup(request.form.get("stock_name"))
         if not symbol:
