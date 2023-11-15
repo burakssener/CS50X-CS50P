@@ -9,9 +9,10 @@
         <label class="lead">transfer the money to your pocket </label>
         <br><br>
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto"name="stock_name" placeholder="Stock Name" type="text">
+            <select autocomplete="off" autofocus class="form-control mx-auto w-auto"name="stock_name" placeholder="Stock Name" type="text">
+                <option>{% for %}</option>
         </div>
-
+        <br>
         <input autocomplete="off" class="form-control mx-auto w-auto" min="1" name="stock_num" placeholder="Shares" type="number">
         <br>
         <button class="btn btn-primary" type="submit">Buy</button>
