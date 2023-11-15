@@ -10,8 +10,10 @@
         <br><br>
         <div class="mb-3">
             <select autocomplete="off" autofocus class="form-control mx-auto w-auto"name="stock_name" placeholder="Stock Name" type="text">
-                {% for stocks in {{}}%}
-                    <option> stocks </option>
+                {% for key in user_data.keys()%}
+                    {% for stock_names in user_data["Name"] in %}
+                        <option> stocks </option>
+                    {% endfor %}
                 {% endfor %}
 
         </div>
