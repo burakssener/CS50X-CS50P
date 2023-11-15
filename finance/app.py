@@ -207,9 +207,10 @@ def sell():
             if stock_num > real_stock_num:
                 return apology
             else:
-                db.execute("UPDATE users SET cash = ? WHERE id = ?", user_data["cash"] + unit_price * stock_num, session['user_id'] )
+                cash_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
+                db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_data["cash"] + unit_price * stock_num, session['user_id'] )
 
-a
+
 
 """symbol = lookup(request.form.get("stock_name"))
         if not symbol:
