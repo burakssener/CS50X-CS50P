@@ -209,7 +209,7 @@ def sell():
             else:
                 cash_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_data["cash"] + unit_price * stock_num, session['user_id'] )
-
+                db.execute("UPDATE users_balance SET stock_num = ? WHERE user_id = ? AND stock_name = ?", real_stock_num - stock_num , session['user_id'], stock_name )
 
 
 """symbol = lookup(request.form.get("stock_name"))
