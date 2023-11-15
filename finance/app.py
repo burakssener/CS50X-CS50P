@@ -38,6 +38,7 @@ def index():
     user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
     for stock_data in user_data:
         stock_data["stock_price"] = lookup(stock_data["Name"])["price"]
+        stock_data["TOTAL"]
     return render_template("basket.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]))
 
 
@@ -72,6 +73,8 @@ def buy():
                         db.execute("INSERT INTO users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
                     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session['user_id'])
                     user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
+                    for stock_data in user_data:
+                        stock_data["stock_price"] = lookup(stock_data["Name"])["price"]
                     return render_template("basket.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]))
                 else:
                     return apology("Not enough balance", 403)
