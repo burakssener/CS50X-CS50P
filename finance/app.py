@@ -225,5 +225,5 @@ def sell():
                 total_money += user_cash[0]["cash"]
             return render_template("basket.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]), total_money = usd(total_money))
         else:
-                return apology("Not enough balance", 403)
+            return apology("Not enough balance", 403)
 
