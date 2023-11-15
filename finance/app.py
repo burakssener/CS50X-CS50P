@@ -198,7 +198,7 @@ def sell():
     elif request.method == "POST":
         symbol = lookup(request.form.get("stock_name"))
         stock_data = db.execute("SELECT stock_num, stock_name FROM users_balance WHERE user_id = ? ", session['user_id'])
-        status = false
+        status = False
         for stock in stock_data:
             if symbol["symbol"] == stock["stock_name"]:
                 status = True
