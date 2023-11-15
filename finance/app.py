@@ -191,4 +191,4 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("KUMSALIMM")
+    return render_template("sell.html")
