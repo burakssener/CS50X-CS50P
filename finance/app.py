@@ -85,6 +85,7 @@ def buy():
                         stock_data["stock_price"] = usd(stock_data["stock_price"])
                         total_money += stock_data["total"]
                         stock_data["total"] = usd(stock_data["total"])
+                    db.execute("INSERT INTO history (hstock_num, hstock_name, hstock_price, user_id) VALUES (?, ?, ?, ?)", stock_num, stock_name, symbol["price"], session['user_id'] )
                     total_money += user_cash[0]["cash"]
                     return render_template("basket.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]), total_money = usd(total_money))
                 else:
@@ -227,7 +228,8 @@ def sell():
             db.execute("UPDATE users SET cash = ? WHERE id = ?", user_data["cash"] + symbol["price"] * stock_num, session['user_id'] )
             user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session['user_id'])
             user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
-            db.execute("INSERT INTO history (hstock_num, hstock_name, hstock_price, user_id) VALUES (?, ?, ?, ?)", -1*stock_num, stock_name, stock_data["stock_price"], session['user_id'] )
+
+            db.execute("INSERT INTO history (hstock_num, hstock_name, hstock_price, user_id) VALUES (?, ?, ?, ?)", -1*stock_num, stock_name, symbol["price"], session['user_id'] )
             db.execute(" users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
             total_money = 0
             for stock_data in user_data:
