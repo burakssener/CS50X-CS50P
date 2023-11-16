@@ -108,7 +108,7 @@ def history():
         total_money += stock_data["total"]
         stock_data["total"] = usd(stock_data["total"])
         total_money += user_cash[0]["cash"]
-    return render_template("basket.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]), total_money = usd(total_money))
+    return render_template("history.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]), total_money = usd(total_money))
 
 
 

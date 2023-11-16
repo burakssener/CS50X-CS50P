@@ -11,20 +11,19 @@
 
     <table class="table table-striped">
         <tr>
-            <th>Shares</th>
             <th>Symbol</th>
+            <th>Shares</th>
             <th>Unit Price</th>
             <th>TOTAL</th>
             <th>Time</th>
-
         </tr>
-            {% for dict in user_data%}
-                <tr>
-                {% for data in dict.values() %}
-                    <td>{{data}}</td>
-                {% endfor %}
-                </tr>
+        {% for dict in user_data%}
+            <tr>
+            {% for data in dict.values() %}
+                <td>{{data}}</td>
             {% endfor %}
+            </tr>
+        {% endfor %}
         <tr>
             <td></td>
             <td></td>
