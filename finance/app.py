@@ -224,7 +224,6 @@ def sell():
             user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
 
             db.execute("INSERT INTO history (hstock_num, hstock_name, hstock_price, user_id) VALUES (?, ?, ?, ?)", -1*stock_num, stock_name, symbol["price"], session['user_id'] )
-            db.execute(" users_balance (stock_num, stock_name, user_id) VALUES (?, ?, ?)", stock_num, stock_name, session['user_id'] )
             total_money = 0
             for stock_data in user_data:
                 stock_data["stock_price"] = lookup(stock_data["Name"])["price"]
