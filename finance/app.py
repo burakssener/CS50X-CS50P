@@ -99,15 +99,11 @@ def buy():
 @app.route("/history")
 @login_required
 def history():
-    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session['user_id'])
-    user_data = db.execute("SELECT stock_name AS Name, stock_num AS Shares FROM users_balance WHERE user_id = ?", session['user_id'])
     total_money = 0
+    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session['user_id'])
+    user_data = db.execute("SELECT hstock_name, hstock_num, hstock_price, date FROM history WHERE user_id = ?", session['user_id'])
     for stock_data in user_data:
-        stock_data["stock_price"] = lookup(stock_data["Name"])["price"]
-        stock_data["total"] = stock_data["stock_price"] * int(stock_data["Shares"])
-        stock_data["stock_price"] = usd(stock_data["stock_price"])
-        total_money += stock_data["total"]
-        stock_data["total"] = usd(stock_data["total"])
+        stock_data["hstock_price"] = usd(stock_data["hstock_price"])
         total_money += user_cash[0]["cash"]
     return render_template("history.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]), total_money = usd(total_money))
 
