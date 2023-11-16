@@ -227,6 +227,7 @@ def sell():
             db.execute("UPDATE users SET cash = ? WHERE id = ?", user_data["cash"] + symbol["price"] * stock_num, session['user_id'] )
             user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session['user_id'])
             user_data = db.execute("SELECT stock_num AS Shares, stock_name AS Name FROM users_balance WHERE user_id = ?", session['user_id'])
+            db.execute("UPDATE history SET hstock_num = ? )
             total_money = 0
             for stock_data in user_data:
                 stock_data["stock_price"] = lookup(stock_data["Name"])["price"]
