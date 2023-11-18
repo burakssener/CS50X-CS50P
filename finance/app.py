@@ -185,7 +185,8 @@ def register():
                 users = db.execute("SELECT username FROM users WHERE username= ? ", username)
                 if  password != crpassword:
                     return apology("must provide password", 403)
-                if username in users:
+                for user in users:
+                    if username == users["username"]
                     return apology("This username is taken", 403)
                 db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(password))
                 return render_template("login.html")
