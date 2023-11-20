@@ -64,7 +64,7 @@ def buy():
             if not stock_num:
                 return apology("must provide stock share", 400)
             else:
-                if type(stock_num) is int
+                if type(stock_num) is int and stock_num > 0:
                     stock_num = int(request.form.get("shares"))
                     user_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
                     if (user_data["cash"] >= symbol["price"] * stock_num):
@@ -93,7 +93,7 @@ def buy():
                     else:
                         return apology("Not enough balance", 400)
                 else:
-                    return apology("", 200)
+                    return apology("fractional, negative, or non-numeric shares", 200)
 
 
 
