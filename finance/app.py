@@ -60,10 +60,10 @@ def buy():
             return apology("must provide stock name", 403)
         else:
             stock_name = symbol["symbol"]
-            if not request.form.get("stock_num"):
+            if not request.form.get("shares"):
                 return apology("must provide stock share", 403)
             else:
-                stock_num = int(request.form.get("stock_num"))
+                stock_num = int(request.form.get("shares"))
                 user_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
                 if (user_data["cash"] >= symbol["price"] * stock_num):
                     stock_data = db.execute("SELECT stock_num, stock_name FROM users_balance WHERE user_id = ? ", session['user_id'])
