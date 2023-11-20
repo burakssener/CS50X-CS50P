@@ -55,12 +55,12 @@ def buy():
         return render_template("buy.html")
 
     elif request.method == "POST":
-        symbol = lookup(request.form.get("stock_name"))
+        symbol = lookup(request.form.get("symbol"))
         if not symbol:
             return apology("must provide stock name", 403)
         else:
             stock_name = symbol["symbol"]
-            if not request.form.get("shares"):
+            if not request.form.get("stock_num"):
                 return apology("must provide stock share", 403)
             else:
                 stock_num = int(request.form.get("shares"))
@@ -206,7 +206,7 @@ def sell():
         return render_template("sell.html", user_data = user_data)
 
     elif request.method == "POST":
-        symbol = lookup(request.form.get("symbol"))
+        symbol = lookup(request.form.get("stock_name"))
         stock_data = db.execute("SELECT stock_num, stock_name FROM users_balance WHERE user_id = ? ", session['user_id'])
         status = False
         for stock in stock_data:
