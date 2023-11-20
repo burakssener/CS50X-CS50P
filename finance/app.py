@@ -64,9 +64,9 @@ def buy():
             if not stock_num:
                 return apology("must provide stock share", 400)
             else:
-                if stock_num.isdigit():
+                try:
                     stock_num = int(request.form.get("shares"))
-                else:
+                except TypeError or ValueError:
                     return apology("fractional, negative, or non-numeric shares", 200)
                 if stock_num > 0:
                     user_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
