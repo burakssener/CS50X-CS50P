@@ -165,6 +165,7 @@ def quote():
         if not symbol:
             return render_template("Invalid Request", 400)
         symbol["price"] = usd(symbol["price"])
+        symbol["name"] = request.form.get("symbol")
         return render_template("quoted.html", symbol = symbol)
 
 
