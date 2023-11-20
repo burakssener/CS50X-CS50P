@@ -223,7 +223,7 @@ def sell():
         return render_template("sell.html", user_data = user_data)
 
     elif request.method == "POST":
-        symbol = lookup(request.form.get("stock_name"))
+        symbol = lookup(request.form.get("symbol"))
         stock_data = db.execute("SELECT stock_num, stock_name FROM users_balance WHERE user_id = ? ", session['user_id'])
         status = False
         for stock in stock_data:
@@ -232,7 +232,7 @@ def sell():
                 real_stock_num = stock["stock_num"]
         if status == True:
             stock_name = symbol["symbol"]
-            stock_num = int(request.form.get("stock_num"))
+            stock_num = int(request.form.get("shares"))
             user_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
             for stock in stock_data:
                 if stock_name == stock["stock_name"] and real_stock_num < stock_num:
