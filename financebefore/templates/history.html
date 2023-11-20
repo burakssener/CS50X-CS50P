@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <div class="mx-auto" style="width: 900px;" class="card" style="width: 18rem;">
+        <h3 class="d-flex justify-content-center" class="display-4">balance: {{user_cash}}</h3>
+    </div>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Unit Price</th>
+            <th>Time</th>
+        </tr>
+        {% for dict in user_data%}
+            <tr>
+            {% for data in dict.values() %}
+                <td>{{data}}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+        <tr>
+
+    </table>
+
+{% endblock %}

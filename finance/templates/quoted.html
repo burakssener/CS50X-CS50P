@@ -5,19 +5,5 @@
 {% endblock %}
 
 {% block main %}
-    <table class="table table-striped">
-        <tr>
-            {% for item in symbol.keys()%}
-                <th>{{item}}</th>
-            {% endfor %}
-        </tr>
-        <tr>
-
-            {% for item in symbol.values()%}
-                <td>{{item}}</td>
-            {% endfor %}
-
-        </tr>
-    </table>
-
+    <p>A share of {{symbol["name"]}} ({{symbol["symbol"]}}) costs {{$symbol["price"]}}.</p>
 {% endblock %}
