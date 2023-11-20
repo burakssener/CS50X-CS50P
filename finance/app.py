@@ -206,7 +206,7 @@ def sell():
         return render_template("sell.html", user_data = user_data)
 
     elif request.method == "POST":
-        symbol = lookup(request.form.get("stock_name"))
+        symbol = lookup(request.form.get("symbol"))
         stock_data = db.execute("SELECT stock_num, stock_name FROM users_balance WHERE user_id = ? ", session['user_id'])
         status = False
         for stock in stock_data:
