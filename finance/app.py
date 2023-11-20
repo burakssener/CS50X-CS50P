@@ -64,7 +64,7 @@ def buy():
             if not stock_num:
                 return apology("must provide stock share", 400)
             else:
-                if stock_num ==
+                if type(stock_num) is int
                     stock_num = int(request.form.get("shares"))
                     user_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
                     if (user_data["cash"] >= symbol["price"] * stock_num):
