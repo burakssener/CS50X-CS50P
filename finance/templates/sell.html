@@ -9,13 +9,13 @@
         <label class="lead">transfer the profit to your pocket </label>
         <br><br>
         <div class="mb-3">
-            <select autocomplete="off" autofocus class="form-control mx-auto w-auto"name="stock_name" placeholder="Stock Name" type="text">
+            <select autocomplete="off" autofocus class="form-control mx-auto w-auto"name="symbol" placeholder="Stock Name" type="text">
                 {% for dicts in user_data %}
                     <option> {{dicts["Name"]}} </option>
                 {% endfor %}
             </select>
         </div>
-        <input autocomplete="off" class="form-control mx-auto w-auto" min="1" name="stock_num" placeholder="Shares" type="number">
+        <input autocomplete="off" class="form-control mx-auto w-auto" min="1" name="shares" placeholder="Shares" type="number">
         <br>
         <button class="btn btn-primary" type="submit">Sell</button>
 </form>

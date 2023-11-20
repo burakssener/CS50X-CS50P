@@ -106,7 +106,7 @@ def buy():
                     else:
                         return apology("Not enough balance", 400)
                 else:
-                    return apology("fractional, negative, and non-numeric shares", 200)
+                    return apology("fractional, negative, and non-numeric shares", 400)
 
 
 
