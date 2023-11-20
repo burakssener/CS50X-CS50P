@@ -57,11 +57,11 @@ def buy():
     elif request.method == "POST":
         symbol = lookup(request.form.get("symbol"))
         if not symbol:
-            return apology("must provide stock name", 403)
+            return apology("must provide stock name", 400)
         else:
             stock_name = symbol["symbol"]
             if not request.form.get("stock_num"):
-                return apology("must provide stock share", 403)
+                return apology("must provide stock share", 400)
             else:
                 stock_num = int(request.form.get("shares"))
                 user_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
@@ -89,7 +89,7 @@ def buy():
                     total_money += user_cash[0]["cash"]
                     return render_template("basket.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]), total_money = usd(total_money))
                 else:
-                    return apology("Not enough balance", 403)
+                    return apology("Not enough balance", 400)
 
 
 
