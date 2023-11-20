@@ -64,7 +64,7 @@ def buy():
             if not stock_num:
                 return apology("must provide stock share", 400)
             else:
-                try:
+                if stock_num.isdigit():
                     stock_num = int(request.form.get("shares"))
                 except TypeError or ValueError:
                     return apology("fractional, negative, or non-numeric shares", 200)
