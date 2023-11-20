@@ -60,7 +60,7 @@ def buy():
             return apology("must provide stock name", 400)
         else:
             stock_name = symbol["symbol"]
-            if not request.form.get("stock_num"):
+            if not request.form.get("symbol"):
                 return apology("must provide stock share", 400)
             else:
                 stock_num = int(request.form.get("shares"))
