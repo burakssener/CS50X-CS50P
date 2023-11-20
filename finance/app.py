@@ -174,20 +174,20 @@ def register():
     elif request.method == "POST":
 
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
         else:
             username = request.form.get("username")
-            if not request.form.get("password") or not request.form.get("cr_password"):
-                return apology("must provide password", 403)
+            if not request.form.get("password") or not request.form.get("confirmation"):
+                return apology("must provide password", 400)
             else:
                 password = request.form.get("password")
-                crpassword = request.form.get("cr_password")
+                crpassword = request.form.get("confirmation")
                 users = db.execute("SELECT username FROM users WHERE username= ? ", username)
                 if  password != crpassword:
-                    return apology("must provide password", 403)
+                    return apology("must provide password", 400)
                 for user in users:
                     if username == user["username"]:
-                     return apology("This username is taken", 403)
+                     return apology("This username is taken", 400)
                 db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(password))
                 return render_template("login.html")
 
