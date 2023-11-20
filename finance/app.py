@@ -64,8 +64,11 @@ def buy():
             if not stock_num:
                 return apology("must provide stock share", 400)
             else:
-                if type(stock_num) is int and stock_num > 0:
+                try:
                     stock_num = int(request.form.get("shares"))
+                except ValueError:
+                    return apology("fractional, negative, or non-numeric shares", 200)
+                if stock_num > 0:
                     user_data = db.execute("SELECT id, cash FROM users WHERE id = ?", session['user_id'])[0]
                     if (user_data["cash"] >= symbol["price"] * stock_num):
                         stock_data = db.execute("SELECT stock_num, stock_name FROM users_balance WHERE user_id = ? ", session['user_id'])
@@ -92,8 +95,6 @@ def buy():
                         return render_template("basket.html", user_data=user_data, user_cash= usd(user_cash[0]["cash"]), total_money = usd(total_money))
                     else:
                         return apology("Not enough balance", 400)
-                else:
-                    return apology("fractional, negative, or non-numeric shares", 200)
 
 
 
