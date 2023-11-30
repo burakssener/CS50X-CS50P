@@ -1,4 +1,6 @@
 answer = input("Expression:")
 
+
 for character in answer:
-    if character.isdigit
+    if character.isdigit():
+
