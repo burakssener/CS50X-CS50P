@@ -5,8 +5,8 @@ if answer.isdigit():
     else:
         print("No")
 else:
-    if answer == "forty-two" or answer == "forty-two":
-            print("Yes")
+    if answer == "forty-two" or answer == "forty two":
+        print("Yes")
     else:
         print("No")
 
