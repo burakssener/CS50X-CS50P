@@ -5,6 +5,6 @@ for letter in answer:
     else:
         print("...", end="")
 print()
-print(letter, sep="...")
+print(answer, sep="")
 
 
