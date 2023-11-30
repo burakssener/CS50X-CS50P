@@ -1,2 +1,2 @@
 mass = input("m: ")
-print("E:", m * 300000000**2)
+print(f"E: {mass * 300000000**2}")
