@@ -1,4 +1,4 @@
-answer = input("What is the Answer to the Great Question of Life, the Universe, and Everything?")
+answer = input("What is the Answer to the Great Question of Life, the Universe, and Everything?").split()
 if answer.isdigit():
     if int(answer) == 42:
         print("Yes")
