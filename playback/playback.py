@@ -1,9 +1,8 @@
 answer = str(input(""))
-sentence = []
 for letter in answer:
     if letter != ' ':
-        sentence.append(letter)
+        print(letter end="")
     else:
-        sentence.append("...")
-print(answer)
+        print("..." end="")
+
 
