@@ -1,8 +1,9 @@
 answer = str(input(""))
-
-for space in answer:
-    if space.isspace():
-        space = str('...')
-
+sentence = []
+for letter in answer:
+    if letter != ' ':
+        sentence.append(letter)
+    else:
+        sentence.append("...")
 print(answer)
 
