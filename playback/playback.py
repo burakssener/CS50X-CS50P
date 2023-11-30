@@ -1,6 +1,6 @@
 answer = str(input(""))
-for space in input:
-    if space == ' ':
-        space = '...'
+for space in answer:
+    if space == " ":
+        space = "..."
 print(answer)
 
