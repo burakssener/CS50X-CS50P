@@ -1,11 +1,10 @@
-answer = input("What is the Answer to the Great Question of Life, the Universe, and Everything?")
+answer = input("What is the Answer to the Great Question of Life, the Universe, and Everything?").strip()
 if answer.isdigit():
     if int(answer) == 42:
         print("Yes")
     else:
         print("No")
 else:
-    answer = answer.strip()
     if answer== "forty-two" or answer.lower() == "forty two":
         print("Yes")
     else:
