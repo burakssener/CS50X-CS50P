@@ -1,6 +1,6 @@
 answer = input("Greeting: ").strip().lower()
 
-if answer == "hello":
+if "hello" in answer:
     print("$0")
 elif answer[0] == 'h':
     print("$20")
