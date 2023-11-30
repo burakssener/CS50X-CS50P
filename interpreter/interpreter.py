@@ -1,7 +1,7 @@
-answer = input("Expression:")
+answer = input("Expression:").strip()
 
-operations = ['/', '+', ]
+operations = ['/', '+', '-']
 
-for character in answer:
-    if character.isdigit():
+
+
 
