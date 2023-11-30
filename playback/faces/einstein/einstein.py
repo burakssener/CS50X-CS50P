@@ -1,1 +1,2 @@
-mass = input("Give the m Value")
+mass = input("m: ")
+print("E:", m * 300000000**2)
