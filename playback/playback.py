@@ -1,4 +1,6 @@
 answer = str(input(""))
 
-print(answer, del="...")
+for space in answer:
+    if space == ' ':
+        space = '
 
