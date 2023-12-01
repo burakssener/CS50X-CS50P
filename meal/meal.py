@@ -1,9 +1,9 @@
 def main():
-     answer = int(input("What time is it?").strip().split("#"))
+     answer = int(input("What time is it?").strip().split("#")
      match(answer):
-          case <= 800 and >= 700: print("breakfast time")
-          case <= 1300 and >= 1200: print("lunch time")
-          case <= 1900 and >= 1800: print("dinner time")
+          case 800 >= answer >= 700: print("breakfast time")
+          case 1300 >= answer >= 1200: print("lunch time")
+          case 1900 >= answer >= 1800: print("dinner time")
 
 
 def convert(time):
