@@ -5,7 +5,7 @@ def main():
         if letter.upper() in ['A', 'E', 'I', 'O', 'U']:
             continue
         print(letter, end="")
-
+    print()
 if __name__ == "__main__":
     main()
 
