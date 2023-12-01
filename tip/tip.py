@@ -6,11 +6,12 @@ def main():
 
 
 def dollars_to_float(d):
-    
+    return float(d)
+
 
 
 def percent_to_float(p):
-    return float(p) / 100
+    return float(p)
 
 
 main()
