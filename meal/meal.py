@@ -9,7 +9,7 @@ def main():
 
 def convert(time):
      hour, minute = time.strip().split(":")
-     return float(hour) + float(minute) / 60 * 100
+     return int(hour) + int(minute) / 60
 
 
 
