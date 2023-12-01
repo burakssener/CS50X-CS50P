@@ -1,1 +1,11 @@
-print("\U0001F600")
+answer = input().strip()
+
+if answer == ":)":
+    print("🙂")
+elif answer == ":(":
+    print("🙁")
+
+
+
+
+
