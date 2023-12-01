@@ -5,4 +5,6 @@ for letter in answer:
         continue
     print(letter, end="")
 
+if __main__
+
 
