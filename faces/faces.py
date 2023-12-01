@@ -2,12 +2,12 @@ answer = input().strip()
 words = answer.split(" ")
 for word in words:
     if word == ":)":
-        print("🙂", end="")
+        print("🙂", end=" ")
     elif word == ":(":
-        print("🙁", end="")
+        print("🙁", end=" ")
 
     else:
-        print(word, end="")
+        print(word, end=" ")
 print()
 
 
