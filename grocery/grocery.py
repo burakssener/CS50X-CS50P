@@ -9,4 +9,5 @@ while True:
     except EOFError:
         for item in items:
             print(items[item], item)
+        break
 
