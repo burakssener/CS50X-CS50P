@@ -1,8 +1,9 @@
 while True:
     try:
         x ,y = input("Fraction: ").strip().split("/")
+        if int(x) in [1,3] and int(y) in [1]
         result = int(x) / int(y) * 100
-        if x
+
         if result >= 99:
             print("F")
         elif result <= 1:
