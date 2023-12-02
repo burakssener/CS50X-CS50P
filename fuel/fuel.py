@@ -4,7 +4,7 @@ while True:
         x , y = int(x), int(y)
         if not (x <= y):
             continue
-        result = int(x) / int(y) * 100
+        result = x / y * 100
         if result >= 99:
             print("F")
         elif result <= 1:
