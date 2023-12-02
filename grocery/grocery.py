@@ -7,7 +7,7 @@ while True:
         else:
             items[new_item] = 1
     except EOFError:
-        for item in (items.keys()).sort():
+        for item in sorted(items.keys()):
             print(items[item], item)
         break
 
