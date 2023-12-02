@@ -9,3 +9,11 @@ menu ={
         "Taco": 3.00,
         "Tortilla Salad": 8.00
 }
+total = 0
+while True:
+    order = input("Item: ")
+    if order in menu:
+        total += menu[order]
+    else:
+        continue
+    print("Total: ", total)
