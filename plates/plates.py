@@ -15,12 +15,14 @@ else:
         if status == 0:
             print("Invalid")
         else:
-            answer[-1] answer[0]
-            for letter in answer:
-
-                    status = 0
-            if status == 0:
-                print("Invalid")
+            if answer[-1].isalpha:
+                for letter in answer:
+                        if letter.isdigit():
+                            status = 0
+                if status == 0:
+                    print("Invalid")
+                else:
+                    print("Valid")
 
 
 
