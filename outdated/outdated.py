@@ -18,7 +18,10 @@ while True:
         month, day, year = raw_date.split("/")
     except ValueError:
         month, day, year = raw_date.split(" ")
-        day = day.replace(",", "")
+        if ',' in day:
+            day = day.replace(",", "")
+        else:
+            continue
         month = month.lower().title()
         for _ in range(len(months)):
             if months[_] == month:
