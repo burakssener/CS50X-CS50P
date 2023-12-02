@@ -17,7 +17,7 @@ while True:
             total += menu[order]
         else:
             continue
-        print(f"Total: ${total:.2f}")
+        print(f"Total: ${total:}")
     except EOFError:
         print()
         break
