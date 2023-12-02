@@ -8,5 +8,6 @@ while True:
             print("E")
         else:
             print(f"{result:.0f}%", sep="")
+        break
     except ValueError and ZeroDivisionError:
         pass
