@@ -25,7 +25,10 @@ while True:
                 month = _ + 1
             else:
                 continue
-    day, month, year = int(day), int(month), int(year)
+    try:
+        day, month, year = int(day), int(month), int(year)
+    except ValueError:
+        continue
     print(f"{year:04}-{month:02}-{day:02}")
     break
 
