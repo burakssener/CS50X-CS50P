@@ -19,12 +19,14 @@ while True:
     except ValueError:
         month, day, year = raw_date.split(" ")
         day = day.replace(",", "")
+        day, year = int(day), int(year)
         month = month.lower().title()
         for _ in range(len(months)):
             if months[_] == month:
                 month = _ + 1
             else:
                 continue
-    print(f"{year:0004}-{month:02}-{day:02}")
+    print(f"{year:04}-{month:02}-{day:02}")
+    break
 
 
