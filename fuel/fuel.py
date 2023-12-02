@@ -1,7 +1,7 @@
 while True:
     try:
-        x , slash, y = input("Fraction: ").strip().split()
-        result = int(x) / int(y) * 100
+        expression = input("Fraction: ").strip()
+        result = int(expression[0]) / int(expression[2]) * 100
         if result >= 99:
             print("F")
         elif result <= 1:
