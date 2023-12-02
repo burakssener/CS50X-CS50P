@@ -15,7 +15,7 @@ else:
         if status == 0:
             print("Invalid")
         else:
-            if answer[-1].isalpha:
+            if answer[-1].isalpha():
                 for letter in answer:
                         if letter.isdigit():
                             status = 0
