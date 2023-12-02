@@ -8,9 +8,12 @@ else:
     else:
         digit = 0
         for letter in answer:
-            if letter.isdigit():
+            if letter.isdigit() and digit == 0:
                 digit = 1
-            if digit == 1 and letter.isalpha()):
+                if letter == 0:
+                    status = 0
+                    break
+            if digit == 1 and letter.isalpha():
                 status = 0
                 break
             if not (letter.isdigit() or letter.isalpha()):
