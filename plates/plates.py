@@ -10,7 +10,7 @@ else:
         for letter in answer:
             if letter.isdigit():
                 digit = 1
-            if not (digit == 1 and letter.isdigit()):
+            if digit == 1 and letter.isalpha()):
                 status = 0
                 break
             if not (letter.isdigit() or letter.isalpha()):
