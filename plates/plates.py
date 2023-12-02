@@ -23,6 +23,9 @@ else:
                     print("Invalid")
                 else:
                     print("Valid")
+            else:
+                 print("Valid")
+
 
 
 
