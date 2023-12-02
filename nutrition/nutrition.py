@@ -1,0 +1,10 @@
+calories {"apple": 130,
+          "Avocado": 130,
+          "Banana": 130,
+          "Cantaloupe": 130,
+          "Grapefruit": 130,
+          "Grapes": 130,
+          "Kiwifruit": 130,
+          "Lemon": 130,
+          "Lime": 130,
+          }
