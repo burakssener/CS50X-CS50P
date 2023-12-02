@@ -3,24 +3,28 @@ status = 1
 if not (6 >= len(answer) >=2):
     print("Invalid")
 else:
-    for letter in answer[0:2]:
-        if not letter.isalpha():
-            print("Invalid")
-            break
-    for letter in answer:
-        if not (letter.isdigit() or letter.isalpha()):
-            print("Invalid")
-            break
-    if answer[-1].isalpha():
+    if not (answer[0].isalpha() and answer[1].isalpha()):
+         print("Invalid")
+    else:
+        digit = 0
         for letter in answer:
-                if letter.isdigit():
-                    status = 0
+            if letter.isdigit():
+                digit = 1
+            if not (digit == 1 and letter.isdigit()):
+                status = 0
+                break
+            if not (letter.isdigit() or letter.isalpha()):
+                status = 0
+                break
+            if answer[-1].isalpha() and letter.isdigit():
+                status = 0
+                break
         if status == 0:
             print("Invalid")
         else:
             print("Valid")
-    else:
-            print("Valid")
+
+
 
 
 
