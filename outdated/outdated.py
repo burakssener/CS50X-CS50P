@@ -1,4 +1,4 @@
-monhths = [
+months = [
     "January",
     "February",
     "March",
@@ -19,6 +19,10 @@ while True:
     except ValueError:
         month, day, year = raw_date.split(" ")
         day = day.split(",")
+        for _ in months:
+            if _ == month:
+                month = _ + 1
+        
 
     print(f"{year:0004}-{month:02}-{day:02}")
 
