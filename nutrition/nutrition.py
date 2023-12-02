@@ -14,11 +14,11 @@ calories= {"Apple": 130,
           "Pear": 100,
           "Pineapple": 50,
           "Plums": 70,
-          "Cherries": 50,
+          "Sweet Cherries": 100,
           "Tangerine": 50,
           "Watermelon": 80,
           }
-fruit = input("Item: ").strip().lower().capitalize()
+fruit = input("Item: ").strip().lower().title()
 if fruit in calories:
     print(calories[fruit])
 
