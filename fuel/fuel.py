@@ -7,6 +7,6 @@ while True:
         elif result <= 1:
             print("E")
         else:
-            print(f"%{result:.0f}", sep="")
+            print(f"{result:.0f}%", sep="")
     except ValueError and ZeroDivisionError:
         pass
