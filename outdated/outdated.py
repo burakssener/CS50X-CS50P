@@ -13,4 +13,5 @@ monhths = [
     "December"
 ]
 while True:
-    
+    raw_date = input("Date: ")
+
