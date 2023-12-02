@@ -27,6 +27,8 @@ while True:
                 continue
     try:
         day, month, year = int(day), int(month), int(year)
+        if not (31 >= day >= 0 and 12 >= month >= 0):
+            continue
     except ValueError:
         continue
     print(f"{year:04}-{month:02}-{day:02}")
