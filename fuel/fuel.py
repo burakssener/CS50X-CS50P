@@ -12,5 +12,5 @@ while True:
         else:
             print(f"{result:.0f}%", sep="")
         break
-    except ValueError and ZeroDivisionError:
+    except ValueError or ZeroDivisionError:
         pass
