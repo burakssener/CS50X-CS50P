@@ -1,4 +1,4 @@
-calories= {"apple": 130,
+calories= {"Apple": 130,
           "Avocado": 50,
           "Banana": 110,
           "Cantaloupe": 50,
