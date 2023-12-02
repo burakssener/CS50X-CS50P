@@ -1,4 +1,4 @@
-[
+monhths = [
     "January",
     "February",
     "March",
@@ -12,3 +12,5 @@
     "November",
     "December"
 ]
+while True:
+    
