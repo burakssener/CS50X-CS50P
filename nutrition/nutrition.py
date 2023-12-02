@@ -18,5 +18,7 @@ calories= {"apple": 130,
           "Tangerine": 50,
           "Watermelon": 80,
           }
+fruit = input("Item: ").strip().lower()
+if fruit in calories:
+    print(calories[fruit])
 
-print(calories[input("Item: ")])
