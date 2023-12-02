@@ -19,6 +19,7 @@ while True:
     except ValueError:
         month, day, year = raw_date.split(" ")
         day = day.replace(",", "")
+        month = month.lower().title()
         for _ in range(len(months)):
             if months[_] == month:
                 month = _ + 1
