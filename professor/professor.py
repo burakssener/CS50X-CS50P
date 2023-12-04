@@ -4,24 +4,25 @@ import random
 def main():
     score = 0
     level = get_level()
-    for i in range(10):
+    for _ in range(10):
         x = generate_integer(level)
         y = generate_integer(level)
-        answer = input(f"{x} + {y} = ", end="")
-        i = 0
-        while not str(x + y) == answer and i < 3:
-            print("EEE")
-            answer = input(f"{x} + {y} = ", end="")
-            i += 1
+        for _ in range(3):
+            answer = input(f"{x} + {y} = ", end="").strip()
             if answer == str(x + y):
                 score += 1
                 break
+            else:
+                print("EEE")
 
 def get_level():
     while True:
-        input("Level: ")
-        if input in [1, 2, 3]:
-            return input
+        lvl = input("Level: ")
+        try:
+            if int(lvl) in [1, 2, 3]:
+                return lvl
+        except ValueError:
+            pass
 
 
 def generate_integer(level):
