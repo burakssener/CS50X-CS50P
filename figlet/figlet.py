@@ -3,7 +3,7 @@ from sys import argv, exit
 from random import choice
 
 if not len(argv) in [1, 3]:
-    exit()
+    exit(1)
 elif len(argv) == 1:
     figlet = Figlet()
     text = input("Input:").strip()
@@ -18,9 +18,9 @@ elif len(argv) == 3 and argv[1] in ["-f", "--font"]:
         figlet.setFont(font=argv[2])
         print(figlet.renderText(text))
     else:
-        exit()
+        exit(1)
 else:
-    exit()
+    exit(1)
 
 
 
