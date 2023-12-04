@@ -11,10 +11,15 @@ def main():
             print(f"{x} + {y} = ", end="")
             answer = input()
             if answer == str(x + y):
+                score_before = score
                 score += 1
                 break
             else:
                 print("EEE")
+        if score_before == score:
+            print(f"{x} + {y} = {x+y}", end="")
+
+
     print("Score:", score)
 
 def get_level():
