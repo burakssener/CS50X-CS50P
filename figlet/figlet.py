@@ -1,7 +1,7 @@
 from pyfiglet import Figlet
-from sys import
+import sys
 
 figlet = Figlet()
-
-if len(sys.argv) == 1:
+for fonts in figlet.getFonts():
+    print(fonts)
 
