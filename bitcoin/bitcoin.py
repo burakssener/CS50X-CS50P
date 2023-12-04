@@ -12,7 +12,7 @@ try:
     response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
     amount = float((response.json()["bpi"]["USD"]["rate"]).replace(",",""))
     amount *= float(argv[1])
-    print(f"${amount:,.2f}")
+    print(f"${amount:,.4f}")
 except requests.RequestException:
     print("request error occured")
 
