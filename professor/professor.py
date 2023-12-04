@@ -8,16 +8,16 @@ def main():
         x = generate_integer(level)
         y = generate_integer(level)
         for _ in range(3):
+            score_before = score
             print(f"{x} + {y} = ", end="")
             answer = input()
             if answer == str(x + y):
-                score_before = score
                 score += 1
                 break
             else:
                 print("EEE")
         if score_before == score:
-            print(f"{x} + {y} = {x+y}", end="")
+            print(f"{x} + {y} = {x+y}")
 
 
     print("Score:", score)
