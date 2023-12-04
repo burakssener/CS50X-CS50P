@@ -1,5 +1,4 @@
 import emoji
-import request
 
-emojis = request.get()
+input("Input: ").strip().lower()
 print(emoji.emojize('Python is :thumbs_up:'))
