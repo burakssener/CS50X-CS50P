@@ -5,7 +5,7 @@ def main():
 
 def shorten(word):
     for letter in word:
-        if letter.upper() in ['E', 'I', 'O', 'U']:
+        if letter.upper() in ['A', 'E', 'I', 'O', 'U']:
             word = word.replace(letter, "")
     return word
 
