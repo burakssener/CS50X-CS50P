@@ -2,6 +2,7 @@ from pyfiglet import Figlet
 from sys import argv
 from random import choice
 
+if 3 >= len(argv) >= 0
 figlet = Figlet()
 text = input("Input: ").strip().lower()
 if len(argv) == 1:
