@@ -1,8 +1,9 @@
 from pyfiglet import Figlet
-from sys import argv
+from sys import argv, exit
 from random import choice
 
-if 3 >= len(argv) >= 0
+if not len(argv) in [1, 3]:
+    exit()
 figlet = Figlet()
 text = input("Input: ").strip().lower()
 if len(argv) == 1:
@@ -14,6 +15,7 @@ elif len(argv) == 3 and argv[1] in ["-f", "--font"]:
     if argv[2] in figlet.getFonts():
         figlet.setFont(font=argv[2])
         print(figlet.renderText(text))
+    else
 
 
 
