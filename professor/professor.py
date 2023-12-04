@@ -35,8 +35,8 @@ def get_level():
 def generate_integer(level):
     match level:
         case 1: return random.randrange(0, 10)
-        case 1: return random.randrange(10, 100)
-        case 1: return random.randrange(100, 1000)
+        case 2: return random.randrange(10, 100)
+        case 3: return random.randrange(100, 1000)
 
 
 
