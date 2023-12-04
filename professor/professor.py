@@ -33,7 +33,7 @@ def get_level():
 
 
 def generate_integer(level):
-    return random.randrange(level*10)
+    return random.randrange(10**level)
 
 
 
