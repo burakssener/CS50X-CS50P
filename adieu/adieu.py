@@ -10,5 +10,5 @@ while True:
         break
 
 mylist = p.join(names, final_sep="")
-print(names)
+
 print("\nAdieu, adieu, to", mylist)
