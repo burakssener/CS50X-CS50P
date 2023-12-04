@@ -6,7 +6,8 @@ while True:
     try:
         names.append(input("Name: ").strip().title())
     except EOFError:
-        mylist = p.join(names, final_sep="")
-        print("Adieu, adieu, to", mylist)
         break
+        mylist = p.join(names, final_sep="")
+        print("\nAdieu, adieu, to", mylist)
+
 
