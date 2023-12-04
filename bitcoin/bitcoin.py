@@ -11,7 +11,7 @@ if not argv[1].isdigit():
 try:
     response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
     amount = float((response.json()["bpi"]["USD"]["rate"]).replace(",",""))
-    amount * float(argv[1])
+    amount *= float(argv[1])
     print(f"${amount:,.2f}")
 except requests.RequestException:
     print("request error occured")
