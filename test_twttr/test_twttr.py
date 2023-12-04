@@ -16,3 +16,4 @@ def test4_shorten():
 
 def test5_shorten():
     assert shorten("AdamDasa,d,a") == ("dmDs,d,")
+
