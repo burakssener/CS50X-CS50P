@@ -6,8 +6,7 @@ if not len(argv) in [1, 3]:
     print("Error")
     exit()
 figlet = Figlet()
-text = input("Input:").strip().lower()
-print()
+text = input("Input:").strip()
 if len(argv) == 1:
     f = choice(figlet.getFonts())
     figlet.setFont(font=f)
