@@ -11,5 +11,5 @@ def test2_shorten():
 def test3_shorten():
     assert shorten("12321aDa") == ("12321D")
 
-def test3_shorten():
+def test4_shorten():
     assert shorten("12321a,d,a") == ("12321,d,")
