@@ -2,9 +2,20 @@ import random
 
 
 def main():
-    input(f"{x} + {y} = ", end="")
-
-
+    score = 0
+    level = get_level()
+    for i in range(10):
+        x = generate_integer(level)
+        y = generate_integer(level)
+        answer = input(f"{x} + {y} = ", end="")
+        i = 0
+        while not str(x + y) == answer and i < 3:
+            print("EEE")
+            answer = input(f"{x} + {y} = ", end="")
+            i += 1
+            if answer == str(x + y):
+                score += 1
+                break
 
 def get_level():
     while True:
@@ -14,7 +25,7 @@ def get_level():
 
 
 def generate_integer(level):
-    x = random.randrange(level*10)
+    return random.randrange(level*10)
 
 
 
