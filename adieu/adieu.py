@@ -4,11 +4,9 @@ p = inflect.engine()
 names = []
 while True:
     try:
-        answer = input("Name: ").strip().title()
-        names.append(answer)
+        names.append(input("Name: ").strip().title())
     except EOFError:
         break
-
 mylist = p.join(names, final_sep="")
 
 print("\nAdieu, adieu, to", mylist)
