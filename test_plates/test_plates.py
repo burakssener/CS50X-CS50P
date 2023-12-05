@@ -12,7 +12,9 @@ def test_length():
 def test_numbers():
     assert is_valid("C50C") == 0
     assert is_valid("85SDS") == 0
-    assert is_valid("ASDA8") == 1
+    assert is_valid("ASD80") == 1
+    assert is_valid("ASD08") == 0
+    assert is_valid("AS80d") == 0
 def test_punctuation():
     assert is_valid("AS,DA8") == 0
     assert is_valid(",,SDS") == 0
