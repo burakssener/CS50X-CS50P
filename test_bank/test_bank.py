@@ -1,6 +1,6 @@
 def main():
     answer = input("Greeting: ").strip().lower()
-    print(value(answer))
+    print(f"${value(answer)}")
 
 def value(answer):
     if "hello" in answer:
