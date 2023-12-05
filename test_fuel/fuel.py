@@ -20,12 +20,19 @@ def main():
 
 
 def convert(fraction):
+    try
     x , y = fraction.split("/")
     x , y = int(x), int(y)
+     return round(x / y * 100)
 
 
 def gauge(percentage):
-    ...
+    if percentage >= 99:
+        print("F")
+    elif result <= 1:
+        print("E")
+    else:
+        print(f"{result:.0f}%", sep="")
 
 
 if __name__ == "__main__":
