@@ -1,6 +1,6 @@
 while True:
     try:
-        x ,y = input("Fraction: ").strip().split("/")
+        fraction = input("Fraction: ").strip()
         x , y = int(x), int(y)
         if not (x <= y):
             continue
@@ -14,3 +14,19 @@ while True:
         break
     except ValueError or ZeroDivisionError:
         pass
+
+def main():
+    ...
+
+
+def convert(fraction):
+    x , y = fraction.split("/")
+    x , y = int(x), int(y)
+
+
+def gauge(percentage):
+    ...
+
+
+if __name__ == "__main__":
+    main()
