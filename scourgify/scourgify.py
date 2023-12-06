@@ -19,10 +19,11 @@ else:
             for row in reader:
                 data.append({"name": row["name"], "house": row["house"]})
         with open(argv[2], "w") as outp:
-            fieldnames = ["first", "last", "house"]
+            fieldnames = [ "last", "first", "house"]
             writer = csv.DictWriter(outp, fieldnames = fieldnames)
             for row in data:
-                first, last = row["name"].split(", ")
+                last, first = row["name"].split(", ")
+                writer.writeheader()
                 writer.writerow({"first": first ,"last": last, "house": row["house"]})
 
     except FileNotFoundError:
