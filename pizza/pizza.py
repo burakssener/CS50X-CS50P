@@ -14,7 +14,7 @@ else:
     try:
 
         with open(argv[1], "r") as file:
-            reader = csv.reader()
+            reader = csv.DictReader(file)
 
 
         print(tabulate(table, headers, tablefmt="plain"))
