@@ -21,4 +21,8 @@ def test_convert_exceptions():
     with pytest.raises(ValueError) as error:
         convert("10/8")
     assert error.type is ValueError
+    with pytest.raises(ValueError) as error:
+        convert("3.5/8")
+    assert error.type is ValueError
+
 
