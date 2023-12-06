@@ -4,7 +4,7 @@ def main():
             fraction = input("Fraction: ").strip()
             print(f"{gauge(convert(fraction))}")
             break
-        except (ValueError or ZeroDivisionError):
+        except (ValueError, ZeroDivisionError) as error:
             pass
 
 
@@ -23,17 +23,13 @@ def convert(fraction):
 
 
 
-
-
-
-
 def gauge(percentage):
     if percentage >= 99:
         return "F"
     elif percentage <= 1:
         return "E"
     else:
-        return f"{percentage:.0f}%"
+        return f"%{percentage:.0f}"
 
 
 if __name__ == "__main__":
