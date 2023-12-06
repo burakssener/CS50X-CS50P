@@ -13,11 +13,13 @@ elif not argv[1].endswith(".csv"):
 
 else:
     try:
-        pizzas = []
+        data = []
         with open(argv[1], "r") as file:
             reader = csv.DictReader(file)
-            for line in reader:
-                print(line)
+            for row in reader:
+                data.append(row)
+        print(data)
+        print(tabulate(data, tablefmt="grid"))
 
     except FileNotFoundError:
         exit("File does not exist")
