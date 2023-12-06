@@ -21,9 +21,9 @@ else:
         with open(argv[2], "w") as outp:
             fieldnames = [ "last", "first", "house"]
             writer = csv.DictWriter(outp, fieldnames = fieldnames)
+            writer.writeheader()
             for row in data:
                 last, first = row["name"].split(", ")
-                writer.writeheader()
                 writer.writerow({"first": first ,"last": last, "house": row["house"]})
 
     except FileNotFoundError:
