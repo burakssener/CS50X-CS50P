@@ -1,8 +1,11 @@
 def main():
-    fraction = input("Fraction: ").strip()
-    try:
-        print(f"{gauge(convert(fraction))}")
-    except ValueError or ZeroDivisionError:
+    while True:
+        try:
+            fraction = input("Fraction: ").strip()
+            print(f"{gauge(convert(fraction))}")
+            break
+        except ValueError or ZeroDivisionError:
+            pass
 
 
 def convert(fraction):
