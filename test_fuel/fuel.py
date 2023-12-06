@@ -9,11 +9,17 @@ def main():
 
 
 def convert(fraction):
-    if not (x <= y):
+    try:
+        x , y = fraction.split("/")
+        x , y = int(x), int(y)
+        if not x <= y:
+            raise ValueError
+        return round(x / y * 100)
+    except ValueError:
         raise ValueError
-    x , y = fraction.split("/")
-    x , y = int(x), int(y)
-    return round(x / y * 100)
+    except ZeroDivisionError:
+        raise ZeroDivisionError
+
 
 
 
@@ -21,10 +27,10 @@ def convert(fraction):
 def gauge(percentage):
     if percentage >= 99:
         return "F"
-    elif result <= 1:
+    elif percentage <= 1:
         return "E"
     else:
-        return f"{result:.0f}%"
+        return f"{percentage:.0f}%"
 
 
 if __name__ == "__main__":
