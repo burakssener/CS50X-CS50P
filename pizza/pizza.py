@@ -16,7 +16,7 @@ else:
         with open(argv[1], "r") as file:
             reader = csv.DictReader(file)
 
+        print(tabulate(reader, tablefmt="plain"))
 
-        print(tabulate(table, headers, tablefmt="plain"))
     except FileNotFoundError:
         exit("File does not exist")
