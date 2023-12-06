@@ -19,6 +19,6 @@ def test_convert_exceptions():
         convert("cat/cat")
     assert error.type is ValueError
     with pytest.raises(ValueError) as error:
-        convert("cat/cat")
+        convert("10/8")
     assert error.type is ValueError
 
