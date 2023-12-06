@@ -11,7 +11,8 @@ elif not argv[1].endswith(.py):
 
 else:
     try:
-        file = open(argv[1], "r")
+        with open(argv[1], "r") as file:
+            
     except FileNotFoundError:
         exit("File does not exist")
 
