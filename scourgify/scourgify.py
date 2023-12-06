@@ -2,13 +2,13 @@ from sys import argv
 import csv
 from tabulate import tabulate
 
-if len(argv) > 2:
+if len(argv) > 3:
     exit("Too many command-line arguments ")
 
-elif len(argv) < 2:
+elif len(argv) < 3:
     exit("Too few command-line arguments ")
 
-elif not argv[1].endswith(".csv"):
+elif not (argv[2].endswith(".csv") and argv[3].endswith(".csv")):
     exit("Not a CSV file")
 
 else:
@@ -22,4 +22,4 @@ else:
         print(tabulate(data, headers="keys", tablefmt="grid"))
 
     except FileNotFoundError:
-        exit("File does not exist")
+        exit("Could not read 1.csv")
