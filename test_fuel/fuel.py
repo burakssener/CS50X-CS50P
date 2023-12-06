@@ -4,7 +4,7 @@ def main():
             fraction = input("Fraction: ").strip()
             print(f"{gauge(convert(fraction))}")
             break
-        except (ValueError or ZeroDivisionError):
+        except ValueError or ZeroDivisionError:
             pass
 
 
