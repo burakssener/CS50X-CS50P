@@ -17,6 +17,8 @@ else:
                 line = line.rstrip()
                 if line and (not line.startswith("#")):
                     code_lines += 1
+                if "\"" in line:
+                    code_lines += 1
         print(code_lines)
 
     except FileNotFoundError:
