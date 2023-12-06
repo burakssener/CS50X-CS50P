@@ -11,9 +11,13 @@ elif not argv[1].endswith(.py):
 
 else:
     try:
+        code_lines = 0
         with open(argv[1], "r") as file:
-            i = 0
             for line in file:
+                line = line.rstrip()
+                if line and not line.startswith("#"):
+                    code_lines += 1
+        print(code_lines)
 
     except FileNotFoundError:
         exit("File does not exist")
