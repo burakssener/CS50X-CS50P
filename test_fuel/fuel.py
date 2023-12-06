@@ -1,6 +1,6 @@
 while True:
     try:
-        fraction = input("Fraction: ").strip()
+
         x , y = int(x), int(y)
         if not (x <= y):
             continue
@@ -16,7 +16,9 @@ while True:
 
 
 def main():
-    ...
+    fraction = input("Fraction: ").strip()
+    try:
+        convert(fraction)
 
 
 def convert(fraction):
@@ -31,11 +33,11 @@ def convert(fraction):
 
 def gauge(percentage):
     if percentage >= 99:
-        print("F")
+        return "F"
     elif result <= 1:
-        print("E")
+        return "E"
     else:
-        print(f"{result:.0f}%", sep="")
+        return f"{result:.0f}%"
 
 
 if __name__ == "__main__":
