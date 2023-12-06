@@ -9,6 +9,11 @@ elif len(argv) < 2:
 elif not argv[1].endswith(.py):
     exit("Not a Python file")
 
-elif 
+else:
+    try:
+        file = open(argv[1], "r")
+    except FileNotFoundError:
+        exit("File does not exist")
+
 
 
