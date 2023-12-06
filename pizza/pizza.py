@@ -19,7 +19,7 @@ else:
             for row in reader:
                 data.append(row)
         print(data)
-        print(tabulate(data, tablefmt="grid"))
+        print(tabulate(data, headers="keys", tablefmt="grid"))
 
     except FileNotFoundError:
         exit("File does not exist")
