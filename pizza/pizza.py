@@ -18,12 +18,8 @@ else:
             reader = csv.DictReader(file)
             for row in reader:
                 data.append(row)
-        with open(arv[2], "r") as outp:
-            fieldnames = ["first", "last", "house"]
-            writer = csv.DictWriter(file, fieldnames = fieldnames)
-            for row in data:
-                first, last = row["name"].strip(" ,")
-                writer.writerow({"first": first ,"last": last, "house": row["house"]})
+
+        print(tabulate(data, headers="keys", tablefmt="grid"))
 
     except FileNotFoundError:
         exit("File does not exist")
