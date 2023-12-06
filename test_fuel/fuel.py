@@ -17,7 +17,6 @@ def convert(fraction):
         if not x <= y:
             raise ValueError
         return round(x / y * 100)
-
     except ValueError:
         raise ValueError
 
@@ -29,7 +28,7 @@ def gauge(percentage):
     elif percentage <= 1:
         return "E"
     else:
-        return f"%{percentage:.0f}"
+        return f"{percentage:.0f}%"
 
 
 if __name__ == "__main__":
