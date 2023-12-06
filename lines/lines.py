@@ -15,7 +15,7 @@ else:
         with open(argv[1], "r") as file:
             for line in file:
                 line = line.rstrip()
-                if line and not (line.startswith("#") and line.startswith('"""')):
+                if line and not line.startswith("#"):
                     code_lines += 1
         print(code_lines)
 
