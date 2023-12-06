@@ -18,7 +18,7 @@ while True:
 def main():
     fraction = input("Fraction: ").strip()
     try:
-        convert(fraction)
+        print(f"{gauge(convert(fraction))}")
 
 
 def convert(fraction):
