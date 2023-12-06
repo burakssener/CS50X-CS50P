@@ -24,7 +24,7 @@ else:
             for row in data:
                 print(row)
                 print(row["name"])
-                first, last = row["name"].strip(",")
+                first, last = row["name"].strip(" ,")
                 writer.writerow({"first": first ,"last": last, "house": row["house"]})
 
     except FileNotFoundError:
