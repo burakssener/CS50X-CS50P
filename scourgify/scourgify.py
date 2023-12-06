@@ -17,7 +17,7 @@ else:
         with open(argv[1], "r") as file:
             reader = csv.DictReader(file)
             for row in reader:
-                data.append(row)
+                data.append(data["name"] = row["name"])
         with open(argv[2], "w") as outp:
             fieldnames = ["first", "last", "house"]
             writer = csv.DictWriter(file, fieldnames = fieldnames)
