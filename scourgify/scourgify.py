@@ -22,9 +22,7 @@ else:
             fieldnames = ["first", "last", "house"]
             writer = csv.DictWriter(file, fieldnames = fieldnames)
             for row in data:
-                print(row)
-                print(row["name"])
-                first, last = row["name"].strip(" ,")
+                first, last = row["name"].split(" ,")
                 writer.writerow({"first": first ,"last": last, "house": row["house"]})
 
     except FileNotFoundError:
