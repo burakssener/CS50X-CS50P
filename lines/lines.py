@@ -18,7 +18,7 @@ else:
                 if line and (not line.startswith("#")):
                     code_lines += 1
                 if "\"\"\"" in line:
-                    code_lines += 1
+                    code_lines += 10
         print(code_lines)
 
     except FileNotFoundError:
