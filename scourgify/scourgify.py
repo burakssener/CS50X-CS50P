@@ -19,7 +19,7 @@ else:
             for row in reader:
                 data.append({"name": row["name"], "house": row["house"]})
         with open(argv[2], "w") as outp:
-            fieldnames = [ "last", "first", "house"]
+            fieldnames = [ "first", "last", "house"]
             writer = csv.DictWriter(outp, fieldnames = fieldnames)
             writer.writeheader()
             for row in data:
