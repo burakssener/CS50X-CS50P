@@ -1,4 +1,5 @@
 from sys import argv
+import csv
 
 if len(argv) > 2:
     exit("Too many command-line arguments ")
@@ -11,13 +12,11 @@ elif not argv[1].endswith(".csv"):
 
 else:
     try:
-        code_lines = 0
-        with open(argv[1], "r") as file:
-            for line in file:
-                line = line.rstrip()
-                if line and (not line.startswith("#")):
-                    code_lines += 1
-        print(code_lines)
 
+        with open(argv[1], "r") as file:
+            reader = csv.reader()
+
+
+        print(tabulate(table, headers, tablefmt="plain"))
     except FileNotFoundError:
         exit("File does not exist")
