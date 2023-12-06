@@ -14,7 +14,7 @@ else:
         code_lines = 0
         with open(argv[1], "r") as file:
             for line in file:
-                line = line.rstrip()
+                line = line.lstrip()
                 if line and (not line.startswith("#")):
                     code_lines += 1
         print(code_lines)
