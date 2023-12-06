@@ -1,24 +1,8 @@
-while True:
-    try:
-
-        x , y = int(x), int(y)
-        if not (x <= y):
-            continue
-        result = x / y * 100
-        if result >= 99:
-            print("F")
-        elif result <= 1:
-            print("E")
-        else:
-            print(f"{result:.0f}%", sep="")
-        break
-
-
-
 def main():
     fraction = input("Fraction: ").strip()
     try:
         print(f"{gauge(convert(fraction))}")
+    except ValueError or ZeroDivisionError:
 
 
 def convert(fraction):
