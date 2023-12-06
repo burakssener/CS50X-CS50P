@@ -12,7 +12,9 @@ elif not argv[1].endswith(.py):
 else:
     try:
         with open(argv[1], "r") as file:
-            
+            i = 0
+            for line in file:
+
     except FileNotFoundError:
         exit("File does not exist")
 
