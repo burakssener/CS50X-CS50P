@@ -12,18 +12,22 @@ while True:
         else:
             print(f"{result:.0f}%", sep="")
         break
-    except ValueError or ZeroDivisionError:
-        pass
+
+
 
 def main():
     ...
 
 
 def convert(fraction):
-    try
-    x , y = fraction.split("/")
-    x , y = int(x), int(y)
-     return round(x / y * 100)
+    if not (x <= y):
+        raise ValueError
+    try:
+        x , y = fraction.split("/")
+        x , y = int(x), int(y)
+        return round(x / y * 100)
+    except ValueError or ZeroDivisionError:
+
 
 
 def gauge(percentage):
