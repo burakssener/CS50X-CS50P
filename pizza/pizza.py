@@ -13,11 +13,11 @@ elif not argv[1].endswith(".csv"):
 
 else:
     try:
-
+        pizzas = []
         with open(argv[1], "r") as file:
             reader = csv.DictReader(file)
-
-        print(reader)
+            for line in reader:
+                print(line)
 
     except FileNotFoundError:
         exit("File does not exist")
