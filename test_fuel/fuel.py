@@ -12,13 +12,16 @@ def convert(fraction):
     try:
         x , y = fraction.split("/")
         x , y = int(x), int(y)
+        if y == 0:
+            raise ZeroDivisionError
         if not x <= y:
             raise ValueError
         return round(x / y * 100)
+
     except ValueError:
         raise ValueError
-    except ZeroDivisionError:
-        raise ZeroDivisionError
+
+
 
 
 

@@ -12,4 +12,7 @@ def test_convert():
     assert convert("9/9") == "100"
     assert convert("0/9") == "0"
 def test_convert_exceptions():
-    
+    with pytest.raises(ZeroDivisionError) as error:
+        convert("5/0")
+    assert error.type is ZeroDivisionError
+
