@@ -23,8 +23,9 @@ else:
             writer = csv.DictWriter(file, fieldnames = fieldnames)
             for row in data:
                 print(row)
-                first, last = row["name"].strip(",")
-                writer.writerow({"first": first ,"last": last, "house": row["house"]})
+                print(row["name"])
+                #first, last = row["name"].strip(",")
+                #writer.writerow({"first": first ,"last": last, "house": row["house"]})
 
     except FileNotFoundError:
         exit("Could not read 1.csv")
