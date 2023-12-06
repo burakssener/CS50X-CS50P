@@ -17,15 +17,15 @@ else:
         with open(argv[1], "r") as file:
             reader = csv.DictReader(file)
             for row in reader:
-                data.append(data["name"] = row["name"])
+                data.append({"name": row["name"], "house": row["house"]})
         with open(argv[2], "w") as outp:
             fieldnames = ["first", "last", "house"]
             writer = csv.DictWriter(file, fieldnames = fieldnames)
             for row in data:
                 print(row)
                 print(row["name"])
-                #first, last = row["name"].strip(",")
-                #writer.writerow({"first": first ,"last": last, "house": row["house"]})
+                first, last = row["name"].strip(",")
+                writer.writerow({"first": first ,"last": last, "house": row["house"]})
 
     except FileNotFoundError:
         exit("Could not read 1.csv")
