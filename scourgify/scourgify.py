@@ -8,7 +8,7 @@ if len(argv) > 3:
 elif len(argv) < 3:
     exit("Too few command-line arguments ")
 
-elif not (argv[2].endswith(".csv") and argv[3].endswith(".csv")):
+elif not (argv[1].endswith(".csv") and argv[2].endswith(".csv")):
     exit("Not a CSV file")
 
 else:
@@ -18,7 +18,6 @@ else:
             reader = csv.DictReader(file)
             for row in reader:
                 data.append(row)
-        print(data)
         print(tabulate(data, headers="keys", tablefmt="grid"))
 
     except FileNotFoundError:

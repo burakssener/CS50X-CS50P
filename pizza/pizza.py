@@ -18,8 +18,9 @@ else:
             reader = csv.DictReader(file)
             for row in reader:
                 data.append(row)
-        print(data)
-        print(tabulate(data, headers="keys", tablefmt="grid"))
+        with open(arv[2], "r") as outp:
+            writer = csv.DictWriter(file)
+            writer.writeheader()
 
     except FileNotFoundError:
         exit("File does not exist")
