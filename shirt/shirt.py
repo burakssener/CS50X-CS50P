@@ -1,4 +1,5 @@
 from sys import argv
+from PIL import Image
 asd = "asdfgh"
 if len(argv) > 3:
     exit("Too many command-line arguments ")
