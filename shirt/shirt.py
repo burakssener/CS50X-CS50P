@@ -15,6 +15,7 @@ elif argv[1][-3:] != argv[2][-3:]:
 else:
     person = Image.open(argv[1])
     shirt = Image.open("shirt.png")
+    size = shirt.size
     person.paste(shirt, mask = shirt)
-    person.save(person)
+    person.save(argv[2])
 
