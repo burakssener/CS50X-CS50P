@@ -7,7 +7,7 @@ elif len(argv) < 3:
     exit("Too few command-line arguments ")
 
 elif not argv[1].endswith(".jpg"):
-    exit("Invalid inputNot a CSV file")
+    exit("Invalid input")
 elif not argv[1][-3:] != argv[2][-3:]:
     exit("Input and output have different extensions")
 
