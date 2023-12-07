@@ -17,6 +17,6 @@ else:
     shirt = Image.open("shirt.png")
     size = shirt.size
     ImageOps.contain(person, size)
-    person.paste(shirt, mask = shirt)
+    person.paste(shirt, (100, 50), mask = shirt)
     person.save(argv[2])
 
