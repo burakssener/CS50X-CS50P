@@ -16,6 +16,7 @@ else:
     person = Image.open(argv[1])
     shirt = Image.open("shirt.png")
     size = shirt.size
+    fit(image, size, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
     person.paste(shirt, mask = shirt)
     person.save(argv[2])
 
