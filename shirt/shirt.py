@@ -15,6 +15,7 @@ elif argv[1][-3:] != argv[2][-3:]:
 else:
     person = Image.open(argv[1])
     shirt = Image.open("shirt.png")
+    shirt.size *= 2
     size = shirt.size
     ImageOps.contain(person, size)
     person.paste(shirt, mask = shirt)
