@@ -1,5 +1,5 @@
 from sys import argv
-from PIL import Image
+from PIL import Image, ImageOps
 
 if len(argv) > 3:
     exit("Too many command-line arguments ")
@@ -16,7 +16,7 @@ else:
     person = Image.open(argv[1])
     shirt = Image.open("shirt.png")
     size = shirt.size
-    shirt.fit(person, size, bleed=0.0, centering=(0.5, 0.5))
+    ImageOps.contain(person, size)
     person.paste(shirt, mask = shirt)
     person.save(argv[2])
 
