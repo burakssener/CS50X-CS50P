@@ -25,7 +25,7 @@ def clock_converter(time, specifier):
     if specifier.lower() == "pm":
          hour = int(hour) + 12
 
-    return f"{hour}:{minute}"
+    return f"{hour:02}:{minute}"
 
 
 
