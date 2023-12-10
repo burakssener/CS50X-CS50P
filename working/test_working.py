@@ -15,6 +15,9 @@ def test_convertionforValueError():
     with pytest.raises(ValueError) as error:
         convert("13 AM to 9 PM")
     assert error.type is ValueError
+    with pytest.raises(ValueError) as error:
+        convert("13 AM 9 PM")
+    assert error.type is ValueError
 
 
 
