@@ -22,8 +22,10 @@ def clock_converter(time, specifier):
     else:
         hour, minute = time, "00"
 
+    hour = int(hour)
+    
     if specifier.lower() == "pm":
-         hour = int(hour) + 12
+         hour = hour + 12
 
     return f"{hour:02}:{minute}"
 
