@@ -7,7 +7,7 @@ def main():
 
 
 def count(s):
-    if matches := re.findall(r"\bum\b", s):
+    if matches := re.findall(r"\bum\b", s, re.IGNORECASE):
         return len(matches)
     else:
         return 0
