@@ -7,15 +7,16 @@ def main():
 
 
 def convert(s):
-    if match := re.search("^([0-9][0-2]?(?::[0-5][0-9])? [ap]m) to ([0-9][0-2]?(?::[0-5][0-9])? [ap]m)$", s, re.IGNORECASE):
-
+    if match := re.search("^([0-9][0-2]?(?::[0-5][0-9])?) ([ap]m) to ([0-9][0-2]?(?::[0-5][0-9])?) ([ap]m)$", s, re.IGNORECASE):
+        if match.group(2).endswith("pm"):
+            try:
+                hour, minute = match.group(1).split(":")
+            except ValueError:
 
 
     else:
         return match
 
-def converter(time):
-    if time.endswith("am")
 
 
 
