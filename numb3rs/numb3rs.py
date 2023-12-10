@@ -11,8 +11,8 @@ def validate(ip):
     match = re.search(r"^([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)$", ip)
     try:
         intgroups = [int(group) for group in match.groups()]
-        validated == [group for group in intgroups if 255 >= group >= 0]
-        print(len(Validated) == 4)
+        validated = [group for group in intgroups if 255 >= group >= 0]
+        print(len(validated) == 4)
     except ValueError:
         print("False")
 
