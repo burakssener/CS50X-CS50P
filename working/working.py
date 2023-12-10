@@ -8,7 +8,7 @@ def main():
 
 def convert(s):
     if match := re.search("^[0-12](:[0-5][0-9])? [ap]m to [0-12](:[0-5][0-9])? [ap]m$", s, re.IGNORECASE):
-        return match.groups(1)
+        return match.groups()
     else:
         return match
 
