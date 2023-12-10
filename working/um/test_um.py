@@ -10,3 +10,7 @@ def test_number():
     assert count("UM ,um Ahahah") == 2
     assert count("Um Ahahah ,um ,um") == 3
     assert count("uM Ahahah um... Um.") == 3
+
+def testinword():
+    assert count("UM ,um this is yummy") == 2
+
