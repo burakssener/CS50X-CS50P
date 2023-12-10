@@ -13,6 +13,12 @@ def convert(s):
                 hour, minute = match.group(1).split(":")
                 hour, minute = int(hour) + 12, int(minute)
             except ValueError:
+        if match.group(4).endswith("pm"):
+            try:
+                hour, minute = match.group(3).split(":")
+                hour, minute = int(hour) + 12, int(minute)
+            except ValueError:
+                int(match.group(3)) + 12
 
 
     else:
