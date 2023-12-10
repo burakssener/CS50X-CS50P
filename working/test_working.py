@@ -9,6 +9,12 @@ def test_convertionforPmAmWithCorners():
     assert convert("5 AM to 12 PM") = ("05.00 to 12.00")
 
 def test_convertionforValueError():
-    assert convert("5 AM to 9.60 PM")
-    assert convert("13 AM to 9 PM")
+    with pytest.raises(ValueError) as error:
+        convert("5 AM to 9.60 PM")
+    assert error.type is ValueError
+     with pytest.raises(ValueError) as error:
+        convert("13 AM to 9 PM")
+    assert error.type is ValueError
+    
+
 
