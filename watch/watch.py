@@ -11,7 +11,7 @@ def parse(s):
     if match := re.search(r'^.*"https?://(www)?\.youtube\.com/embed/(.+)".*$', s):
         return f"https://youtu.be/{match.group(2)}"
     else:
-        return False
+        return match
 
 
 
