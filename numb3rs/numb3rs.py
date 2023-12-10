@@ -8,7 +8,7 @@ def main():
 
 def validate(ip):
     ip = ip.strip()
-    re.
+    re.search(r"0-9")
 
 
 ...
