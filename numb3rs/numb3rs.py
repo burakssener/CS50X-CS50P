@@ -10,7 +10,7 @@ def validate(ip):
     ip = ip.strip()
     match = re.search(r"^([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)$", ip)
     try:
-        print(match.groups(1))
+        group = int(group) for group in groups
     except:
         raise ValueError
 
