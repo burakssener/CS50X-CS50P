@@ -8,7 +8,7 @@ def main():
 
 def validate(ip):
     ip = ip.strip()
-    match = re.search(r"^(0-9+)\.(0-9+)\.(0-9+)\.(0-9+)$", ip)
+    match = re.search(r"^([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)$", ip)
     try:
         print(match.groups(1))
     except:
