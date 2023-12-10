@@ -11,7 +11,7 @@ def convert(s):
         if match.group(2).endswith("pm"):
             try:
                 hour, minute = match.group(1).split(":")
-                hour = int(hour) + 12
+                hour, minute = int(hour) + 12, int(minute)
             except ValueError:
 
 
