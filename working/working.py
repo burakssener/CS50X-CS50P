@@ -7,13 +7,11 @@ def main():
 
 
 def convert(s):
-    9:00 AM to 5:00 PM
-    9 AM to 5 PM
-    if match := re.search("^[0-12](:[0-5][0-9])? [ap]m+", s, re.IGNORECASE):
+    if match := re.search("^[0-12](:[0-5][0-9])? [ap]m to [0-12](:[0-5][0-9])? [ap]m$", s, re.IGNORECASE):
+        return match.groups(1)
+    else:
+        return match
 
-
-
-...
 
 
 if __name__ == "__main__":
