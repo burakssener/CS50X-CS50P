@@ -7,10 +7,10 @@ def main():
 
 
 def count(s):
-    if matches := re.findall("[^a-zA-Z0-9_]um[^a-zA-Z0-9_]", s):
-        return matches
+    if matches := re.findall(r"\bum\b", s):
+        return len(matches)
     else:
-        return None
+        return 0
 
 
 if __name__ == "__main__":
