@@ -1,5 +1,6 @@
 from datetime import date
 import inflect
+import sys
 
 p = inflect.engine()
 
@@ -11,13 +12,13 @@ def main():
     print(words.capitalize() + " minutes")
 
 def getter():
-    while True:
-        try:
-            birth = input("Date of Birth: ").strip().replace("-", "")
-            return date.fromisoformat(birth)
-        except ValueError:
-            print("Invalid date ")
-            pass
+    try:
+        birth = input("Date of Birth: ").strip().replace("-", "")
+        return date.fromisoformat(birth)
+    except ValueError:
+        print("Invalid date ")
+        sys.exit(0)
+        pass
 
 
 
