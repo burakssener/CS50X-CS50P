@@ -5,7 +5,8 @@ def main():
     ...
 
 
-def 
+def getter():
+    input()
 
 if __name__ == "__main__":
     main()
