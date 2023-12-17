@@ -13,7 +13,7 @@ def getter():
         except ValueError:
             pass
 
-    birth = birth.date.fromisoformat('20191204')
+    birth = date.fromisoformat(birth)
     print(birth)
 
 if __name__ == "__main__":
