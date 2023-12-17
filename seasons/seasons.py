@@ -8,7 +8,7 @@ def main():
 
     minute = round((date.today() - birth).total_seconds() / 60)
     words = p.number_to_words(minute, andword="")
-    print(words)
+    print(words + " minutes")
 
 def getter():
     while True:
