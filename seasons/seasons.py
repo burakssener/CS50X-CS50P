@@ -1,12 +1,14 @@
 from datetime import date
+import inflect
 
+p = inflect.engine()
 
 def main():
     birth = getter()
 
-    minute = (date.today() - birth).total_seconds() / 60
-
-    print(round(minute))
+    minute = round((date.today() - birth).total_seconds() / 60)
+    words = p.number_to_words(minute, andword="")
+    print(words)
 
 def getter():
     while True:
