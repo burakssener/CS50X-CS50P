@@ -8,13 +8,13 @@ def main():
 def getter():
     while True:
         try:
-            birth = int(input("Date of Birth: ").strip().replace(" ", ""))
+            birth = input("Date of Birth: ").strip().replace("-", "")
             break
         except ValueError:
             pass
 
     birth = birth.date.fromisoformat('20191204')
-    print(date.today())
+    print(birth)
 
 if __name__ == "__main__":
     main()
