@@ -2,19 +2,19 @@ from datetime import date
 
 
 def main():
-    getter()
-
+    birth = getter()
+    birth = date.fromisoformat(birth)
+    now = date.today()
+    print(now - birth)
 
 def getter():
     while True:
         try:
-            birth = input("Date of Birth: ").strip().replace("-", "")
-            break
+            return input("Date of Birth: ").strip().replace("-", "")
         except ValueError:
             pass
 
-    birth = date.fromisoformat(birth)
-    print(birth)
+
 
 if __name__ == "__main__":
     main()
