@@ -3,15 +3,18 @@ from datetime import date
 
 def main():
     birth = getter()
-    birth = date.fromisoformat(birth)
-    now = date.today()
-    print(now - birth)
+
+    minute = (date.today() - birth).total_seconds() / 60
+
+    print(round(minute))
 
 def getter():
     while True:
         try:
-            return input("Date of Birth: ").strip().replace("-", "")
+            birth = input("Date of Birth: ").strip().replace("-", "")
+            return date.fromisoformat(birth)
         except ValueError:
+            print("Invalid date ")
             pass
 
 
