@@ -8,8 +8,8 @@ class Jar:
 
 
     @capacity.setter
-    def capaticy(self, capacity)
-        return self_capacity
+    def capacity(self, capacity):
+        return self._capacity
 
 
 cookie = Jar(12)
