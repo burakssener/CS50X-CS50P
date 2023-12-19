@@ -11,7 +11,7 @@ class PDF():
 
     def image(self, path):
         self._pdf.image(path, keep_aspect_ratio=True)
-
+        
 
 
 pdf = PDF("cs50")
