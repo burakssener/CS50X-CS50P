@@ -14,10 +14,10 @@ class PDF():
         self._pdf.image(path, w = self._pdf.epw)
         self._pdf.set_text_color(255, 255, 255)
         self._pdf.set_font("helvetica", "B", 25)
-        self._pdf.text(text="Burak Sener took CS50", x = 50, y = 100)
+        self._pdf.text(text="Burak Sener took CS50", x = 50, y = 85)
 
 
 
 pdf = PDF("cs50")
 pdf.image("./shirtificate.png")
-pdf.save("Shirtificate.pdf")
+pdf.save("shirtificate.pdf")
