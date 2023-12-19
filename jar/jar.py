@@ -6,8 +6,8 @@ class Jar:
         return (f"🍪" * self.size)
 
     def deposit(self, n):
-        if self.size + n >
         self.size += n
+
 
     def withdraw(self, n):
         self.size -= n
