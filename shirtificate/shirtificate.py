@@ -7,7 +7,7 @@ class PDF():
         self._pdf.cell(text="CS50 Shirtificate", markdown=True)
 
     def save(self, name):
-        FPDF
+        self._pdf.output(name)
 
 
 
