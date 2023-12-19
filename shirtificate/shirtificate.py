@@ -10,8 +10,8 @@ class PDF():
         self._pdf.output(name)
 
     def image(self, path):
-        self._pdf.image(path, keep_aspect_ratio=True)
-        
+        self._pdf.image(path, w=self._pdf.epw)
+
 
 
 pdf = PDF("cs50")
