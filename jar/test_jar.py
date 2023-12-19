@@ -22,6 +22,7 @@ def test_deposit():
 
 
 def test_withdraw():
+    jar = Jar(2)
     with pytest.raises(ValueError) as error:
         jar.withdraw(5)
     assert error.type is ValueError
