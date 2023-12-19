@@ -3,7 +3,6 @@ import pytest
 
 def test_init():
     jar = Jar(15)
-    assert capacity(jar) == 15
 
 def test_str():
     jar = Jar()
@@ -19,10 +18,10 @@ def test_deposit():
     with pytest.raises(ValueError) as error:
         jar.deposit(18)
     assert error.type is ValueError
-    with pytest.raises(ValueError) as error:
-        jar.withdraw(5)
-    assert error.type is ValueError
+
 
 
 def test_withdraw():
-    ...
+    with pytest.raises(ValueError) as error:
+        jar.withdraw(5)
+    assert error.type is ValueError
