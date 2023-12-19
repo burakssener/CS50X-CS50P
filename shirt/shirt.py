@@ -18,7 +18,6 @@ else:
     (width, height) = (shirt.width * 2, shirt.height * 2)
     shirt = shirt.resize((width, height))
     size = shirt
-    ImageOps.contain(person, size)
     person.paste(shirt, mask = shirt)
     person.save(argv[2])
 
