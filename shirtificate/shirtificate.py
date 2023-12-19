@@ -6,11 +6,14 @@ class PDF():
         self._pdf.set_font("helvetica", "B", 50)
         self._pdf.cell(text="CS50 Shirtificate", center = True, markdown=True)
 
+
     def save(self, name):
         self._pdf.output(name)
 
     def image(self, path):
         self._pdf.image(path, x = 20 , y=60)
+        self._pdf.set_text_color(255, 255, 255)
+        self._pdf.cell(text="Burak Sener took CS50", x = 50, y = 150)
 
 
 
