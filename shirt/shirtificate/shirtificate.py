@@ -3,6 +3,7 @@ class PDF():
     def __init__(self, name):
         self._pdf = FPDF()
         self._pdf.add_page()
+        self._pdf.set_font("helvetica", "B", 50)
     def header(self):
         # Rendering logo:
         self.image("./shirtificate.png", 10, 8, 33)
