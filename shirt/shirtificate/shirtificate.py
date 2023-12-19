@@ -1,5 +1,8 @@
 from fpdf import FPDF
-class PDF(FPDF):
+class PDF():
+    def __init__(self, name):
+        self._pdf = FPDF()
+        self._pdf.add_page()
     def header(self):
         # Rendering logo:
         self.image("./shirtificate.png", 10, 8, 33)
@@ -13,7 +16,7 @@ class PDF(FPDF):
         self.ln(20)
 
 pdf = PDF()
-pdf.add_page()
+
 #pdf.set_font('helvetica')
 #pdf.cell(text="hello world")
 pdf.set_title("CS50 Shirtificate")
