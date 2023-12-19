@@ -17,7 +17,7 @@ def getter():
         return date.fromisoformat(birth)
     except ValueError:
         print("Invalid date ")
-        sys.exit(0)
+        sys.exit(1)
         pass
 
 
