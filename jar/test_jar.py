@@ -15,9 +15,13 @@ def test_str():
 
 
 def test_deposit():
-
-    jar.deposit(1)
-    assert str(jar) == "🍪"
+    jar = Jar(2)
+    with pytest.raises(ValueError) as error:
+        jar.deposit(18)
+    assert error.type is ValueError
+    with pytest.raises(ValueError) as error:
+        jar.withdraw(5)
+    assert error.type is ValueError
 
 
 def test_withdraw():
