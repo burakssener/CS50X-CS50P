@@ -11,7 +11,7 @@ class PDF():
         self._pdf.output(name)
 
     def image(self, path):
-        self._pdf.image(path, w )
+        self._pdf.image(path, w = self._pdf.epw)
         self._pdf.set_text_color(255, 255, 255)
         self._pdf.set_font("helvetica", "B", 25)
         self._pdf.text(text="Burak Sener took CS50", x = 50, y = 150)
