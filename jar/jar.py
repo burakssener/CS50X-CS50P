@@ -3,9 +3,10 @@ class Jar:
         self.capacity = capacity
 
     def __str__(self):
-        return f"{self.capacity}"
+        return (f"🍪" * self.size)
 
     def deposit(self, n):
+        if self.size + n >
         self.size += n
 
     def withdraw(self, n):
@@ -30,8 +31,8 @@ class Jar:
         self._size = size
 
 
-cookie = Jar(12)
-
+cookie = Jar()
+cookie.deposit(5)
 print(cookie)
 
 
