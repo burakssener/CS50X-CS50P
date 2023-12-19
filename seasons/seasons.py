@@ -5,20 +5,18 @@ import sys
 p = inflect.engine()
 
 def main():
-    birth = getter()
+    birth = getter(input("Date of Birth: ").strip().replace("-", ""))
 
     minute = round((date.today() - birth).total_seconds() / 60)
     words = p.number_to_words(minute, andword="")
     print(words.capitalize() + " minutes")
 
-def getter():
+def getter(birth):
     try:
-        birth = input("Date of Birth: ").strip().replace("-", "")
         return date.fromisoformat(birth)
     except ValueError:
         print("Invalid date ")
         sys.exit(1)
-        pass
 
 
 
