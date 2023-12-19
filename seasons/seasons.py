@@ -5,13 +5,14 @@ import sys
 p = inflect.engine()
 
 def main():
-    birth = getter(input("Date of Birth: ").strip().replace("-", ""))
+    birth = getter(input("Date of Birth: "))
 
     minute = round((date.today() - birth).total_seconds() / 60)
     words = p.number_to_words(minute, andword="")
     print(words.capitalize() + " minutes")
 
 def getter(birth):
+    birth = birth.strip().replace("-", "")
     try:
         return date.fromisoformat(birth)
     except ValueError:
