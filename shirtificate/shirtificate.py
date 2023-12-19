@@ -10,7 +10,7 @@ class PDF():
         self._pdf.output(name)
 
     def image(self, path):
-        self._pdf.image(path)
+        self._pdf.image(path, h=self._pdf.eph, w=self._pdf.epw/2, x=self._pdf.epw/2)
 
 
 
