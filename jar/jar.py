@@ -19,3 +19,5 @@ class Jar:
     @property
     def size(self):
         ...
+    @capacity.setter
+    def capaticy(self,)
