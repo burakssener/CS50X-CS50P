@@ -34,3 +34,8 @@ class Jar:
             raise ValueError
 
 
+cookie = Jar()
+cookie.deposit(5)
+print(cookie)
+
+
