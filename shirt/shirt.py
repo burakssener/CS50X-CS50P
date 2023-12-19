@@ -17,6 +17,6 @@ else:
     shirt = Image.open("shirt.png")
     (width, height) = (shirt.width * 2, shirt.height * 2)
     shirt = shirt.resize((width, height))
-    person.paste(shirt, mask = shirt)
+    person.paste(shirt, box = (100,0), mask = shirt)
     person.save(argv[2])
 
