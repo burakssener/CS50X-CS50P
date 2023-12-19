@@ -6,10 +6,10 @@ class Jar:
         return f"{self.capacity}"
 
     def deposit(self, n):
-        ...
+        self.size += n
 
     def withdraw(self, n):
-        ...
+        self.size
 
     @property
     def capacity(self):
@@ -19,6 +19,14 @@ class Jar:
     @capacity.setter
     def capacity(self, capacity):
         self._capacity = capacity
+
+    @property
+    def size(self):
+        return self._size
+
+    @size.setter
+    def size(self, size):
+        self._size = size
 
 
 cookie = Jar(12)
