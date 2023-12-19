@@ -9,7 +9,7 @@ class Jar:
         self.size += n
 
     def withdraw(self, n):
-        self.size
+        self.size -= n
 
     @property
     def capacity(self):
@@ -19,6 +19,7 @@ class Jar:
     @capacity.setter
     def capacity(self, capacity):
         self._capacity = capacity
+        self._size = 0
 
     @property
     def size(self):
