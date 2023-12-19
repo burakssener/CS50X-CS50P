@@ -18,5 +18,5 @@ else:
     size = shirt.size
     person_resized = ImageOps.fit(person, size)
     person_resized.paste(shirt, mask = shirt)
-    person.save(argv[2])
+    person_resized.save(argv[2])
 
