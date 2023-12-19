@@ -4,7 +4,7 @@ class PDF():
         self._pdf = FPDF(orientation="portrait", format="A4")
         self._pdf.add_page()
         self._pdf.set_font("helvetica", "B", 50)
-        self._pdf.cell(text="CS50 Shirtificate", center = True, markdown=True)
+        self._pdf.cell(text="CS50 Shirtificate", center = True, markdown=True, new_x = "LMARGIN", new_y = "NEXT")
 
 
     def save(self, name):
@@ -14,7 +14,7 @@ class PDF():
         self._pdf.image(path, w = self._pdf.epw)
         self._pdf.set_text_color(255, 255, 255)
         self._pdf.set_font("helvetica", "B", 25)
-        self._pdf.text(text="Burak Sener took CS50", x = 50, y = 150)
+        self._pdf.text(text="Burak Sener took CS50", x = 50, y = 80)
 
 
 
