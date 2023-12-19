@@ -9,7 +9,11 @@ class PDF():
     def save(self, name):
         self._pdf.output(name)
 
+    def image(self, path):
+        self._pdf.image(path)
+
 
 
 pdf = PDF("cs50")
+pdf.image("./shirtificate.png")
 pdf.save("Shirtificate.pdf")
