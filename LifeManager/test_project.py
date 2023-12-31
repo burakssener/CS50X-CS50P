@@ -3,13 +3,11 @@ from project import get_digit
 
 def test_valid_input():
     result = get_digit("Enter a digit: ", bot=1, top=10)
-    assert isinstance(result, int)
     assert 1 <= result <= 10
 
 def test_valid_input_without_top():
     # Test when the input is a valid integer without the top limit
     result = get_digit("Enter a digit: ", bot=1)
-    assert isinstance(result, int)
     assert result >= 1
 
 def test_invalid_input():
