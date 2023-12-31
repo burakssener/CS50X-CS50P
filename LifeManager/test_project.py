@@ -1,2 +1,2 @@
 import pytest
-from project.py import
+from project import
